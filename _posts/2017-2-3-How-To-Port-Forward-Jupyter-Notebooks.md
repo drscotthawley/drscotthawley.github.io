@@ -10,11 +10,9 @@ On edges, I run the Jupyter notebook...
 `shawley@edges$ jupyter notebook --no-browser --port=8889`  
 or for torch, similarly,  
 `shawley@edges:~$ itorch notebook --no-browser --port=8889`  
-
 This generates a bunch of text, including a URL with a token...  
  It'll say, "Copy/paste this URL into your browser when you connect for the first time, to login with a token:  
         http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc"  
-
 
 2. The computer "hedges"(that's right, hedges and edges)  is my server which is visible from the outside world:  
 `shawley@hedges:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 edges`
