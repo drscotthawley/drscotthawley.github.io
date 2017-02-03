@@ -3,7 +3,10 @@ layout: post
 title: How to Port-Forward Jupyter Notebooks
 ---
 
-[Jupyter notebooks](http://jupyter.org/) and  their related [iTorch notebooks](https://github.com/facebook/iTorch) seem to be popular for tutorials, e.g the [Deep Learning with Torch](https://github.com/soumith/cvpr2015/blob/master/Deep%20Learning%20with%20Torch.ipynb) tutorial I started today, but I hated them and avoided them.  Not just for [the reasons on this list](http://opiateforthemass.es/articles/why-i-dont-like-jupyter-fka-ipython-notebook/), but mainly because I keep my "machine learning machine" inside my university's firewall.  Sometimes I like to work from home, which I do via a couple ssh hops, and then copy and paste my script files into the terminal window.  But these "notebook" things require a web GUI, and X11 forwarding over mutliple ssh sessions is prohibitively slow.
+[Jupyter notebooks](http://jupyter.org/) and  their related [iTorch notebooks](https://github.com/facebook/iTorch) seem to be popular for tutorials, e.g the [Deep Learning with Torch](https://github.com/soumith/cvpr2015/blob/master/Deep%20Learning%20with%20Torch.ipynb) tutorial I started today, but I hated them and avoided them.  Not just for [the reasons on this list](http://opiateforthemass.es/articles/why-i-dont-like-jupyter-fka-ipython-notebook/), but mainly because I keep my "machine learning machine" inside my university's firewall.
+
+
+Sometimes I like to work from home, which I do via a couple ssh hops, and then copy and paste my script files into the terminal window.  But these "notebook" things require a web GUI, and X11 forwarding over mutliple ssh sessions is prohibitively slow.
 
 
 I didn't want to configure a NAT system, and was considering some kind of homegrown CGI-script system (which has "security breach" written all over it), but thankfully I stumbled upon [this post on Coderwall](https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh), where the process was spelled out.  For my set of systems, I needed an additional layer of port-forwarding.  So for me it goes like this...
