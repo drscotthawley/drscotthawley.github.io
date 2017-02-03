@@ -33,6 +33,6 @@ This generates a bunch of text, including a URL with a token...
     `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`  
 **...and it works!**
 
-**Wohoo!**
+## Wohoo!
 
 
