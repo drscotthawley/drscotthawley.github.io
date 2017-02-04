@@ -23,7 +23,7 @@ This generates a bunch of text, including a URL with a token...
  It'll say, "Copy/paste this URL into your browser when you connect for the first time, to login with a token:  
        `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`"  
 
-2. The server we'll call "doorkeeper" is visible to the outside world, and so we forward its port 8889 to the one over on "internal" where the notebook is running: 
+2. The server we'll call "doorkeeper" is visible to the outside world, and so we forward its port 8889 to the one over on "internal" where the notebook is running:  
         `me@doorkeeper:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 internal`
 
 
