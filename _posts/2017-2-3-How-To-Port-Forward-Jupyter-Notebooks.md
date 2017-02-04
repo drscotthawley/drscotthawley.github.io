@@ -31,7 +31,7 @@ This generates a bunch of text, including a URL with a token...
 
 4. And then on my laptop, I paste the URL from the jupyter (or itorch) notebook into my web browser...  
     `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`  
-**...and it works!**
+**...and it works!**  The notebook comes right up, but the only lag involves sending *text* over ssh, as opposed to sending X11 graphics.
 
 ## Wohoo!
 
