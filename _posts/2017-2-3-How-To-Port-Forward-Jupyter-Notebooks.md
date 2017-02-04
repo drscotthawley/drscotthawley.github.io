@@ -14,19 +14,19 @@ I didn't want to configure a NAT system, and was considering some kind of homegr
 
 1. My machine-learning computer called "edges" sits inside the firewall.  
 On edges, I run the Jupyter notebook...  
-        `shawley@edges$ jupyter notebook --no-browser --port=8889`  
+        `me@edges$ jupyter notebook --no-browser --port=8889`  
 or for torch, similarly,  
-        `shawley@edges:~$ itorch notebook --no-browser --port=8889`  
+        `me@edges:~$ itorch notebook --no-browser --port=8889`  
 This generates a bunch of text, including a URL with a token...  
  It'll say, "Copy/paste this URL into your browser when you connect for the first time, to login with a token:  
        `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`"  
 
 2. The computer "hedges" (that's right, hedges and edges...long story)  is my server which is visible from the outside world, and so we forward its port 8889 to the one over on edges where the notebook is running: 
-        `shawley@hedges:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 edges`
+        `me@hedges:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 edges`
 
 
 3. Then on my laptop, I run a similar port-forward so the browser will connected to the port on hedges:
-        `shawley@laptop:~$ ssh -N -n -L 127.0.0.1:8889:127.0.0.1:8889 hedges`  
+        `me@laptop:~$ ssh -N -n -L 127.0.0.1:8889:127.0.0.1:8889 hedges`  
 
 
 4. And then on my laptop, I paste the URL from the jupyter (or itorch) notebook into my web browser...  
