@@ -15,7 +15,7 @@ I didn't want to configure a NAT system, and was considering some kind of homegr
 
 
 1. My machine-learning computer, which we'll call "internal", sits inside the firewall.  
-On edges, I run the Jupyter notebook...  
+On internal, I run the Jupyter notebook...  
         `me@internal$ jupyter notebook --no-browser --port=8889`  
 or for torch, similarly,  
         `me@internal:~$ itorch notebook --no-browser --port=8889`  
