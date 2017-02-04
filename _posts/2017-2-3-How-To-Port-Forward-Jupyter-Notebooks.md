@@ -14,21 +14,21 @@ When I work from home, I do so via a couple ssh hops, and then copy and paste my
 I didn't want to configure a NAT system, and was considering some kind of homegrown CGI-script system (which has "security breach" written all over it), but thankfully I stumbled upon [this post on Coderwall](https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh), where the process was spelled out.  For my set of systems, I needed an additional layer of port-forwarding.  So for me it goes like this...
 
 
-1. My machine-learning computer called "edges" sits inside the firewall.  
+1. My machine-learning computer, which we'll call "internal", sits inside the firewall.  
 On edges, I run the Jupyter notebook...  
-        `me@edges$ jupyter notebook --no-browser --port=8889`  
+        `me@internal$ jupyter notebook --no-browser --port=8889`  
 or for torch, similarly,  
-        `me@edges:~$ itorch notebook --no-browser --port=8889`  
+        `me@internal:~$ itorch notebook --no-browser --port=8889`  
 This generates a bunch of text, including a URL with a token...  
  It'll say, "Copy/paste this URL into your browser when you connect for the first time, to login with a token:  
        `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`"  
 
-2. The computer "hedges" (that's right, hedges and edges...long story)  is my server which is visible from the outside world, and so we forward its port 8889 to the one over on edges where the notebook is running: 
-        `me@hedges:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 edges`
+2. The server we'll call "doorkeeper" is visible to the outside world, and so we forward its port 8889 to the one over on "internal" where the notebook is running: 
+        `me@doorkeeper:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 internal`
 
 
-3. Then on my laptop, I run a similar port-forward so the browser will connected to the port on hedges:  
-        `me@laptop:~$ ssh -N -n -L 127.0.0.1:8889:127.0.0.1:8889 hedges`  
+3. Then on my laptop, I run a similar port-forward so the browser will connected to the port on doorkeeper:  
+        `me@laptop:~$ ssh -N -n -L 127.0.0.1:8889:127.0.0.1:8889 doorkeeper`  
 
 
 4. And then on my laptop, I paste the URL from the jupyter (or itorch) notebook into my web browser...  
