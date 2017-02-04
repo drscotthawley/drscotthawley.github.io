@@ -25,7 +25,7 @@ This generates a bunch of text, including a URL with a token...
         `me@hedges:~$ ssh -Y -N -n -L 127.0.0.1:8889:127.0.0.1:8889 edges`
 
 
-3. Then on my laptop, I run a similar port-forward so the browser will connected to the port on hedges:
+3. Then on my laptop, I run a similar port-forward so the browser will connected to the port on hedges:  
         `me@laptop:~$ ssh -N -n -L 127.0.0.1:8889:127.0.0.1:8889 hedges`  
 
 
