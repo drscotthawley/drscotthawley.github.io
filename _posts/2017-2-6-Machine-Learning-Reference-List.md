@@ -1,4 +1,4 @@
-#Neural Network / Machine Learning Notes:
+#Neural Network / Machine Learning Reference List:
 
 *A list of references & tutorials I compiled ca. February 2016 & again in October 2016.  The field moves so quickly, much of this may be out of date.  This was compiled for my own use; if you find it useful as well, that's great.*
 
