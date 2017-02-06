@@ -217,7 +217,8 @@ create an "IAM" user.  Grant the user permissions to upload to s3 via <https://f
 aws configure
 ...good to go.
 
-watch -n 550 aws s3 cp /tmp/weights.hdf5 s3://hawleymainbucket
+```watch -n 550 aws s3 cp /tmp/weights.hdf5 s3://hawleymainbucket```
+
 * Theano GPU setup guide: <https://github.com/andreasjansson/simple-aws-gpu-setup>
 * OpenMP: Don't forget to enable multiple OpenMP threads!  Can get you at least a factor of 2 speedup!
     * In most ‘modern’ Python installations (e.g. anaconda) OpenMP is automatic
