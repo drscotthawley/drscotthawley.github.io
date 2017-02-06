@@ -1,6 +1,6 @@
 This has been my personal reading list, compiled ca. February 2016 & again further ca. October 2016.  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
 
-*I'm mostly interested in audio processing, so...*
+*I'm mostly interested in audio processing, so...* 
 
 **Jump Right Into : Audio Processing via RNNs:**
 
