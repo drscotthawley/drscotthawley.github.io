@@ -123,6 +123,29 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
+**Frameworks (too many to choose from!):**
+
+* Main Ones:
+    * [Theano](http://deeplearning.net/software/theano/) - mature codebase, non-CUDA GPU support via libgpuarray
+    * [TensorFlow](https://www.tensorflow.org/) - Google-supported, awesome viz tool TensorBoard
+    * [Keras](http://keras.io), runs on Theano or TensorFlow as backends. VERY popular
+    * [Torch](http://torch.ch/) - used by LeCun & Karpathy, scripting in Lua.  Not Python.  
+    	  * [PyTorch](http://pytorch.org/) Python bindings for Torch, includes 'automatic differentiation'
+
+    * [Scikit-Learn](http://scikit-learn.org) - General system for many methods; some Keras support.  Allows 'easy' swapping of different ML methods & models
+
+* Others, not seeing these used as much:
+    * [Caffe](http://caffe.berkeleyvision.org/), supposed to be easy & abstract
+    * [Lasagne](http://lasagne.readthedocs.io/en/latest/) - Another Theano front end for abstraction & ease of use
+    * [Mozi](https://github.com/hycis/Mozi), Another one build on Theano.  Looks simple to use
+    * [DeepLearning4J](https://deeplearning4j.org/): The "J" is for "Java"
+    * scikits.neural - not popular
+* Which package to choose when starting out?
+    * I say **Keras**.  Everything's super-easy and automated compared to others.
+
+
+
+
 **More Tutorials (e.g., app-specific):**
 
 * Lots in <http://maachinelearningmastery.com>
@@ -225,27 +248,6 @@ aws configure
 * My proposed PC build: <https://pcpartpicker.com/user/drscotthawley/saved/bFZ8dC>
 * 
 
-
-
-**Frameworks (too many to choose from!):**
-
-* Main Ones:
-    * Theano - mature codebase
-    * TensorFlow - Google-supported, awesome viz tool TensorBoard
-    * [Keras](http://keras.io), runs on Theano or TensorFlow as backends. VERY popular
-    * Torch - used by LeCun & Karpathy, scripting in Lua.  Not Python.  
-    	  * [PyTorch](http://pytorch.org/) Python bindings for Torch, includes 'automatic differentiation'
-
-    * Scikits-learn - General system for many methods; some Keras support.  Allows 'easy' swapping of different ML methods & models
-
-* Others, not seeing these used as much:
-    * Caffe <http://caffe.berkeleyvision.org/>, supposed to be easy & abstract
-    * Lasagne - Another Theano front end for abstraction & ease of use
-    * Mozi <https://github.com/hycis/Mozi>, Another one build on Theano.  Looks simple to use
-    * DL4J - ?
-    * scikits.neural - not used enough
-* Which package to choose when starting out?
-    * I say Keras.  Everything's super-easy and automated compared to others.
 
 
 
