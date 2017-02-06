@@ -9,8 +9,8 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 * Generation/Synthesis of new sounds based on training set:
 
     * Jake Fiala: "Deep Learning and Sound" <http://fiala.uk/notes/deep-learning-and-sound-01-intro>
-    * GRUV: <https://github.com/MattVitelli/GRUV.  Btw, found that LSTM worked better than GRU>
-    * John Glover: <http://www.johnglover.net/blog/generating-sound-with-rnns.html  Glover used LSTM fed by phase vocoder (really just STFT)>
+    * GRUV: <https://github.com/MattVitelli/GRUV>.  Btw, found that LSTM worked better than GRU>
+    * John Glover: <http://www.johnglover.net/blog/generating-sound-with-rnns.html>  Glover used LSTM fed by phase vocoder (really just STFT)>
     * Google Magenta for MIDI: <https://magenta.tensorflow.org/welcome-to-magenta>
     * Google WaveNet for Audio... <https://deepmind.com/blog/wavenet-generative-model-raw-audio/>
         * WaveNet is slow.   "Fast Wavenet": <https://github.com/tomlepaine/fast-wavenet>
