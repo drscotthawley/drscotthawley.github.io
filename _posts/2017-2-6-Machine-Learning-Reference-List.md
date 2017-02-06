@@ -18,10 +18,11 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 **General Neural Network References:**
 
-* Books/Guides on Deep/Machine Learning:
+* Books/Guides on Deep/Machine Learning: (all excellent)
     * <http://neuralnetworksanddeeplearning.com>
     * <http://machinelearningmastery.com>
     * <https://www.deeplearningbook.org>
+    * [Hacker's Guide to Neural Nets](http://karpathy.github.io/neuralnets/) by karpathy
 * Tutorials/Videos:
     * Youtube Playlist on “Deep Learning”, t from Oxford U. by Nando de Freitas <https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu>
     * Andrew Ng's online course on ML at Stanford comes highly recommended: <http://www.youtube.com/view_play_list?p=A89DCFA6ADACE599>
