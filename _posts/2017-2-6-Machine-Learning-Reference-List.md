@@ -168,7 +168,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 **More Demos:**
 
-* Anything by [@karpathy](http://twitter.com/karpathy)
+* Anything by [@karpathy](http://karpathy.github.io/)
 * Lightweight Theano-LSTM: <https://github.com/JonathanRaiman/theano_lstm>
 * TensorFlow Playgrounds: <http://playground.tensorflow.org >
 
