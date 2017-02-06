@@ -1,4 +1,4 @@
-# Neural Network / Machine Learning Reference List:
+# Neural Network / Machine Learning References:
 
 This has been my personal reading list, compiled ca. February 2016 & again further ca. October 2016.  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
 
