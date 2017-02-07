@@ -154,7 +154,7 @@ img {
   margin-bottom: 50px;
   background-image: url('{{ site.bg_image }}');
   background-position: 0 -70px; 
-  background-size:100%;
+  //background-size:100%;
 
 }
 
@@ -287,10 +287,11 @@ nav {
   }
 }
 .post-title{
-  line-height:70%;
+  line-height:90%;
+  margin-bottom: 0px;
 }
 .post-subtitle{
- margin-top: -5px;
+ margin-top: 5px;
   line-height:100%;
 }
 .post-meta{
