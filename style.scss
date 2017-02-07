@@ -152,7 +152,8 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
-  background-image: url('{{ site.bg_image }}')
+  background-image: url('{{ site.bg_image }}');
+  background-position: 0 -70px; 
 }
 
 .masthead {
