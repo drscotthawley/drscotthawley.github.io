@@ -151,7 +151,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 00px;
   background-image: url('{{ site.bg_image }}');
   background-position: 0 -70px; 
 }
@@ -277,6 +277,13 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+}
+.post-title{
+  line-height:70%;
+}
+.post-meta{
+  font-style: italic;
+  line-height:70%;
 }
 
 .wrapper-footer {
