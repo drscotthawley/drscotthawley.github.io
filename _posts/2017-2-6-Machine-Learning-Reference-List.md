@@ -27,7 +27,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
     * Stanford Tutorial: <http://ufldl.stanford.edu/tutorial/>
 *  Concepts in NN/Deep Learning:
     * Backpropagation (i.e. the chain rule): 
-        * - neuralnetworksanddeeplearning.org book, chapter 3
+        * - [neuralnetworksanddeeplearning.org book, chapter 2](http://neuralnetworksanddeeplearning.com/chap2.html)
         * -  Chris Olah on backprop: <http://colah.github.io/posts/2015-08-Backprop/>
         * - Karpathy on backprop: <http://cs231n.github.io/optimization-2/>
 
