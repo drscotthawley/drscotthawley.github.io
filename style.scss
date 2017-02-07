@@ -234,15 +234,16 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 30px;
     color: white;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
-      color: $blue;
+      margin: 30 10px;
+      text-align: center;
+      //color: $blue;
     }
   }
 }
