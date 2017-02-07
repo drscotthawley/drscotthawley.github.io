@@ -30,7 +30,7 @@
 
 
     <meta property="og:url"
-        content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+        content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/" />
 
       {% if page.image %}
           <meta property="og:image" content="{{ site.url }}/{{page.image}}" />
