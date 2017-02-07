@@ -90,7 +90,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
     - Denoising Autoencoder: <https://www.quora.com/Is-it-possible-to-create-an-adaptive-filter-using-neural-network-so-that-after-training-it-can-filter-noisy-signal-and-give-desired-output>,    <https://www.quora.com/Can-a-denoising-autoencoder-remove-or-filter-noise-in-a-noisy-signal-like-audio-and-recover-the-clean-signal>
     - Dereverberation:
 
-### Extended Memory Architectures
+### Extended Memory Architectures:
 * Memory Networks, Weston,
     * First paper: <https://arxiv.org/abs/1410.3916.  >
     * Tutorial: <http://www.thespermwhale.com/jaseweston/icml2016/>
