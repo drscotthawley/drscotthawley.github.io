@@ -2,7 +2,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 *I'm mostly interested in audio processing, so...* 
 
-**Jump Right Into : Audio Processing via RNNs:**
+### Jump Right Into : Audio Processing via RNNs:
 
 * Generation/Synthesis of new sounds based on training set:
 
@@ -14,7 +14,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
         * WaveNet is slow.   "Fast Wavenet": <https://github.com/tomlepaine/fast-wavenet>
         * WaveNet in Keras: <https://github.com/basveeling/wavenet>
 
-**General Neural Network References:**
+### General Neural Network References:
 
 * Books/Guides on Deep/Machine Learning: (all excellent)
     * <http://neuralnetworksanddeeplearning.com>
@@ -32,7 +32,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
         * - Karpathy on backprop: <http://cs231n.github.io/optimization-2/>
 
 
-**Recurrent Neural Networks (RNN) (which all feature LSTM nowadays):**
+### Recurrent Neural Networks (RNN) (which all feature LSTM nowadays):
 
 * RNNs in general:
     * Karpathy post: <http://karpathy.github.io/2015/05/21/rnn-effectiveness/, Karpathy talk: https://www.youtube.com/watch?v=yCC09vCHzF8>
@@ -49,7 +49,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 *Traditional RNNs suffer from vanishing/exploding gradient. Hence LSTM & others...*
 
-**Long Short-Term Memory (LSTM):**
+### Long Short-Term Memory (LSTM):
 
 * Tutorial: <http://nbviewer.jupyter.org/github/JonathanRaiman/theano_lstm/blob/master/Tutorial.ipynb>
 * Chris Olah post: <http://colah.github.io/posts/2015-08-Understanding-LSTMs>
@@ -64,7 +64,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 * LSTM backpropagation tutorial :-)   <http://arunmallya.github.io/writeups/nn/lstm/index.html#/>
 
 
-**LSTM Alternatives/advances:**
+### LSTM Alternatives/advances:
 
 * GRU (Gated Recurrent Unit) by Cho et al, ``Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation, <http://arxiv.org/pdf/1406.1078v3.pdf  (2014) >
     * Chung et al. Good exp of GRU & LSTM, say GRU comparable to LSTM,  <http://arxiv.org/abs/1412.3555>
@@ -83,7 +83,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 * Neural Turing Machines (NTM), Graves et al, <https://arxiv.org/pdf/1410.5401v2.pdf>
 * ConvNet for Audio -- Spotify analysis & recommendation: <http://benanne.github.io/2014/08/05/spotify-cnns.html>
 
-**LSTM for Sequence to Sequence Learning:**
+### LSTM for Sequence to Sequence Learning:
 
 - Main paper: <http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf>
 - There’s an encoder step and a decoder step
@@ -99,7 +99,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 
 
-**Reinforcement Learning:**
+### Reinforcement Learning:
 
 * OpenAIGym: <https://openai.com/blog/openai-gym-beta/>
     * Tutorial for cart-pole problem: <http://kvfrans.com/simple-algoritms-for-solving-cartpole/>
@@ -108,13 +108,13 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 * BetaGo: <https://github.com/maxpumperla/betago>
 
 
-**Data Representation:**
+### Data Representation:
 
 Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo Sprechman's talk <https://youtu.be/OS6rZXKVU1Y?t=20m44s>
 
 
 
-**Related Approaches to Neural Networks:  (historical)**
+### Related Approaches to Neural Networks:  (historical)
 
 * Hidden Markov Models (HMM).  Dahl used for text classification: George E. Dahl, Ryan P. Adams, and Hugo Larochelle. ``Training restricted boltzmann machines on word observations.'' arXiv:1202.5695v1 (2012)
 * Support Vector Machine (SVM).  SVMs are globally convex, which is nice (whereas NNs are only locally convex).  Very effective for classification tasks.  But NNs have beat them out for complex datasets & tasks.   Audio app:  e.g., Audio Classificiation by Gou & Li (2003) <http://www.ee.columbia.edu/~sfchang/course/spr-F05/papers/guo-li-svm-audio00.pdf>
@@ -122,7 +122,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
-**Frameworks (too many to choose from!):**
+### Frameworks (too many to choose from!):
 
 * Main Ones:
     * [Theano](http://deeplearning.net/software/theano/) - mature codebase, non-CUDA GPU support via libgpuarray
@@ -145,9 +145,9 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
-**More Tutorials (e.g., app-specific):**
+### More Tutorials (e.g., app-specific):
 
-* Lots in <http://machinelearningmastery.com>
+* Lots in <http://maachinelearningmastery.com>
 * [Andrew Trask’s Blog](http://iamtrask.github.io): Andrew writes excellent tutorials.  The first LSTM guide I read was his. 
 * Tutorials on Theano, Keras, Lasagne, RNN: <https://github.com/Vict0rSch/deep_learning>
 * Theano:
@@ -165,14 +165,14 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
     * Tutorial Videos: <https://www.youtube.com/playlist?list=PLLHTzKZzVU9ebuL6DCclzI54MrPNFGqbW>
   
 
-**More Demos:**
+### More Demos:
 
 * Anything by [@karpathy](http://karpathy.github.io/)
 * Lightweight Theano-LSTM: <https://github.com/JonathanRaiman/theano_lstm>
 * TensorFlow Playgrounds: <http://playground.tensorflow.org >
 
 
-**Audio Applications:**
+### Audio Applications:
 
 * Huang et al, "Deep Recurrent NNs for Source Separation" <http://posenhuang.github.io/papers/Joint_Optimization_of_Masks_and_Deep%20Recurrent_Neural_Networks_for_Monaural_Source_Separation_TASLP2015.pdf>
     *  Qutoe: "in parallel, for improving the efficiency of DRNN training, utterances are chopped into sequences of at most 100 time steps"
@@ -185,7 +185,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
-**Datasets of Musical Audio for Machine Learning:**
+### Datasets of Musical Audio for Machine Learning:
 
 - IRMAS: for musical Instrument recognition: <http://www.mtg.upf.edu/download/datasets/irmas>
 
@@ -206,7 +206,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
-**Hardware:**
+### Hardware:
 
 * Amazon Web Services (AWS):
     * Stanford disk image (AMI) with everything preinstalled: <https://cs231n.github.io/aws-tutorial/>
@@ -229,7 +229,8 @@ sudo python setup.py install
 
 FACTOR OF 10 SPEEDUP using the g2.xlarge GPUs vs my Macbook Pro (no GPU)!!
 
-**Checkpointing:**
+
+### Checkpointing:
 
 run 'watch' command to execute AWS transfer to S3 ever <n> seconds
 ...and spot instance went down without any checkpoint
@@ -250,13 +251,13 @@ aws configure
 
 
 
-**Self-Organizing Maps:**
+### Self-Organizing Maps:
 
 * “Unsupervised Classification of Audio Signals by Self-Organizing Maps and Bayesian Labeling”: <http://link.springer.com/chapter/10.1007%2F978-3-642-28942-2_6>
 * “Visualization of Tonal Content in the  Symbolic and Audio Domains“ <http://www.ccarh.org/publications/cm/15/cm15-10-toiviainen.pdf>
 
 
-**"Weird Stuff"**:**
+### "Weird Stuff":
 
 * Stochastic path Deep NN for image rec: <http://arxiv.org/pdf/1603.09382v1.pdf>
 
