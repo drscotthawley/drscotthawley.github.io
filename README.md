@@ -1,12 +1,13 @@
 I mangled this a bit from the original jekyll-now repo:
 
 - added the background image
-- turned the headertext to white
-- added dates on the list of quotes.
+- turned the header text to white
+- added dates on the list of posts.
 - added the Gemfile (for local editing & serving jekyll)
-- added the Open Graph data to _layouts/default.html
+- added the Open Graph metadata to _layouts/default.html
 - put boxes around the little "READ MORE" tags
 - added capability for subtitles
+- changes sizes and moved this a smidge, to make 'em look nice.
 
 > March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
 
