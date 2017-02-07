@@ -154,11 +154,13 @@ img {
   margin-bottom: 50px;
   background-image: url('{{ site.bg_image }}');
   background-position: 0 -70px; 
+  background-size:100%;
+
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  //border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
