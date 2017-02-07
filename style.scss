@@ -274,8 +274,14 @@ nav {
   }
 
   .read-more {
+
     text-transform: uppercase;
     font-size: 15px;
+    border:1px;
+    border-style: solid;
+    padding: 2px;
+    padding-bottom: 0px;
+
   }
 }
 .post-title{
