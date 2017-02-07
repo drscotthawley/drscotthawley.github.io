@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -71,7 +71,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -152,6 +152,7 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
+  background-image: url('{{ site.bg_image }}')
 }
 
 .masthead {
@@ -161,6 +162,7 @@ img {
   @include mobile {
     text-align: center;
   }
+  height:300px;
 }
 
 .site-avatar {
@@ -180,22 +182,12 @@ img {
   }
 }
 
-.header-image { 
-    position: relative; 
-    top: 0; 
-    left: 0; 
-} 
-.header-avatar { 
-    position: absolute; 
-    width: 70px;
-    height: 70px;
-    top: 60px; 
-    left: 80px; 
-} 
+
+
 
 .site-info {
   float: left;
-
+  color:white;
   @include mobile {
     float: none;
     display: block;
@@ -205,7 +197,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: white;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -215,7 +207,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: white;
   font-size: 16px;
 
   @include mobile {
@@ -225,9 +217,11 @@ img {
 
 nav {
   float: right;
+  margin-right: 30px;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
+  color:white;
 
   @include mobile {
     float: none;
@@ -238,7 +232,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: white;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
