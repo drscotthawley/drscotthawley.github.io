@@ -32,7 +32,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
         * - Karpathy on backprop: <http://cs231n.github.io/optimization-2/>
 
 
-### Recurrent Neural Networks (RNN) (which all feature LSTM nowadays):
+### Recurrent Neural Networks (RNN) (which mostly feature LSTM nowadays):
 
 * RNNs in general:
     * Karpathy post: <http://karpathy.github.io/2015/05/21/rnn-effectiveness/, Karpathy talk: https://www.youtube.com/watch?v=yCC09vCHzF8>
