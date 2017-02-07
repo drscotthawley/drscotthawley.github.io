@@ -9,7 +9,7 @@ I mangled this a bit from the original jekyll-now repo:
 - added capability for subtitles
 - changed sizes and moved this a smidge, to make 'em look nice.
 - changed the heading colors to match the Cayman theme
-
+- separated "bio" from "description"
 
 --------------------------
 
