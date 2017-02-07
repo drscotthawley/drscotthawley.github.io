@@ -33,11 +33,11 @@
         content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 
       {% if page.image %}
-          <meta property="og:image" content="{{page.image}}" />
-          <meta name="twitter:image" content="{{page.image}}" />
+          <meta property="og:image" content="{{ site.baseurl }}/{{page.image}}" />
+          <meta name="twitter:image" content="{{ site.baseurl }}/{{page.image}}" />
       {% else %}
-        <meta property="og:image" content="{{site.bg_image}}" />
-        <meta name="twitter:image" content="{{site.bg_image}}" />
+        <meta property="og:image" content="{{ site.baseurl }}/{{site.bg_image}}" />
+        <meta name="twitter:image" content="{{ site.baseurl }}/{{site.bg_image}}" />
       {% endif %}
 
 
