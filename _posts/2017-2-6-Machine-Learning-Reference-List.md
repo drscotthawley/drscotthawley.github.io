@@ -80,7 +80,6 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
     * End-to-End version: <http://arxiv.org/abs/1503.08895>
     * Keras version: <https://github.com/fchollet/keras/blob/master/examples/babi_memnn.py>
 * Stack-Augmented Recurrent Nets, Joulin & Mikolov  "Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets," <https://arxiv.org/pdf/1503.01007.pdf (2015)>
-* Neural Turing Machines (NTM), Graves et al, <https://arxiv.org/pdf/1410.5401v2.pdf>
 * ConvNet for Audio -- Spotify analysis & recommendation: <http://benanne.github.io/2014/08/05/spotify-cnns.html>
 
 ### LSTM for Sequence to Sequence Learning:
@@ -97,6 +96,11 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
     - Denoising Autoencoder: <https://www.quora.com/Is-it-possible-to-create-an-adaptive-filter-using-neural-network-so-that-after-training-it-can-filter-noisy-signal-and-give-desired-output>,    <https://www.quora.com/Can-a-denoising-autoencoder-remove-or-filter-noise-in-a-noisy-signal-like-audio-and-recover-the-clean-signal>
     - Dereverberation:
 
+### Extended (Differentiable) Memory Architectures
+* Neural Turing Machines (NTM), Graves et al, <https://arxiv.org/pdf/1410.5401v2.pdf>
+* Neural Stack Machines:
+	- Original paper: "Learning to Transduce with Unbounded Memory" by Grefenstette et al.: <https://arxiv.org/abs/1506.02516>
+	- [Trask's tutorial blog on Neural Stack Machines](http://iamtrask.github.io/2016/02/25/deepminds-neural-stack-machine/)
 
 
 ### Reinforcement Learning:
