@@ -1,6 +1,5 @@
 ---
 layout: default
-post.date: {{ page.date | date: "%B %e, %Y" }}
 ---
 
 <article class="post">
@@ -9,9 +8,7 @@ post.date: {{ page.date | date: "%B %e, %Y" }}
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
-  <div class="alsodate">
-     Also date is {{post.date}}
-  </div>
+  
 
   <div class="entry">
     {{ content }}
