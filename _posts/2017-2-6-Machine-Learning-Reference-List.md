@@ -147,7 +147,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 **More Tutorials (e.g., app-specific):**
 
-* Lots in <http://maachinelearningmastery.com>
+* Lots in <http://machinelearningmastery.com>
 * [Andrew Trask’s Blog](http://iamtrask.github.io): Andrew writes excellent tutorials.  The first LSTM guide I read was his. 
 * Tutorials on Theano, Keras, Lasagne, RNN: <https://github.com/Vict0rSch/deep_learning>
 * Theano:
