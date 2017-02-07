@@ -19,6 +19,7 @@ On internal, I run the Jupyter notebook...
 or for torch, similarly,  
         `me@internal:~$ itorch notebook --no-browser --port=8889`  
 This generates a bunch of text, including a URL with a token. It'll say...
+
  > Copy/paste this URL into your browser when you connect for the first time, to login with a token:  
  > http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc  
 
