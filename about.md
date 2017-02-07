@@ -8,7 +8,7 @@ I dabble in a variety of technologies, usually with the goal of improving the ph
 
 ### More Information
 
-[My website](http://www.scotthawley.com)
+[My music website](http://www.scotthawley.com)
 
 ### Contact me
 How about a message on twitter?  [@drscotthawley](http://www.twitter.com/drscotthawley)
