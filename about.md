@@ -8,7 +8,7 @@ I dabble in a variety of technologies, usually with the goal of improving the ph
 
 ### Affiliations:
 
-<a href="http://www.belmont.edu">Belmont University <img src="http://i.imgur.com/5OKrXVYs.png" height="100" align="top"></a>
+<a href="http://www.belmont.edu">Belmont University <img src="http://i.imgur.com/5OKrXVYs.png" height="100" align="top" style="vertical-align: top;"></a>
 
 <a href="http://aspirecoop.github.io">ASPIRE Research Co-op <img src="https://github.com/aspirecoop/aspirecoop.github.io/blob/master/images/aspire_logo_lines.png?raw=true" height="100" align="top"></a>
 
