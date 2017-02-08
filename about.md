@@ -6,7 +6,7 @@ permalink: /about/
 
 I dabble in a variety of technologies, usually with the goal of improving the physics education of audio engineering students.
 
-### Affiliations:
+### Affiliations
 
 <a href="http://www.belmont.edu">Belmont University <img src="http://i.imgur.com/5OKrXVYs.png" height="100" align="top" style="vertical-align: top;"></a>
 
