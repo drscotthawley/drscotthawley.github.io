@@ -6,6 +6,7 @@ description: First in a series on Machine Larning Foundations, which applies to 
 excerpt: First in a series on Machine Larning Foundations, which applies to much of science and statistics as well. 
 image: images/FG-images/header_image.jpg
 bg-image: images/FG-images/header_image.jpg
+comments: true
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ![header_img](https://drscotthawley.github.io/images/FG-images/header_image.jpg)
