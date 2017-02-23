@@ -182,7 +182,7 @@ plt.show()
 
 In the above plot, we colored the points by iteration number, starting with the dark purple at the initial location of x=-1, and bouncing around ever-farther from the solution as the color changes to yellow.  As this happens, the error is growing exponentially; this is one example of a numerical instability.  Thus, this algorithm is <a href="http://bit.ly/2kZZVP1">not entirely stable.</a>
 
-<img src="notentirelystable-0.png">
+<img src="http://hedges.belmont.edu/~shawley/PHY4410/notentirelystable-0.png">
 
 One way to guard against this to check: is our value of $$f(x)$$ at the current iteration *larger* than the value it was at the previous iteration?  If so, that's a sign that our learning rate is too large, and we can use this criterion to dynamically adjust the learning rate.  
 
