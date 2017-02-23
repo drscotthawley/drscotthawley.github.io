@@ -1053,8 +1053,8 @@ $$y(t) = A\sin(\omega t + \phi),$$
 
 where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
-<br>
-<br>
+
+
 *The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
 
 PHY4410 class, you can stop here.*
