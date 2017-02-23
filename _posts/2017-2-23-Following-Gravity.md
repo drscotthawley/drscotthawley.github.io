@@ -266,7 +266,7 @@ So in the preceding example, we start at $x=-1$, than the unstable behavior star
 
 **Exercise:** In the example above, we only decrease $\alpha$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
 
-You may say, *"Why do I need to worry about this instability stuff? As long as $\alpha<1$ the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
+You may say, * "Why do I need to worry about this instability stuff? As long as $\alpha<1$ the system will converge, right?" *  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
 
 ### Challenge: Non-global minima
 To explore more complicated functions, we're going to take advantage of the SymPy package, to let it take derivatives for us.  Try executing the import in the next cell, and if nothing happens it means you have SymPy installed.  If you get an error, you may need to go into a Terminal and run "`pip install sympy`". 
@@ -1022,7 +1022,7 @@ print("Estimate for g = ",-2*c[2])
 
 So, in this case, we were able to *show* not only that the data fits a parabola well, but that the higher order term (for $t^3$) is negigible!!  Great science!    In practice, however, for non-perfect data, this does not work out.  The higher-order term introduces an extreme sensitivity to the noise, which can render the results inconclusive.
 
-**Exercise:** Go back to where the data is generated, and uncomment the line that says "# for later; add noise in" and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
+**Exercise:** Go back to where the data is generated, and uncomment the line that says '# for later; add noise in' and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
 
 Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce the parameters of the motion (initial position & velocity, and acceleration), and we get a very low error in doing so. :-)  Trying to show that higher-order terms in a polynomial expansion don't contribute...that worked for "perfect data" but in a practical case it didn't work out because polynomials are "ill behaved."   Still, we got some useful physics out of it. And that works for many applications.  We could stop here. 
 
@@ -1036,9 +1036,9 @@ where the fit parameters will the amplitude $A$, frequency $\omega$ and phase co
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
 <br>
 <br>
-<div align="center">*The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
+*The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
 
-PHY4410 class, you can stop here.*</div>
+PHY4410 class, you can stop here.*
 
 -SH
 
