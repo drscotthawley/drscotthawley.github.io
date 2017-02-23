@@ -7,6 +7,7 @@ excerpt: First in a series on Machine Larning Foundations, which applies to much
 image: images/FG-images/header_image.jpg
 bg-image: images/FG-images/header_image.jpg
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ![header_img](https://drscotthawley.github.io/images/FG-images/header_image.jpg)
 <div style="text-align: left; font-size: small"> 
 First in a series on "Machine Larning Foundations," which applies to much of science and statistics as well.
