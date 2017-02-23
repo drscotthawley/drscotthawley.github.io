@@ -7,9 +7,6 @@ excerpt: First in a series on Machine Larning Foundations, which applies to much
 image: http://hedges.belmont.edu/~shawley/PHY4410/header_image.jpg
 bg-image: http://hedges.belmont.edu/~shawley/PHY4410/header_image.jpg
 ---
-
-# "Following Gravity" (MLF Part 1a: Regression) 
-
 <div style="text-align: left; font-size: small"> 
 First in a series on "Machine Larning Foundations," which applies to much of science and statistics as well.
 </div>
