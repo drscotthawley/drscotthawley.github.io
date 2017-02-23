@@ -4,8 +4,8 @@ title: Following Gravity - ML Foundations Part Ia.
 subtitle: Gradient Descent and Regression
 description: First in a series on Machine Larning Foundations, which applies to much of science and statistics as well. 
 excerpt: First in a series on Machine Larning Foundations, which applies to much of science and statistics as well. 
-image: http://hedges.belmont.edu/~shawley/PHY4410/header_image.jpg
-bg-image: http://hedges.belmont.edu/~shawley/PHY4410/header_image.jpg
+image: images/FG-images/header_image.jpg
+bg-image: images/FG-images/header_image.jpg
 ---
 <div style="text-align: left; font-size: small"> 
 First in a series on "Machine Larning Foundations," which applies to much of science and statistics as well.
