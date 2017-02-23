@@ -17,7 +17,7 @@ First in a series on "Machine Larning Foundations," which applies to much of sci
 <div>
 <p style="font-style:italic">by <a href="https://drscotthawley.github.io">Scott Hawley</a>, February 23, 2017</p>
     <p style="text-align: left"> 
-    <a href="Following%20Gravity.ipynb">
+    <a href="https://github.com/drscotthawley/machinelearningfoundations/blob/master/Ia-FollowingGravity.ipynb">
     Click here</a> to download the <a href="http://jupyter.org">Jupyter</a> notebook file for this document.
     </p>
 </div>
