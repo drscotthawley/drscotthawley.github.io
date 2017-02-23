@@ -31,10 +31,10 @@ By the end of this session, we will -- as an example problem -- have used the 1-
 
 ## Optimization Basics: Gradient Descent
 
-Let's put the "sample problem" aside for now, and talk about the general problem of optimization.   Often we may wish to minimize some function $f(x)$.  In science, doing so may enable us to fit a curve to our data, as we'll do below.   Similarly,'machine learning' systems often operate on the basis of minimizing a 'cost' function to discern patterns in complex datasets.  
+Let's put the "sample problem" aside for now, and talk about the general problem of optimization.   Often we may wish to minimize some function $$f(x)$$.  In science, doing so may enable us to fit a curve to our data, as we'll do below.   Similarly,'machine learning' systems often operate on the basis of minimizing a 'cost' function to discern patterns in complex datasets.  
 
 
-Thus we want to find the value of $x$ for which $f(x)$ is the smallest.  A graph of such a function might look like this...
+Thus we want to find the value of $$x$$ for which $$f(x)$$ is the smallest.  A graph of such a function might look like this...
 
 
 ```python
@@ -50,17 +50,22 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_1_0.png)
 
 
-If $f(x)$ is differentiable and the derivative $df/dx$ can be evaluated easily, then we can perform a so-called "gradient descent".  
+If $$f(x)$$ is differentiable and the derivative $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
 
 We do so as follows:
 
-1. Start with some initial guess for $x$
-2. "Go in the direction of  $-df/dx$":
+1. Start with some initial guess for $$x$$
+2. "Go in the direction of  $$-df/dx$$":
+
 $$x_{new} = x_{old} - \alpha {df\over dx},$$
-where $\alpha$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $x$ is given by $\Delta x \equiv - \alpha (df/dx)$.    
+
+where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by 
+
+$$\Delta x \equiv - \alpha (df/dx).$$    
+
 3. Repeat step 2 until some approximation criterion is met.
 
-A nice feature of this method is that as $df/dx \rightarrow 0$, so too $\Delta x\rightarrow0$.  So an "adaptive stepsize" is built-in.
+A nice feature of this method is that as $$df/dx \rightarrow 0$$, so too $$\Delta x\rightarrow0$$.  So an "adaptive stepsize" is built-in.
 
 Now let's try this out with some Python code...
 
@@ -118,13 +123,13 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_4_1.png)
 
 
-Notice how the larger learning rate ($\alpha$=0.8) meant that the steps taken were so large that they "overshot" the minimum, whereas the too-small learning rate ($\alpha=0.002$) still hadn't come anywhere close to the minimum before the maximum iteration was reached.
+Notice how the larger learning rate ($$\alpha$$=0.8) meant that the steps taken were so large that they "overshot" the minimum, whereas the too-small learning rate ($$\alpha=0.002$$) still hadn't come anywhere close to the minimum before the maximum iteration was reached.
 
 **Exercise:** Experiment by editing the above code: Try different learning rates and observe the behavior.
 
 ### Challenge: Instability
 
-You may have noticed, if you made the learning rate too large, that the algorithm does *not* converge to the solution but instead 'blows up'.   This is the 'flip side' of the 'adaptive step size' feature of this algorithm:  If you jump "across" the minimum to the other side and end up a greater distance from the minimum that where you started, you will encounter an even larger gradient, which will lead to an even larger $\Delta x$, and so on.
+You may have noticed, if you made the learning rate too large, that the algorithm does *not* converge to the solution but instead 'blows up'.   This is the 'flip side' of the 'adaptive step size' feature of this algorithm:  If you jump "across" the minimum to the other side and end up a greater distance from the minimum that where you started, you will encounter an even larger gradient, which will lead to an even larger $$\Delta x$$, and so on.
 
 We can see this with the same code from before, let's just use a different starting point and a step size that's clearly too large...
 
@@ -179,7 +184,7 @@ In the above plot, we colored the points by iteration number, starting with the 
 
 <img src="notentirelystable-0.png">
 
-One way to guard against this to check: is our value of $f(x)$ at the current iteration *larger* than the value it was at the previous iteration?  If so, that's a sign that our learning rate is too large, and we can use this criterion to dynamically adjust the learning rate.  
+One way to guard against this to check: is our value of $$f(x)$$ at the current iteration *larger* than the value it was at the previous iteration?  If so, that's a sign that our learning rate is too large, and we can use this criterion to dynamically adjust the learning rate.  
 
 Let's add some 'control' code to that effect, to the previous script, and also print out the values of the relevant variables so we can track the progress:
 
@@ -264,11 +269,11 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_9_1.png)
 
 
-So in the preceding example, we start at $x=-1$, than the unstable behavior starts and we begin diverging from the minimum, so we decrease $\alpha$ as often as our criterion tells us to.  Finally $\alpha$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
+So in the preceding example, we start at $$x=-1$$, than the unstable behavior starts and we begin diverging from the minimum, so we decrease $$\alpha$$ as often as our criterion tells us to.  Finally $$\alpha$$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
 
-**Exercise:** In the example above, we only decrease $\alpha$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
+**Exercise:** In the example above, we only decrease $$\alpha$$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
 
-You may say, * "Why do I need to worry about this instability stuff? As long as $\alpha<1$ the system will converge, right?" *  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
+You may say, *"Why do I need to worry about this instability stuff? As long as $$\alpha&lt;1$$ the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
 
 ### Challenge: Non-global minima
 To explore more complicated functions, we're going to take advantage of the SymPy package, to let it take derivatives for us.  Try executing the import in the next cell, and if nothing happens it means you have SymPy installed.  If you get an error, you may need to go into a Terminal and run "`pip install sympy`". 
@@ -339,16 +344,18 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_15_1.png)
 
 
-All the runs start at $x=6$.  Notice how the runs marked in organge and green go on to find a "local" minimum, but they don't find the "global" minimum (the overall lowest point) like the run marked in red does.  The problem of ending up at non-global local minima is a generic problem for all kinds of optimization tasks.  It tends to get even worse when you add more parameters...
+All the runs start at $$x=6$$.  Notice how the runs marked in organge and green go on to find a "local" minimum, but they don't find the "global" minimum (the overall lowest point) like the run marked in red does.  The problem of ending up at non-global local minima is a generic problem for all kinds of optimization tasks.  It tends to get even worse when you add more parameters...
 
 ### Multidimensional Gradient Descent  
 *(A descent into darkness...)*
 
 Let's define a function of two variables, that's got at least one minimum in it.  We'll choose
+
 $$f(x,y) = -\left( \cos x + 3\cos y \right) /2,$$
+
 which actually has infinitely many minima, but we'll try to 'zoom in' one just one.
 
-We can vizualize this function via the graph produced by the code below; in the graph, darker areas show lower values than ligher areas, and there is a minimum at the point $x=0,y=0$ where $f(0,0)=-2$.
+We can vizualize this function via the graph produced by the code below; in the graph, darker areas show lower values than ligher areas, and there is a minimum at the point $$x=0,y=0$$ where $$f(0,0)=-2$$.
 
 
 ```python
@@ -375,6 +382,7 @@ plt.show()
 The way we find a minimum is similar to what we did before, except we use partial derivatives in the x- and y-directions:
 
 $$x_{new} = x_{old} + \Delta x,\ \ \ \ \ \ \Delta x = - \alpha {\partial f\over \partial x}  $$
+
 $$y_{new} = y_{old} + \Delta y,\ \ \ \ \ \ \Delta y = - \alpha {\partial f\over \partial y},$$
 
 
@@ -433,9 +441,9 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_20_1.png)
 
 
-In the above figure, we've shown the 'path' the algorithm takes in $x$-$y$ space, coloring the dots according to iteration number, so that the first points are dark purple, and later points tend to yellow.
+In the above figure, we've shown the 'path' the algorithm takes in $$x$$-$$y$$ space, coloring the dots according to iteration number, so that the first points are dark purple, and later points tend to yellow.
 
-Note that due to the asymmetry in the function (between $x$ and $y$), the path descends rapidly in $y$, and then travels along the "valley" in $x$ to reach the minimum.   This "long narrow valley" behavior is common in multidimensional optimization problems: the system may 'solve' one parameter quickly, but require thousands of operations to find the other one.  
+Note that due to the asymmetry in the function (between $$x$$ and $$y$$), the path descends rapidly in $$y$$, and then travels along the "valley" in $$x$$ to reach the minimum.   This "long narrow valley" behavior is common in multidimensional optimization problems: the system may 'solve' one parameter quickly, but require thousands of operations to find the other one.  
 
 Many sophisticated schemes have arisen to handle this challenge, and we won't cover them here.  For now, suffice it to say that, yes, this sort of thing happens.  You may have 'found' highly accurate values for certain parameters, but others are bogging down the process of convergence.
 
@@ -450,29 +458,31 @@ This is such a common thing to do in science and statistics, that everyone shoul
 
 ### How to Fit a Line
 
-Let's say we're trying to fit a line to a bunch of data.  We've been given $n$ data points with coordinates $(x_i,y_i)$ where $i=1..N$.  The problem becomes, given a line $f(x) = mx+b$, find the values of the parameters $m$ and $b$ which minimize the overall "error".
+Let's say we're trying to fit a line to a bunch of data.  We've been given $$n$$ data points with coordinates $$(x_i,y_i)$$ where $$i=1..N$$.  The problem becomes, given a line $$f(x) = mx+b$$, find the values of the parameters $$m$$ and $$b$$ which minimize the overall "error".
 
 #### add some kinda picture here?
 
-The error can take many forms; one is the squared error $SE$, which is just the sum of the squares of the "distances" between each data point's $y$-value and the "guess" from the line fit $f$ at each value of $x$:
+The error can take many forms; one is the squared error $$SE$$, which is just the sum of the squares of the "distances" between each data point's $$y$$-value and the "guess" from the line fit $$f$$ at each value of $$x$$:
 
 $$ SE = (f(x_1) - y_1)^2 + (f(x_2) - y_2)^2 + ... (f(x_n)-y_n)^2,$$
 
 We can write this concisely as
 $$ SE = \sum_{i=1}^n (f(x_i)-y_i)^2.$$
 
-Another popular form is the "mean squared error" $MSE$, which is just $SE/n$:
+Another popular form is the "mean squared error" $$MSE$$, which is just $$SE/n$$:
 
 $$ MSE = {1\over n}\sum_{i=1}^n (f(x_i)-y_i)^2.$$
 
 The MSE has the nice feature that as you add more data points, it tends to hold a more-or-less consistent value (as opposed to the SE which gets bigger as you add more points).  We'll use the MSE in the work that follows.
 
-So expanding out $f(x)$, we see that the MSE is a function of $m$ and $b$, and these are the parameters we'll vary to minimize the MSE:
+So expanding out $f(x)$, we see that the MSE is a function of $$m$$ and $$b$$, and these are the parameters we'll vary to minimize the MSE:
+
 $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
-So, following our earlier word on multidimensional optimization, we start with guesses for $m$ and $b$ and then update according to gradient descent:
+So, following our earlier word on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
 
 $$m_{new} = m_{old} + \alpha \Delta m,\ \ \ \ \ \ \Delta m = {\partial (MSE)\over\partial m} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
+
 $$b_{new} = b_{old} + \alpha \Delta b,\ \ \ \ \ \ \Delta b = {\partial (MSE)\over\partial b} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(1).$$
 
 So, to start off, let's get some data...
@@ -506,7 +516,7 @@ plot_data(x_data,y_data, zero_y=True)
 
 *Note: in contrast to earlier parts of this document which include complete python programs in every code post, for brevity's sake we will start using the notebook "as intended", relying on the internal state and adding successive bits of code which make use of the "memory" of previously-defined variables.*
 
-Let's map out the MSE for this group of points, as a function of possible $m$ and $b$ values...
+Let's map out the MSE for this group of points, as a function of possible $$m$$ and $$b$$ values...
 
 
 ```python
@@ -534,7 +544,7 @@ plt.show()
 
 We see the minimum near the "exact" values chosen in the begininng.  (Note that we've plotted the logarithm of the MSE just to make the colors stand out better.)
 
-Next we will choose starting guesses for $m$ and $b$, and use gradient descent to fit the line...
+Next we will choose starting guesses for $$m$$ and $$b$$, and use gradient descent to fit the line...
 
 
 ```python
@@ -708,7 +718,7 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_28_1.png)
 
 
-*Note that the optimized values $(m,b)$ that we find may not exactly match the "exact" values we used to make the data, because the noise we added to the data can throw this off.  In the limit where the noise amplitude goes to zero, our optimized values will exactly match the "exact" values used to generated the data.*
+*Note that the optimized values $$(m,b)$$ that we find may not exactly match the "exact" values we used to make the data, because the noise we added to the data can throw this off.  In the limit where the noise amplitude goes to zero, our optimized values will exactly match the "exact" values used to generated the data.*
 
 Let's see the results of our line fit...
 
@@ -738,27 +748,32 @@ Great!
 ### Least Squares Fitting with Nonlinear Functions
 
 We can generalize the technique describe above to fit polynomials 
+
 $$ f(x) = c_0 + c_1 x + c_2 x^2 + ...c_k x^k,$$
-where $c_0...c_k$ are the parameters we will tune, and $k$ is the order of the polynomial. (Typically people use the letter $a$ for polynomial coefficients, but in the math rendering of Jupter, $\alpha$ and $a$ look too much alike, so we'll use $c$.) Written more succinctly,
+
+where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
+
 $$ f(x) = \sum_{j=0}^k c_j x^j.$$
 
 (Indeed, we could even try non-polynomial basis functions, e.g.,
-$ f(x) = c_0 + c_1 g(x) + c_2 h(x) + ...,$
+
+$$ f(x) = c_0 + c_1 g(x) + c_2 h(x) + ...,$$
+
 but let's stick to polynomials for now.)
 
-The key thing to note is that for each parameter $c_j$, the update $\Delta c_j$ will be
+The key thing to note is that for each parameter $$c_j$$, the update $$\Delta c_j$$ will be
 
 $$\Delta c_j = -\alpha {\partial (MSE)\over \partial c_j} 
 = -\alpha {\partial (MSE)\over \partial f}{\partial f\over \partial c_j}$$
 $$= -\alpha {2\over n}\sum_{i=1}^n [f(x_i)-y_i](x_i)^{j} $$
 
 
-*(Note that we are not taking the derivative with respect to $x_i$, but rather with respect to $c_j$.  Thus there is no "power rule" that needs be applied to this derivative.  Also there is no sum over j.)*
+*(Note that we are not taking the derivative with respect to $$x_i$$, but rather with respect to $$c_j$$.  Thus there is no "power rule" that needs be applied to this derivative.  Also there is no sum over j.)*
 
 The following is a complete code for doing this, along with some added refinements:
 
-* $\alpha$ is now $\alpha_j$, i.e. different learning rates for different directions
-* we initialise $\alpha_j$ such that larger powers of $x$ start with smaller coefficients
+* $$\alpha$$ is now $$\alpha_j$$, i.e. different learning rates for different directions
+* we initialise $$\alpha_j$$ such that larger powers of $$x$$ start with smaller coefficients
 * we put the fitting code inside a method (with a bunch of parameters) so we can call it later
 
 
@@ -883,7 +898,7 @@ plot_data_and_curve(x_data,y_data)
 ![png](https://drscotthawley.github.io/images/FG-images/output_32_1.png)
 
 
-Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $|x|$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
+Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$|x|$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
 
 (For more general functions, I actually wrote a multi-parameter SymPy gradient-descient that is completely general, but it's *terrifically slow* so I won't be posting it here.  If you really want it, contact me.)
 
@@ -893,11 +908,11 @@ Ok. Now we're all we're going to do next is fit a parabola to the motion of a fa
 
 Well, from a philosophical standpoint and from the way that these methods will generalize to other situations, there are significant implications from the *methodology* we're about to follow.
 
-**The Challenge**: Given a set of one-dimensional data of position vs. time $y(t)$, can we find the underlying equation that gives rise to it?  Better put, can we fit a model to it, and how well can we fit it, and what kind of model will it be anyway?  
+**The Challenge**: Given a set of one-dimensional data of position vs. time $$y(t)$$, can we find the underlying equation that gives rise to it?  Better put, can we fit a model to it, and how well can we fit it, and what kind of model will it be anyway?  
 
 (This is the sort of thing that statisticians *do*, but it's also something physicists do, and one could argue, this is what *everybody* does *all the time*. )
 
-Let's get started.  I'm just going to specify y(t) at a series of $n+1$ time steps $t_i$ ($t_0$...$t_n$) and we'll make them evenly spaced, and we'll leave out any noise at all -- perfect data. :-) 
+Let's get started.  I'm just going to specify y(t) at a series of $$n+1$$ time steps $$t_i$$ ($$t_0$$...$$t_n$$) and we'll make them evenly spaced, and we'll leave out any noise at all -- perfect data. :-) 
 
 
 
@@ -1022,7 +1037,7 @@ print("Estimate for g = ",-2*c[2])
     Estimate for g =  9.79965559992
 
 
-So, in this case, we were able to *show* not only that the data fits a parabola well, but that the higher order term (for $t^3$) is negigible!!  Great science!    In practice, however, for non-perfect data, this does not work out.  The higher-order term introduces an extreme sensitivity to the noise, which can render the results inconclusive.
+So, in this case, we were able to *show* not only that the data fits a parabola well, but that the higher order term (for $$t^3$$) is negigible!!  Great science!    In practice, however, for non-perfect data, this does not work out.  The higher-order term introduces an extreme sensitivity to the noise, which can render the results inconclusive.
 
 **Exercise:** Go back to where the data is generated, and uncomment the line that says '# for later; add noise in' and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
 
@@ -1033,8 +1048,10 @@ Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce 
 *What if our data wasn't parabolic?* Sure, for motion in a uniform gravitational field this is fine, but what if we want to model the sinusoidal motion of a simple harmonic oscillator?  In that case, guessing a parabola would only work for very early times (thanks to [Taylor's theorem](https://en.wikipedia.org/wiki/Taylor's_theorem)).  Sure, we could fit a model where we've explictly put in a sine function in the code -- and I encourage you to write your own code to do this -- but perhaps there's a way to *deduce* the motion, by looking at the local behavior and thereby 'learning' the differential equation underlying the motion.
 
 **Exercise:** Copy the `polyfit()` code elsewhere (e.g. to text file or a new cell in this Jupyter notebook or a new notebook) and rename it `sinefit()`, and modify it to fit a sine function instead of a polynomial:
+
 $$y(t) = A\sin(\omega t + \phi),$$
-where the fit parameters will the amplitude $A$, frequency $\omega$ and phase constant $\phi$.  Try fitting to data generated for $A=3$, $\omega=2$, $\phi=1.57$ on $0\le t \le 10$.
+
+where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
 <br>
 <br>
