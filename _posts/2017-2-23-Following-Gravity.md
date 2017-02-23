@@ -475,7 +475,7 @@ $$ MSE = {1\over n}\sum_{i=1}^n (f(x_i)-y_i)^2.$$
 
 The MSE has the nice feature that as you add more data points, it tends to hold a more-or-less consistent value (as opposed to the SE which gets bigger as you add more points).  We'll use the MSE in the work that follows.
 
-So expanding out $f(x)$, we see that the MSE is a function of $$m$$ and $$b$$, and these are the parameters we'll vary to minimize the MSE:
+So expanding out $$f(x)$$, we see that the MSE is a function of $$m$$ and $$b$$, and these are the parameters we'll vary to minimize the MSE:
 
 $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
