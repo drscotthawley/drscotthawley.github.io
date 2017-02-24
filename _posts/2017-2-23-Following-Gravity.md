@@ -274,7 +274,7 @@ So in the preceding example, we start at $$x=-1$$, than the unstable behavior st
 
 **Exercise:** In the example above, we only decrease $$\alpha$$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
 
-You may say, *"Why do I need to worry about this instability stuff? As long as $$\alpha&lt;1$$ the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
+You may say, *"Why do I need to worry about this instability stuff? As long as $$\alpha$$ is less than 1, then the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
 
 ### Challenge: Non-global minima
 To explore more complicated functions, we're going to take advantage of the SymPy package, to let it take derivatives for us.  Try executing the import in the next cell, and if nothing happens it means you have SymPy installed.  If you get an error, you may need to go into a Terminal and run "`pip install sympy`". 
