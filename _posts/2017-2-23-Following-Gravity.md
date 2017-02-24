@@ -274,7 +274,7 @@ plt.show()
 ![png](../images/Ia-FollowingGravity_9_1.png)
 
 
-So in the preceding example, we start at $$x=-1$$, than the unstable behavior starts and we begin diverging from the minimum, so we decrease $$\alpha$$ as often as our criterion tells us to.  Finally $$\alpha$$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
+So in the preceding example, we start at $$x=-1$$, then the unstable behavior starts and we begin diverging from the minimum, so we decrease $$\alpha$$ as often as our criterion tells us to.  Finally $$\alpha$$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
 
 **Exercise:** In the example above, we only decrease $$\alpha$$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
 
