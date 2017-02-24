@@ -1100,7 +1100,7 @@ As an example, you can check your answer against [this](http://hedges.belmont.ed
 <hr>
 ## Afterward: Alternatives to "Simple" Gradient Descent
 
-There are *lots* of schemes that incorporate more sophisticated approaches in order to achieve convergence more reliabily and more quickly that the "simple" gradient descent we've been doing. 
+There are *lots* of schemes that incorporate more sophisticated approaches in order to achieve convergence more reliabily and more quickly than the "simple" gradient descent we've been doing. 
 
 Such schemes introduce concepts such as "momentum" and go by names such as Adagrad, Adadelta, Adam, RMSProp, etc... For an excellent overview of such methods, I recommend [Sebastian Ruder's blog post](http://sebastianruder.com/optimizing-gradient-descent/) which includes some great animations!
 
