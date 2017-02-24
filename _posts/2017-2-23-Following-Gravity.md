@@ -358,7 +358,7 @@ Let's define a function of two variables, that's got at least one minimum in it.
 
 $$f(x,y) = -\left( \cos x + 3\cos y \right) /2,$$
 
-which actually has infinitely many minima, but we'll try to 'zoom in' one just one.
+which actually has infinitely many minima, but we'll try to 'zoom in' on just one.
 
 We can vizualize this function via the graph produced by the code below; in the graph, darker areas show lower values than ligher areas, and there is a minimum at the point $$x=0,y=0$$ where $$f(0,0)=-2$$.
 
