@@ -9,7 +9,8 @@ bg-image: ../images/Ia-FollowingGravity_header.jpg
 comments: true
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-![header_img](https://drscotthawley.github.io/../images/Ia-FollowingGravity_header.jpg)<p style="text-align: right">*Image credit: NASA*</a>
+![header_img](https://drscotthawley.github.io/../images/Ia-FollowingGravity_header.jpg)
+<p style="text-align: right">*Image credit: NASA*</p>
 
 # "Following Gravity" (MLF Part 1a: Regression) 
 
