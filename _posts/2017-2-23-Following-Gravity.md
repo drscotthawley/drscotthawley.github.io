@@ -487,9 +487,9 @@ $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
 So, following our earlier word on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
 
-$$m_{new} = m_{old} + \alpha \Delta m,\ \ \ \ \ \ \Delta m = {\partial (MSE)\over\partial m} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
+$$m_{new} = m_{old} + \Delta m,\ \ \ \ \ \ \Delta m = -\alpha {\partial (MSE)\over\partial m} = \alpha {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
 
-$$b_{new} = b_{old} + \alpha \Delta b,\ \ \ \ \ \ \Delta b = {\partial (MSE)\over\partial b} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(1).$$
+$$b_{new} = b_{old} + \Delta b,\ \ \ \ \ \ \Delta b = -\alpha {\partial (MSE)\over\partial b} = -\alpha {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(1).$$
 
 So, to start off, let's get some data...
 
