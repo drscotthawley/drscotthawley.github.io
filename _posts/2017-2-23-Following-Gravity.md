@@ -1088,7 +1088,7 @@ Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce 
 
 $$y(t) = A\sin(\omega t + \phi),$$
 
-where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
+where the fit parameters will be the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
 <br>
 <br>
