@@ -752,7 +752,7 @@ We can generalize the technique describe above to fit polynomials
 
 $$ f(x) = c_0 + c_1 x + c_2 x^2 + ...c_k x^k,$$
 
-where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
+where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupyter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
 
 $$ f(x) = \sum_{j=0}^k c_j x^j.$$
 
