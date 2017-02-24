@@ -1076,7 +1076,7 @@ print("Estimate for g = ",-2*c[2])
 
 So, in this case, we were able to *show* not only that the data fits a parabola well, but that the higher order term (for $$t^3$$) is negigible!!  Great science!    In practice, however, for non-perfect data, this does not work out.  The higher-order term introduces an extreme sensitivity to the noise, which can render the results inconclusive.
 
-**Exercise:** Go back to where the data is generated, and uncomment the line that says "# for later; add noise in" and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
+**Exercise:** Go back to where the data is generated, and uncomment the line that says "# for later; add noise in" and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same as before, will still be "close."
 
 Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce the parameters of the motion (initial position & velocity, and acceleration), and we get a very low error in doing so. :-)  Trying to show that higher-order terms in a polynomial expansion don't contribute...that worked for "perfect data" but in a practical case it didn't work out because polynomials are "ill behaved."   Still, we got some useful physics out of it. And that works for many applications.  We could stop here. 
 
