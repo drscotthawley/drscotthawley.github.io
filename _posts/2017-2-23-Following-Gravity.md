@@ -24,7 +24,7 @@ First in a series on "Machine Learning Foundations," which applies to much of sc
 
 ###### Preface: I'm writing this for myself, current students & [ASPIRE](http://aspirecoop.github.io) collaborators, and to 'give back' to the internet community.   I recently had insight into my 'main' research problem, but started to hit a snag so decided to return to  foundations.  Going back to basics can be a good way to move forward...
 
-By the end of this session, we will -- as an example problem -- have used the 1-dimensional path of an object in the presesece of gravity, to  'train' a system to correctly infer (i.e. to 'learn') the constant of the motion -- initial position and velocity, and the acceleration due to gravity.  Hopefully we learn a few other things along the way. ;-)  
+By the end of this session, we will -- as an example problem -- have used the 1-dimensional path of an object in the presesece of gravity, to  'train' a system to correctly infer (i.e. to 'learn') the constants of the motion -- initial position and velocity, and the acceleration due to gravity.  Hopefully we learn a few other things along the way. ;-)  
 
 *In the next installment, "Part Ib," we'll derive the differential equation of motion, and in then in "Part II" we'll adapt the techniques we've learned here to do signal processing.*
 
