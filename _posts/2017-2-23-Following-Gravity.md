@@ -1,24 +1,27 @@
+
 ---
 layout: post
 title: Following Gravity - ML Foundations Part Ia.
 subtitle: Gradient Descent and Regression
 description: First in a series on Machine Learning Foundations, which applies to much of science and statistics as well. 
 excerpt: First in a series on Machine Learning Foundations, which applies to much of science and statistics as well. 
-image: images/FG-images/header_image.jpg
-bg-image: images/FG-images/header_image.jpg
+image: images/Ia-FollowingGravity_header.jpg
+bg-image: images/Ia-FollowingGravity_header.jpg
 comments: true
 ---
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-![header_img](https://drscotthawley.github.io/images/FG-images/header_image.jpg)
+![header_img](https://drscotthawley.github.io/images/Ia-FollowingGravity_header.jpg)<p style="text-align: right">*Image credit: NASA*</a>
+
+# "Following Gravity" (MLF Part 1a: Regression) 
+
 <div style="text-align: left; font-size: small"> 
-First in a series on "Machine Learning Foundations," which applies to much of science and statistics as well.
+First in a series on "Machine Larning Foundations," which applies to much of science and statistics as well.
 </div>
 
 <div>
 <p style="font-style:italic">by <a href="https://drscotthawley.github.io">Scott Hawley</a>, February 23, 2017</p>
     <p style="text-align: left"> 
     <a href="https://github.com/drscotthawley/machinelearningfoundations/blob/master/Ia-FollowingGravity.ipynb">
-    Click here</a> to download the <a href="http://jupyter.org">Jupyter</a> notebook file for this document.
+    Click here</a> to download the <a href="http://jupyter.org">Jupyter</a> notebook file for this document, so you can run the code.
     </p>
 </div>
 
@@ -36,7 +39,9 @@ Let's put the "sample problem" aside for now, and talk about the general problem
 
 Thus we want to find the value of $$x$$ for which $$f(x)$$ is the smallest.  A graph of such a function might look like this...
 
-*(Python code follows, to generate the graph)*
+*(Python code follows, to make the graph)*
+
+
 ```python
 import numpy as np, matplotlib.pyplot as plt
 fig, ax = plt.subplots()
@@ -47,10 +52,10 @@ plt.show()
 ```
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_1_0.png)
+![png](images/Ia-FollowingGravity_1_0.png)
 
 
-If $$f(x)$$ is differentiable and the derivative (aka slope) $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
+If $$f(x)$$ is differentiable and the derivative (*i.e.*, slope) $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
 
 We do so as follows:
 
@@ -58,15 +63,13 @@ We do so as follows:
 
 2. "Go in the direction of  $$-df/dx$$":
 
-     $$x_{new} = x_{old} - \alpha {df\over dx},$$
+  $$x_{new} = x_{old} - \alpha {df\over dx},$$
 
-    where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is    increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by 
-
-    $$\Delta x \equiv - \alpha {df \over dx}.$$    
+where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by $$\Delta x \equiv - \alpha (df/dx)$$.    
 
 3. Repeat step 2 until some approximation criterion is met.
 
-A nice feature of this method is that as $$df/dx \rightarrow 0$$, so too $$\Delta x\rightarrow0$$.  So an "adaptive stepsize" is built-in.
+A nice feature of this method is that as $$df/dx \rightarrow 0$$, so too $$\Delta x\rightarrow 0$$.  So an "adaptive stepsize" is built-in.
 
 Now let's try this out with some Python code...
 
@@ -92,7 +95,7 @@ for alpha in ([0.002,0.1,0.25,0.8]):
     x_arr = [x]
     y_arr = [f(x)]
     maxiter = 50
-    for iter in range(maxiter):	     # do the descent
+    for iter in range(maxiter):      # do the descent
         # these two lines are just for plotting later
         x_arr.append(x)
         y_arr.append( f(x) )
@@ -121,7 +124,7 @@ plt.show()
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_4_1.png)
+![png](images/Ia-FollowingGravity_4_1.png)
 
 
 Notice how the larger learning rate ($$\alpha$$=0.8) meant that the steps taken were so large that they "overshot" the minimum, whereas the too-small learning rate ($$\alpha=0.002$$) still hadn't come anywhere close to the minimum before the maximum iteration was reached.
@@ -154,7 +157,7 @@ x = -1                           # starting point
 x_arr = []
 y_arr = []
 maxiter = 12
-for iter in range(maxiter):	     # do the descent
+for iter in range(maxiter):      # do the descent
     x_arr.append(x)
     y_arr.append( f(x) )
     x = x - alpha * dfdx(x)
@@ -178,7 +181,7 @@ plt.show()
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_7_1.png)
+![png](images/Ia-FollowingGravity_7_1.png)
 
 
 In the above plot, we colored the points by iteration number, starting with the dark purple at the initial location of x=-1, and bouncing around ever-farther from the solution as the color changes to yellow.  As this happens, the error is growing exponentially; this is one example of a numerical instability.  Thus, this algorithm is <a href="http://bit.ly/2kZZVP1">not entirely stable.</a>
@@ -209,7 +212,7 @@ x_arr = []
 y_arr = []
 maxiter = 20
 f_old = 1e99   # some big number
-for iter in range(maxiter):	     # do the descent
+for iter in range(maxiter):      # do the descent
     # these two lines are just for plotting later
     x_arr.append(x)
 
@@ -219,7 +222,7 @@ for iter in range(maxiter):	     # do the descent
     print("iter = ",iter,"x = ",x,"f(x) =",f(x),"alpha = ",alpha)
     
     if (f_cur > f_old):         # check for runaway behavior
-        alpha = alpha * 0.1
+        alpha = alpha * 0.5
         print(" decreasing alpha. new alpha = ",alpha)
     f_old = f_cur
     
@@ -243,38 +246,40 @@ plt.show()
     alpha =  13.0
     iter =  0 x =  -1 f(x) = 5 alpha =  13.0
     iter =  1 x =  51.0 f(x) = 2501.0 alpha =  13.0
-     decreasing alpha. new alpha =  1.3
-    iter =  2 x =  -79.0 f(x) = 6401.0 alpha =  1.3
-     decreasing alpha. new alpha =  0.13
-    iter =  3 x =  -58.2 f(x) = 3505.6400000000003 alpha =  0.13
-    iter =  4 x =  -42.808 f(x) = 1920.140864 alpha =  0.13
-    iter =  5 x =  -31.41792 f(x) = 1051.9215371263997 alpha =  0.13
-    iter =  6 x =  -22.9892608 f(x) = 576.4846337304167 alpha =  0.13
-    iter =  7 x =  -16.752052992 f(x) = 316.1353854307761 alpha =  0.13
-    iter =  8 x =  -12.13651921408 f(x) = 173.56813706189303 alpha =  0.13
-    iter =  9 x =  -8.721024218419199 f(x) = 95.4983118550926 alpha =  0.13
-    iter =  10 x =  -6.193557921630207 f(x) = 52.747275571848704 alpha =  0.13
-    iter =  11 x =  -4.323232862006353 f(x) = 29.336808103144353 alpha =  0.13
-    iter =  12 x =  -2.9391923178847015 f(x) = 16.517236117281847 alpha =  0.13
-    iter =  13 x =  -1.9150023152346791 f(x) = 9.49723849782354 alpha =  0.13
-    iter =  14 x =  -1.1571017132736625 f(x) = 5.653087801408169 alpha =  0.13
-    iter =  15 x =  -0.5962552678225103 f(x) = 3.5480308800511136 alpha =  0.13
-    iter =  16 x =  -0.18122889818865762 f(x) = 2.39530170991599 alpha =  0.13
-    iter =  17 x =  0.12589061534039336 f(x) = 1.7640672163499962 alpha =  0.13
-    iter =  18 x =  0.35315905535189107 f(x) = 1.4184032076732578 alpha =  0.13
-    iter =  19 x =  0.5213377009603994 f(x) = 1.229117596521876 alpha =  0.13
-                  final x =  0.6457898987106956
+     decreasing alpha. new alpha =  6.5
+    iter =  2 x =  -599.0 f(x) = 360001.0 alpha =  6.5
+     decreasing alpha. new alpha =  3.25
+    iter =  3 x =  3301.0 f(x) = 10890001.0 alpha =  3.25
+     decreasing alpha. new alpha =  1.625
+    iter =  4 x =  -7424.0 f(x) = 55130626.0 alpha =  1.625
+     decreasing alpha. new alpha =  0.8125
+    iter =  5 x =  4641.625 f(x) = 21535401.390625 alpha =  0.8125
+    iter =  6 x =  -2899.390625 f(x) = 8412266.77758789 alpha =  0.8125
+    iter =  7 x =  1813.744140625 f(x) = 3286042.31937027 alpha =  0.8125
+    iter =  8 x =  -1131.965087890625 f(x) = 1283610.8903790116 alpha =  0.8125
+    iter =  9 x =  709.1031799316406 f(x) = 501411.1134293014 alpha =  0.8125
+    iter =  10 x =  -441.5644874572754 f(x) = 195864.32555832085 alpha =  0.8125
+    iter =  11 x =  277.6028046607971 f(x) = 76510.1115462191 alpha =  0.8125
+    iter =  12 x =  -171.8767529129982 f(x) = 29887.37169774183 alpha =  0.8125
+    iter =  13 x =  109.04797057062387 f(x) = 11675.363944430403 alpha =  0.8125
+    iter =  14 x =  -66.52998160663992 f(x) = 4561.298415793126 alpha =  0.8125
+    iter =  15 x =  43.20623850414995 f(x) = 1782.36656866919 alpha =  0.8125
+    iter =  16 x =  -25.37889906509372 f(x) = 696.8463158864023 alpha =  0.8125
+    iter =  17 x =  17.486811915683575 f(x) = 272.8149671431259 alpha =  0.8125
+    iter =  18 x =  -9.304257447302234 f(x) = 107.17772154028356 alpha =  0.8125
+    iter =  19 x =  7.440160904563896 f(x) = 42.47567247667326 alpha =  0.8125
+                  final x =  -3.025100565352435
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_9_1.png)
+![png](images/Ia-FollowingGravity_9_1.png)
 
 
 So in the preceding example, we start at $$x=-1$$, than the unstable behavior starts and we begin diverging from the minimum, so we decrease $$\alpha$$ as often as our criterion tells us to.  Finally $$\alpha$$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
 
 **Exercise:** In the example above, we only decrease $$\alpha$$ by a factor of 2 each time, but it would be more efficient to decrease by a factor of 10.  Try that and observe the behavior of the system.
 
-You may say, *"Why do I need to worry about this instability stuff? As long as $$\alpha$$ is less than 1, then the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
+You may say, *"Why do I need to worry about this instability stuff? As long as $$\alpha<1$$ the system will converge, right?"*  Well, for this simple system it seems obvious what needs to happen, but with multidimensional optimization problems (see below), it's not always obvious what to do. (Sometimes different 'dimensions' need different learning rates.) This simple example serves as an introduction to phenomena which arise in more complex situations.
 
 ### Challenge: Non-global minima
 To explore more complicated functions, we're going to take advantage of the SymPy package, to let it take derivatives for us.  Try executing the import in the next cell, and if nothing happens it means you have SymPy installed.  If you get an error, you may need to go into a Terminal and run "`pip install sympy`". 
@@ -342,7 +347,7 @@ plt.show()
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_15_1.png)
+![png](images/Ia-FollowingGravity_15_1.png)
 
 
 All the runs start at $$x=6$$.  Notice how the runs marked in organge and green go on to find a "local" minimum, but they don't find the "global" minimum (the overall lowest point) like the run marked in red does.  The problem of ending up at non-global local minima is a generic problem for all kinds of optimization tasks.  It tends to get even worse when you add more parameters...
@@ -351,9 +356,7 @@ All the runs start at $$x=6$$.  Notice how the runs marked in organge and green 
 *(A descent into darkness...)*
 
 Let's define a function of two variables, that's got at least one minimum in it.  We'll choose
-
 $$f(x,y) = -\left( \cos x + 3\cos y \right) /2,$$
-
 which actually has infinitely many minima, but we'll try to 'zoom in' one just one.
 
 We can vizualize this function via the graph produced by the code below; in the graph, darker areas show lower values than ligher areas, and there is a minimum at the point $$x=0,y=0$$ where $$f(0,0)=-2$$.
@@ -377,13 +380,12 @@ plt.show()
 ```
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_18_0.png)
+![png](images/Ia-FollowingGravity_18_0.png)
 
 
 The way we find a minimum is similar to what we did before, except we use partial derivatives in the x- and y-directions:
 
 $$x_{new} = x_{old} + \Delta x,\ \ \ \ \ \ \Delta x = - \alpha {\partial f\over \partial x}  $$
-
 $$y_{new} = y_{old} + \Delta y,\ \ \ \ \ \ \Delta y = - \alpha {\partial f\over \partial y},$$
 
 
@@ -439,7 +441,7 @@ plt.show()
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_20_1.png)
+![png](images/Ia-FollowingGravity_20_1.png)
 
 
 In the above figure, we've shown the 'path' the algorithm takes in $$x$$-$$y$$ space, coloring the dots according to iteration number, so that the first points are dark purple, and later points tend to yellow.
@@ -477,13 +479,11 @@ $$ MSE = {1\over n}\sum_{i=1}^n (f(x_i)-y_i)^2.$$
 The MSE has the nice feature that as you add more data points, it tends to hold a more-or-less consistent value (as opposed to the SE which gets bigger as you add more points).  We'll use the MSE in the work that follows.
 
 So expanding out $$f(x)$$, we see that the MSE is a function of $$m$$ and $$b$$, and these are the parameters we'll vary to minimize the MSE:
-
 $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
-So, following our earlier work on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
+So, following our earlier word on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
 
 $$m_{new} = m_{old} + \alpha \Delta m,\ \ \ \ \ \ \Delta m = {\partial (MSE)\over\partial m} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
-
 $$b_{new} = b_{old} + \alpha \Delta b,\ \ \ \ \ \ \Delta b = {\partial (MSE)\over\partial b} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(1).$$
 
 So, to start off, let's get some data...
@@ -512,7 +512,7 @@ plot_data(x_data,y_data, zero_y=True)
 ```
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_24_0.png)
+![png](images/Ia-FollowingGravity_24_0.png)
 
 
 *Note: in contrast to earlier parts of this document which include complete python programs in every code post, for brevity's sake we will start using the notebook "as intended", relying on the internal state and adding successive bits of code which make use of the "memory" of previously-defined variables.*
@@ -540,7 +540,7 @@ plt.show()
 ```
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_26_0.png)
+![png](images/Ia-FollowingGravity_26_0.png)
 
 
 We see the minimum near the "exact" values chosen in the begininng.  (Note that we've plotted the logarithm of the MSE just to make the colors stand out better.)
@@ -716,7 +716,7 @@ plt.show()
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_28_1.png)
+![png](images/Ia-FollowingGravity_28_1.png)
 
 
 *Note that the optimized values $$(m,b)$$ that we find may not exactly match the "exact" values we used to make the data, because the noise we added to the data can throw this off.  In the limit where the noise amplitude goes to zero, our optimized values will exactly match the "exact" values used to generated the data.*
@@ -741,7 +741,7 @@ plt.show()
 ```
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_30_0.png)
+![png](images/Ia-FollowingGravity_30_0.png)
 
 
 Great!
@@ -749,17 +749,12 @@ Great!
 ### Least Squares Fitting with Nonlinear Functions
 
 We can generalize the technique describe above to fit polynomials 
-
 $$ f(x) = c_0 + c_1 x + c_2 x^2 + ...c_k x^k,$$
-
-where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupyter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
-
+where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
 $$ f(x) = \sum_{j=0}^k c_j x^j.$$
 
 (Indeed, we could even try non-polynomial basis functions, e.g.,
-
 $$ f(x) = c_0 + c_1 g(x) + c_2 h(x) + ...,$$
-
 but let's stick to polynomials for now.)
 
 The key thing to note is that for each parameter $$c_j$$, the update $$\Delta c_j$$ will be
@@ -896,10 +891,10 @@ plot_data_and_curve(x_data,y_data)
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_32_1.png)
+![png](images/Ia-FollowingGravity_32_1.png)
 
 
-Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$\abs(x)$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
+Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$|x|$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
 
 (For more general functions, I actually wrote a multi-parameter SymPy gradient-descient that is completely general, but it's *terrifically slow* so I won't be posting it here.  If you really want it, contact me.)
 
@@ -939,7 +934,7 @@ plot_data(t_data,y_data, axis_labels=('t','y'))
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_35_1.png)
+![png](images/Ia-FollowingGravity_35_1.png)
 
 
 Can we fit this with a polynomial?  Sure, let's do that, using the code from before...
@@ -954,28 +949,28 @@ print("Estimate for g = ",-2*c[2])
 plot_data_and_curve(t_data,y_data, axis_labels=('t','y'))
 ```
 
-                   Initial guess:    c =  [ 0.64  0.06  0.54]
-       0/1000: MSE =  19.1813, c = [  7.371 -20.089   5.247]
+                   Initial guess:    c =  [ 0.72  0.71  0.77]
+       0/1000: MSE =  5.41899, c = [-2.186  7.319 -1.042]
          Notice: decreasing alpha[ 0 ] to  3.0
          Notice: decreasing alpha[ 0 ] to  0.9
-     100/1000: MSE = 0.177848, c = [ 2.206 -2.552  0.744]
-     200/1000: MSE =0.0158786, c = [ 1.524  1.44  -3.214]
-     300/1000: MSE =0.00141768, c = [ 1.321  2.633 -4.396]
-     400/1000: MSE =0.000126573, c = [ 1.26   2.99  -4.749]
-     500/1000: MSE =1.13007e-05, c = [ 1.242  3.096 -4.855]
-     600/1000: MSE =1.00895e-06, c = [ 1.236  3.128 -4.887]
-     700/1000: MSE =9.00812e-08, c = [ 1.235  3.137 -4.896]
-     800/1000: MSE =8.04263e-09, c = [ 1.234  3.14  -4.899]
-     900/1000: MSE =7.18063e-10, c = [ 1.234  3.141 -4.9  ]
-    1000/1000: MSE =6.41101e-11, c = [ 1.234  3.141 -4.9  ]
+     100/1000: MSE =0.0314071, c = [ 1.642  0.749 -2.528]
+     200/1000: MSE =0.00280409, c = [ 1.356  2.427 -4.191]
+     300/1000: MSE =0.000250355, c = [ 1.27   2.928 -4.688]
+     400/1000: MSE =2.23522e-05, c = [ 1.245  3.078 -4.837]
+     500/1000: MSE =1.99565e-06, c = [ 1.237  3.122 -4.881]
+     600/1000: MSE =1.78176e-07, c = [ 1.235  3.136 -4.894]
+     700/1000: MSE =1.59079e-08, c = [ 1.234  3.14  -4.898]
+     800/1000: MSE =1.42029e-09, c = [ 1.234  3.141 -4.899]
+     900/1000: MSE =1.26806e-10, c = [ 1.234  3.141 -4.9  ]
+    1000/1000: MSE =1.13215e-11, c = [ 1.234  3.141 -4.9  ]
     
-    Our fit:          y(t) = 1.23401844558 + 3.14139190537*t + -4.89989284513*t**2
+    Our fit:          y(t) = 1.23400775143 + 3.14145457517*t + -4.89995497009*t**2
     Compare to exact: y(t) = 1.234 + 3.1415*t - 4.9*t**2
-    Estimate for g =  9.79978569026
+    Estimate for g =  9.79990994018
 
 
 
-![png](https://drscotthawley.github.io/images/FG-images/output_37_1.png)
+![png](images/Ia-FollowingGravity_37_1.png)
 
 
 What if we try fitting higher-order terms?  Are their coefficients negligible?  The system *may* converge, but it will take *a lot* more iterations...  (be prepared to wait!)
@@ -989,58 +984,88 @@ print("Compare to exact: y(t) = ",y0,  " + ",v0,  "*t - ",0.5*g_exact,"*t**2",se
 print("Estimate for g = ",-2*c[2])
 ```
 
-                   Initial guess:    c =  [ 0.66  0.79  0.04  0.46]
-       0/800000: MSE = 0.809474, c = [ 0.661  0.645 -0.004  0.45 ]
+                   Initial guess:    c =  [ 0.33  0.23  0.63  0.41]
+       0/700000: MSE = 0.828106, c = [ 1.189 -0.045  0.563  0.398]
          Notice: decreasing alpha[ 0 ] to  0.3
-    20000/800000: MSE =0.000265287, c = [ 1.277  2.622 -3.606 -0.86 ]
-    40000/800000: MSE =0.000167865, c = [ 1.268  2.728 -3.871 -0.684]
-    60000/800000: MSE =0.000106219, c = [ 1.261  2.813 -4.082 -0.544]
-    80000/800000: MSE =6.72123e-05, c = [ 1.256  2.88  -4.249 -0.433]
-    100000/800000: MSE =4.25298e-05, c = [ 1.251  2.933 -4.382 -0.344]
-    120000/800000: MSE =2.69115e-05, c = [ 1.248  2.976 -4.488 -0.274]
-    140000/800000: MSE =1.70287e-05, c = [ 1.245  3.01  -4.572 -0.218]
-    160000/800000: MSE =1.07752e-05, c = [ 1.243  3.037 -4.639 -0.173]
-    180000/800000: MSE =6.81822e-06, c = [ 1.241  3.058 -4.693 -0.138]
-    200000/800000: MSE =4.31435e-06, c = [ 1.24   3.075 -4.735 -0.11 ]
-    220000/800000: MSE =2.72998e-06, c = [ 1.238  3.089 -4.769 -0.087]
-    240000/800000: MSE =1.72744e-06, c = [ 1.237  3.1   -4.796 -0.069]
-    260000/800000: MSE =1.09307e-06, c = [ 1.237  3.108 -4.817 -0.055]
-    280000/800000: MSE =6.91661e-07, c = [ 1.236  3.115 -4.834 -0.044]
-    300000/800000: MSE =4.37661e-07, c = [ 1.236  3.12  -4.847 -0.035]
-    320000/800000: MSE =2.76938e-07, c = [ 1.235  3.125 -4.858 -0.028]
-    340000/800000: MSE =1.75237e-07, c = [ 1.235  3.128 -4.867 -0.022]
-    360000/800000: MSE =1.10884e-07, c = [ 1.235  3.131 -4.874 -0.018]
-    380000/800000: MSE =7.01641e-08, c = [ 1.235  3.133 -4.879 -0.014]
-    400000/800000: MSE =4.43976e-08, c = [ 1.235  3.135 -4.883 -0.011]
-    420000/800000: MSE =2.80934e-08, c = [ 1.234  3.136 -4.887 -0.009]
-    440000/800000: MSE =1.77766e-08, c = [ 1.234  3.137 -4.889 -0.007]
-    460000/800000: MSE =1.12485e-08, c = [ 1.234  3.138 -4.892 -0.006]
-    480000/800000: MSE =7.11766e-09, c = [  1.234e+00   3.139e+00  -4.893e+00  -4.455e-03]
-    500000/800000: MSE =4.50383e-09, c = [  1.234e+00   3.139e+00  -4.895e+00  -3.544e-03]
-    520000/800000: MSE =2.84988e-09, c = [  1.234e+00   3.140e+00  -4.896e+00  -2.819e-03]
-    540000/800000: MSE =1.80331e-09, c = [  1.234e+00   3.140e+00  -4.897e+00  -2.242e-03]
-    560000/800000: MSE =1.14108e-09, c = [  1.234e+00   3.140e+00  -4.897e+00  -1.784e-03]
-    580000/800000: MSE =7.22037e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.419e-03]
-    600000/800000: MSE =4.56882e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.129e-03]
-    620000/800000: MSE =2.891e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -8.978e-04]
-    640000/800000: MSE =1.82933e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -7.142e-04]
-    660000/800000: MSE =1.15754e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -5.681e-04]
-    680000/800000: MSE =7.32457e-11, c = [  1.234e+00   3.141e+00  -4.899e+00  -4.519e-04]
-    700000/800000: MSE =4.63475e-11, c = [  1.234e+00   3.141e+00  -4.899e+00  -3.595e-04]
-    720000/800000: MSE =2.93272e-11, c = [  1.234e+00   3.141e+00  -4.900e+00  -2.860e-04]
-    740000/800000: MSE =1.85573e-11, c = [  1.234e+00   3.141e+00  -4.900e+00  -2.275e-04]
-    760000/800000: MSE =1.17425e-11, c = [  1.234e+00   3.141e+00  -4.900e+00  -1.809e-04]
-    780000/800000: MSE =7.43026e-12, c = [  1.234e+00   3.141e+00  -4.900e+00  -1.439e-04]
-    800000/800000: MSE =4.70163e-12, c = [  1.234e+00   3.141e+00  -4.900e+00  -1.145e-04]
+    10000/700000: MSE =0.000464818, c = [ 1.291  2.454 -3.188 -1.138]
+    20000/700000: MSE =0.000369748, c = [ 1.285  2.528 -3.373 -1.015]
+    30000/700000: MSE =0.000294122, c = [ 1.279  2.594 -3.538 -0.906]
+    40000/700000: MSE =0.000233965, c = [ 1.275  2.654 -3.685 -0.808]
+    50000/700000: MSE =0.000186111, c = [ 1.27   2.706 -3.817 -0.72 ]
+    60000/700000: MSE =0.000148045, c = [ 1.266  2.753 -3.934 -0.642]
+    70000/700000: MSE =0.000117765, c = [ 1.263  2.795 -4.038 -0.573]
+    80000/700000: MSE =9.36783e-05, c = [ 1.26   2.833 -4.131 -0.511]
+    90000/700000: MSE =7.4518e-05, c = [ 1.257  2.866 -4.214 -0.456]
+    100000/700000: MSE =5.92766e-05, c = [ 1.254  2.896 -4.289 -0.407]
+    110000/700000: MSE =4.71526e-05, c = [ 1.252  2.922 -4.355 -0.363]
+    120000/700000: MSE =3.75083e-05, c = [ 1.25   2.946 -4.414 -0.323]
+    130000/700000: MSE =2.98366e-05, c = [ 1.248  2.967 -4.466 -0.288]
+    140000/700000: MSE =2.37341e-05, c = [ 1.247  2.986 -4.513 -0.257]
+    150000/700000: MSE =1.88797e-05, c = [ 1.246  3.003 -4.555 -0.229]
+    160000/700000: MSE =1.50182e-05, c = [ 1.244  3.018 -4.592 -0.205]
+    170000/700000: MSE =1.19465e-05, c = [ 1.243  3.031 -4.626 -0.183]
+    180000/700000: MSE =9.50301e-06, c = [ 1.242  3.043 -4.655 -0.163]
+    190000/700000: MSE =7.55933e-06, c = [ 1.241  3.054 -4.682 -0.145]
+    200000/700000: MSE =6.0132e-06, c = [ 1.24   3.063 -4.705 -0.129]
+    210000/700000: MSE =4.7833e-06, c = [ 1.24   3.072 -4.726 -0.115]
+    220000/700000: MSE =3.80496e-06, c = [ 1.239  3.079 -4.745 -0.103]
+    230000/700000: MSE =3.02672e-06, c = [ 1.239  3.086 -4.762 -0.092]
+    240000/700000: MSE =2.40766e-06, c = [ 1.238  3.092 -4.777 -0.082]
+    250000/700000: MSE =1.91521e-06, c = [ 1.238  3.097 -4.79  -0.073]
+    260000/700000: MSE =1.52349e-06, c = [ 1.237  3.102 -4.802 -0.065]
+    270000/700000: MSE =1.21188e-06, c = [ 1.237  3.106 -4.813 -0.058]
+    280000/700000: MSE =9.64014e-07, c = [ 1.237  3.11  -4.822 -0.052]
+    290000/700000: MSE =7.66841e-07, c = [ 1.236  3.114 -4.83  -0.046]
+    300000/700000: MSE =6.09997e-07, c = [ 1.236  3.117 -4.838 -0.041]
+    310000/700000: MSE =4.85233e-07, c = [ 1.236  3.119 -4.845 -0.037]
+    320000/700000: MSE =3.85987e-07, c = [ 1.236  3.122 -4.851 -0.033]
+    330000/700000: MSE =3.0704e-07, c = [ 1.235  3.124 -4.856 -0.029]
+    340000/700000: MSE =2.4424e-07, c = [ 1.235  3.126 -4.861 -0.026]
+    350000/700000: MSE =1.94285e-07, c = [ 1.235  3.127 -4.865 -0.023]
+    360000/700000: MSE =1.54547e-07, c = [ 1.235  3.129 -4.869 -0.021]
+    370000/700000: MSE =1.22937e-07, c = [ 1.235  3.13  -4.872 -0.019]
+    380000/700000: MSE =9.77925e-08, c = [ 1.235  3.132 -4.875 -0.017]
+    390000/700000: MSE =7.77907e-08, c = [ 1.235  3.133 -4.878 -0.015]
+    400000/700000: MSE =6.188e-08, c = [ 1.235  3.134 -4.88  -0.013]
+    410000/700000: MSE =4.92235e-08, c = [ 1.235  3.134 -4.882 -0.012]
+    420000/700000: MSE =3.91556e-08, c = [ 1.235  3.135 -4.884 -0.01 ]
+    430000/700000: MSE =3.1147e-08, c = [ 1.234  3.136 -4.886 -0.009]
+    440000/700000: MSE =2.47764e-08, c = [ 1.234  3.136 -4.887 -0.008]
+    450000/700000: MSE =1.97088e-08, c = [ 1.234  3.137 -4.889 -0.007]
+    460000/700000: MSE =1.56777e-08, c = [ 1.234  3.138 -4.89  -0.007]
+    470000/700000: MSE =1.24711e-08, c = [ 1.234  3.138 -4.891 -0.006]
+    480000/700000: MSE =9.92037e-09, c = [ 1.234  3.138 -4.892 -0.005]
+    490000/700000: MSE =7.89133e-09, c = [  1.234e+00   3.139e+00  -4.893e+00  -4.691e-03]
+    500000/700000: MSE =6.27729e-09, c = [  1.234e+00   3.139e+00  -4.894e+00  -4.184e-03]
+    510000/700000: MSE =4.99338e-09, c = [  1.234e+00   3.139e+00  -4.894e+00  -3.731e-03]
+    520000/700000: MSE =3.97207e-09, c = [  1.234e+00   3.139e+00  -4.895e+00  -3.328e-03]
+    530000/700000: MSE =3.15965e-09, c = [  1.234e+00   3.140e+00  -4.896e+00  -2.968e-03]
+    540000/700000: MSE =2.5134e-09, c = [  1.234e+00   3.140e+00  -4.896e+00  -2.647e-03]
+    550000/700000: MSE =1.99932e-09, c = [  1.234e+00   3.140e+00  -4.896e+00  -2.361e-03]
+    560000/700000: MSE =1.5904e-09, c = [  1.234e+00   3.140e+00  -4.897e+00  -2.106e-03]
+    570000/700000: MSE =1.26511e-09, c = [  1.234e+00   3.140e+00  -4.897e+00  -1.878e-03]
+    580000/700000: MSE =1.00635e-09, c = [  1.234e+00   3.140e+00  -4.897e+00  -1.675e-03]
+    590000/700000: MSE =8.0052e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.494e-03]
+    600000/700000: MSE =6.36787e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.332e-03]
+    610000/700000: MSE =5.06543e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.188e-03]
+    620000/700000: MSE =4.02939e-10, c = [  1.234e+00   3.141e+00  -4.898e+00  -1.060e-03]
+    630000/700000: MSE =3.20524e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -9.454e-04]
+    640000/700000: MSE =2.54967e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -8.432e-04]
+    650000/700000: MSE =2.02818e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -7.520e-04]
+    660000/700000: MSE =1.61335e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -6.707e-04]
+    670000/700000: MSE =1.28336e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -5.982e-04]
+    680000/700000: MSE =1.02087e-10, c = [  1.234e+00   3.141e+00  -4.899e+00  -5.335e-04]
+    690000/700000: MSE =8.12072e-11, c = [  1.234e+00   3.141e+00  -4.899e+00  -4.758e-04]
+    700000/700000: MSE =6.45976e-11, c = [  1.234e+00   3.141e+00  -4.899e+00  -4.244e-04]
     
-    Our fit:          y(t) = 1.23400574699 + 3.14143083991*t + -4.89982779996*t**2 + -0.000114496558129*t**3
+    Our fit:          y(t) = 1.23402130221 + 3.1412436463*t + -4.89936171114*t**2 + -0.000424401050714*t**3
     Compare to exact: y(t) = 1.234 + 3.1415*t - 4.9*t**2
-    Estimate for g =  9.79965559992
+    Estimate for g =  9.79872342227
 
 
 So, in this case, we were able to *show* not only that the data fits a parabola well, but that the higher order term (for $$t^3$$) is negigible!!  Great science!    In practice, however, for non-perfect data, this does not work out.  The higher-order term introduces an extreme sensitivity to the noise, which can render the results inconclusive.
 
-**Exercise:** Go back to where the data is generated, and uncomment the line that says '# for later; add noise in' and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
+**Exercise:** Go back to where the data is generated, and uncomment the line that says "# for later; add noise in" and re-run the fitting.  You will find that the coefficients for the cubic polynomial do *not* resemble the original values found at all, whereas the coefficients for a quadratic polynomial, while not being the same, will still be "close."
 
 Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce the parameters of the motion (initial position & velocity, and acceleration), and we get a very low error in doing so. :-)  Trying to show that higher-order terms in a polynomial expansion don't contribute...that worked for "perfect data" but in a practical case it didn't work out because polynomials are "ill behaved."   Still, we got some useful physics out of it. And that works for many applications.  We could stop here. 
 
@@ -1049,16 +1074,14 @@ Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce 
 *What if our data wasn't parabolic?* Sure, for motion in a uniform gravitational field this is fine, but what if we want to model the sinusoidal motion of a simple harmonic oscillator?  In that case, guessing a parabola would only work for very early times (thanks to [Taylor's theorem](https://en.wikipedia.org/wiki/Taylor's_theorem)).  Sure, we could fit a model where we've explictly put in a sine function in the code -- and I encourage you to write your own code to do this -- but perhaps there's a way to *deduce* the motion, by looking at the local behavior and thereby 'learning' the differential equation underlying the motion.
 
 **Exercise:** Copy the `polyfit()` code elsewhere (e.g. to text file or a new cell in this Jupyter notebook or a new notebook) and rename it `sinefit()`, and modify it to fit a sine function instead of a polynomial:
-
 $$y(t) = A\sin(\omega t + \phi),$$
-
 where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
+<br>
+<br>
+<div align="center">*The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
 
-
-*The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
-
-PHY4410 class, you can stop here.*
+PHY4410 class, you can stop here.*</div>
 
 -SH
 
