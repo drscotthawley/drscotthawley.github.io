@@ -1090,9 +1090,9 @@ where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phas
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
 <br>
 <br>
-<div align="center">*The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
+<div align="center"><i>The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
 
-PHY4410 class, you can stop here.*</div>
+PHY4410 class, you can stop here.*</i></div>
 
 -SH
 
