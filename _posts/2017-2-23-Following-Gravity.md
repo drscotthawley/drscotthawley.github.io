@@ -752,18 +752,24 @@ Great!
 ### Least Squares Fitting with Nonlinear Functions
 
 We can generalize the technique describe above to fit polynomials 
+
 $$ f(x) = c_0 + c_1 x + c_2 x^2 + ...c_k x^k,$$
+
 where $$c_0...c_k$$ are the parameters we will tune, and $$k$$ is the order of the polynomial. (Typically people use the letter $$a$$ for polynomial coefficients, but in the math rendering of Jupter, $$\alpha$$ and $$a$$ look too much alike, so we'll use $$c$$.) Written more succinctly,
+
 $$ f(x) = \sum_{j=0}^k c_j x^j.$$
 
 (Indeed, we could even try non-polynomial basis functions, e.g.,
+
 $$ f(x) = c_0 + c_1 g(x) + c_2 h(x) + ...,$$
+
 but let's stick to polynomials for now.)
 
 The key thing to note is that for each parameter $$c_j$$, the update $$\Delta c_j$$ will be
 
 $$\Delta c_j = -\alpha {\partial (MSE)\over \partial c_j} 
 = -\alpha {\partial (MSE)\over \partial f}{\partial f\over \partial c_j}$$
+
 $$= -\alpha {2\over n}\sum_{i=1}^n [f(x_i)-y_i](x_i)^{j} $$
 
 
