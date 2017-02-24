@@ -1,15 +1,14 @@
-
 ---
 layout: post
 title: Following Gravity - ML Foundations Part Ia.
 subtitle: Gradient Descent and Regression
 description: First in a series on Machine Learning Foundations, which applies to much of science and statistics as well. 
 excerpt: First in a series on Machine Learning Foundations, which applies to much of science and statistics as well. 
-image: images/Ia-FollowingGravity_header.jpg
-bg-image: images/Ia-FollowingGravity_header.jpg
+image: ../images/Ia-FollowingGravity_header.jpg
+bg-image: ../images/Ia-FollowingGravity_header.jpg
 comments: true
 ---
-![header_img](https://drscotthawley.github.io/images/Ia-FollowingGravity_header.jpg)<p style="text-align: right">*Image credit: NASA*</a>
+![header_img](https://drscotthawley.github.io/../images/Ia-FollowingGravity_header.jpg)<p style="text-align: right">*Image credit: NASA*</a>
 
 # "Following Gravity" (MLF Part 1a: Regression) 
 
@@ -52,7 +51,7 @@ plt.show()
 ```
 
 
-![png](images/Ia-FollowingGravity_1_0.png)
+![png](../images/Ia-FollowingGravity_1_0.png)
 
 
 If $$f(x)$$ is differentiable and the derivative (*i.e.*, slope) $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
@@ -124,7 +123,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_4_1.png)
+![png](../images/Ia-FollowingGravity_4_1.png)
 
 
 Notice how the larger learning rate ($$\alpha$$=0.8) meant that the steps taken were so large that they "overshot" the minimum, whereas the too-small learning rate ($$\alpha=0.002$$) still hadn't come anywhere close to the minimum before the maximum iteration was reached.
@@ -181,7 +180,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_7_1.png)
+![png](../images/Ia-FollowingGravity_7_1.png)
 
 
 In the above plot, we colored the points by iteration number, starting with the dark purple at the initial location of x=-1, and bouncing around ever-farther from the solution as the color changes to yellow.  As this happens, the error is growing exponentially; this is one example of a numerical instability.  Thus, this algorithm is <a href="http://bit.ly/2kZZVP1">not entirely stable.</a>
@@ -272,7 +271,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_9_1.png)
+![png](../images/Ia-FollowingGravity_9_1.png)
 
 
 So in the preceding example, we start at $$x=-1$$, than the unstable behavior starts and we begin diverging from the minimum, so we decrease $$\alpha$$ as often as our criterion tells us to.  Finally $$\alpha$$ becomes low enought to get the system  'under control' and the algorithm enters the convergent regime.
@@ -347,7 +346,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_15_1.png)
+![png](../images/Ia-FollowingGravity_15_1.png)
 
 
 All the runs start at $$x=6$$.  Notice how the runs marked in organge and green go on to find a "local" minimum, but they don't find the "global" minimum (the overall lowest point) like the run marked in red does.  The problem of ending up at non-global local minima is a generic problem for all kinds of optimization tasks.  It tends to get even worse when you add more parameters...
@@ -380,7 +379,7 @@ plt.show()
 ```
 
 
-![png](images/Ia-FollowingGravity_18_0.png)
+![png](../images/Ia-FollowingGravity_18_0.png)
 
 
 The way we find a minimum is similar to what we did before, except we use partial derivatives in the x- and y-directions:
@@ -441,7 +440,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_20_1.png)
+![png](../images/Ia-FollowingGravity_20_1.png)
 
 
 In the above figure, we've shown the 'path' the algorithm takes in $$x$$-$$y$$ space, coloring the dots according to iteration number, so that the first points are dark purple, and later points tend to yellow.
@@ -512,7 +511,7 @@ plot_data(x_data,y_data, zero_y=True)
 ```
 
 
-![png](images/Ia-FollowingGravity_24_0.png)
+![png](../images/Ia-FollowingGravity_24_0.png)
 
 
 *Note: in contrast to earlier parts of this document which include complete python programs in every code post, for brevity's sake we will start using the notebook "as intended", relying on the internal state and adding successive bits of code which make use of the "memory" of previously-defined variables.*
@@ -540,7 +539,7 @@ plt.show()
 ```
 
 
-![png](images/Ia-FollowingGravity_26_0.png)
+![png](../images/Ia-FollowingGravity_26_0.png)
 
 
 We see the minimum near the "exact" values chosen in the begininng.  (Note that we've plotted the logarithm of the MSE just to make the colors stand out better.)
@@ -716,7 +715,7 @@ plt.show()
 
 
 
-![png](images/Ia-FollowingGravity_28_1.png)
+![png](../images/Ia-FollowingGravity_28_1.png)
 
 
 *Note that the optimized values $$(m,b)$$ that we find may not exactly match the "exact" values we used to make the data, because the noise we added to the data can throw this off.  In the limit where the noise amplitude goes to zero, our optimized values will exactly match the "exact" values used to generated the data.*
@@ -741,7 +740,7 @@ plt.show()
 ```
 
 
-![png](images/Ia-FollowingGravity_30_0.png)
+![png](../images/Ia-FollowingGravity_30_0.png)
 
 
 Great!
@@ -891,7 +890,7 @@ plot_data_and_curve(x_data,y_data)
 
 
 
-![png](images/Ia-FollowingGravity_32_1.png)
+![png](../images/Ia-FollowingGravity_32_1.png)
 
 
 Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$|x|$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
@@ -934,7 +933,7 @@ plot_data(t_data,y_data, axis_labels=('t','y'))
 
 
 
-![png](images/Ia-FollowingGravity_35_1.png)
+![png](../images/Ia-FollowingGravity_35_1.png)
 
 
 Can we fit this with a polynomial?  Sure, let's do that, using the code from before...
@@ -970,7 +969,7 @@ plot_data_and_curve(t_data,y_data, axis_labels=('t','y'))
 
 
 
-![png](images/Ia-FollowingGravity_37_1.png)
+![png](../images/Ia-FollowingGravity_37_1.png)
 
 
 What if we try fitting higher-order terms?  Are their coefficients negligible?  The system *may* converge, but it will take *a lot* more iterations...  (be prepared to wait!)
