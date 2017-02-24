@@ -463,7 +463,7 @@ This is such a common thing to do in science and statistics, that everyone shoul
 
 ### How to Fit a Line
 
-Let's say we're trying to fit a line to a bunch of data.  We've been given $$n$$ data points with coordinates $$(x_i,y_i)$$ where $$i=1..N$$.  The problem becomes, given a line $$f(x) = mx+b$$, find the values of the parameters $$m$$ and $$b$$ which minimize the overall "error".
+Let's say we're trying to fit a line to a bunch of data.  We've been given $$n$$ data points with coordinates $$(x_i,y_i)$$ where $$i=1..n$$.  The problem becomes, given a line $$f(x) = mx+b$$, find the values of the parameters $$m$$ and $$b$$ which minimize the overall "error".
 
 #### add some kinda picture here?
 
