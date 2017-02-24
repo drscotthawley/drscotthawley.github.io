@@ -905,7 +905,7 @@ plot_data_and_curve(x_data,y_data)
 ![png](../images/Ia-FollowingGravity_32_1.png)
 
 
-Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$|x|$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
+Now, it turns out that polynomials are often *terrible* things to try to fit arbitrary data with, because they can 'blow up' as $$abs(x)$$ increases, and this causes instability.  But for a variety of physics problems (see below), polynomials can be just what we're after.  Plus, that made a nice demonstration, for now. 
 
 (For more general functions, I actually wrote a multi-parameter SymPy gradient-descient that is completely general, but it's *terrifically slow* so I won't be posting it here.  If you really want it, contact me.)
 
