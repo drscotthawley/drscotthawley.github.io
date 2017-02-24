@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Following Gravity - ML Foundations Part Ia.
