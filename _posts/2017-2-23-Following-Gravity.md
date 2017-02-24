@@ -50,7 +50,7 @@ plt.show()
 ![png](https://drscotthawley.github.io/images/FG-images/output_1_0.png)
 
 
-If $$f(x)$$ is differentiable and the derivative $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
+If $$f(x)$$ is differentiable and the derivative (aka slope) $$df/dx$$ can be evaluated easily, then we can perform a so-called "gradient descent".  
 
 We do so as follows:
 
@@ -62,7 +62,7 @@ We do so as follows:
 
     where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is    increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by 
 
-    $$\Delta x \equiv - \alpha (df/dx).$$    
+    $$\Delta x \equiv - \alpha {df \over dx}.$$    
 
 3. Repeat step 2 until some approximation criterion is met.
 
