@@ -12,8 +12,6 @@ comments: true
 ![header_img](https://drscotthawley.github.io/../images/Ia-FollowingGravity_header.jpg)
 <p style="text-align: right"><i>Image credit: NASA</i></p>
 
-# "Following Gravity" (MLF Part 1a: Regression) 
-
 <div style="text-align: left; font-size: small"> 
 First in a series on "Machine Larning Foundations," which applies to much of science and statistics as well.
 </div>
