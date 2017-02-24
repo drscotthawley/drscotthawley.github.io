@@ -36,7 +36,7 @@ Let's put the "sample problem" aside for now, and talk about the general problem
 
 Thus we want to find the value of $$x$$ for which $$f(x)$$ is the smallest.  A graph of such a function might look like this...
 
-
+*Python code follows, to generate the graph*
 ```python
 import numpy as np, matplotlib.pyplot as plt
 fig, ax = plt.subplots()
