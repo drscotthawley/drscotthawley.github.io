@@ -1092,7 +1092,7 @@ As an example, you can check your answer against [this](http://hedges.belmont.ed
 <br>
 <div align="center"><i>The discussion goes on, but I'm breaking it off into a "Part Ib" for a separate post.  In that post, we'll switch from fitting the data "globally" to looking "locally," in preparation for work in "Time Series Prediction."
 <br><br>
-PHY4410 class, you can stop here.*</i></div>
+PHY4410 class, you can stop here.</i></div>
 
 -SH
 
