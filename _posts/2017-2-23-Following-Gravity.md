@@ -1083,7 +1083,9 @@ Thus, by *hypothesizing* a parabolic dependence, we're able to correctly deduce 
 *What if our data wasn't parabolic?* Sure, for motion in a uniform gravitational field this is fine, but what if we want to model the sinusoidal motion of a simple harmonic oscillator?  In that case, guessing a parabola would only work for very early times (thanks to [Taylor's theorem](https://en.wikipedia.org/wiki/Taylor's_theorem)).  Sure, we could fit a model where we've explictly put in a sine function in the code -- and I encourage you to write your own code to do this -- but perhaps there's a way to *deduce* the motion, by looking at the local behavior and thereby 'learning' the differential equation underlying the motion.
 
 **Exercise:** Copy the `polyfit()` code elsewhere (e.g. to text file or a new cell in this Jupyter notebook or a new notebook) and rename it `sinefit()`, and modify it to fit a sine function instead of a polynomial:
+
 $$y(t) = A\sin(\omega t + \phi),$$
+
 where the fit parameters will the amplitude $$A$$, frequency $$\omega$$ and phase constant $$\phi$$.  Try fitting to data generated for $$A=3$$, $$\omega=2$$, $$\phi=1.57$$ on $$0\le t \le 10$$.
 As an example, you can check your answer against [this](http://hedges.belmont.edu/~shawley/PHY4410/sinefit_a3w2p1.57.png). 
 <br>
