@@ -58,11 +58,11 @@ We do so as follows:
 
 2. "Go in the direction of  $$-df/dx$$":
 
-$$x_{new} = x_{old} - \alpha {df\over dx},$$
+     $$x_{new} = x_{old} - \alpha {df\over dx},$$
 
-where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by 
+    where $$\alpha$$ is some parameter often called the "learning rate".  All this equation is saying is, "If the function is    increasing, then move to the left; and if the function is decreasing then move to the right."  The actual change to $$x$$ is given by 
 
-$$\Delta x \equiv - \alpha (df/dx).$$    
+    $$\Delta x \equiv - \alpha (df/dx).$$    
 
 3. Repeat step 2 until some approximation criterion is met.
 
