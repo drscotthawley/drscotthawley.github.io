@@ -385,6 +385,7 @@ plt.show()
 The way we find a minimum is similar to what we did before, except we use partial derivatives in the x- and y-directions:
 
 $$x_{new} = x_{old} + \Delta x,\ \ \ \ \ \ \Delta x = - \alpha {\partial f\over \partial x}  $$
+
 $$y_{new} = y_{old} + \Delta y,\ \ \ \ \ \ \Delta y = - \alpha {\partial f\over \partial y},$$
 
 
@@ -469,6 +470,7 @@ The error can take many forms; one is the squared error $$SE$$, which is just th
 $$ SE = (f(x_1) - y_1)^2 + (f(x_2) - y_2)^2 + ... (f(x_n)-y_n)^2,$$
 
 We can write this concisely as
+
 $$ SE = \sum_{i=1}^n (f(x_i)-y_i)^2.$$
 
 Another popular form is the "mean squared error" $$MSE$$, which is just $$SE/n$$:
@@ -478,11 +480,13 @@ $$ MSE = {1\over n}\sum_{i=1}^n (f(x_i)-y_i)^2.$$
 The MSE has the nice feature that as you add more data points, it tends to hold a more-or-less consistent value (as opposed to the SE which gets bigger as you add more points).  We'll use the MSE in the work that follows.
 
 So expanding out $$f(x)$$, we see that the MSE is a function of $$m$$ and $$b$$, and these are the parameters we'll vary to minimize the MSE:
+
 $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
 So, following our earlier word on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
 
 $$m_{new} = m_{old} + \alpha \Delta m,\ \ \ \ \ \ \Delta m = {\partial (MSE)\over\partial m} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
+
 $$b_{new} = b_{old} + \alpha \Delta b,\ \ \ \ \ \ \Delta b = {\partial (MSE)\over\partial b} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(1).$$
 
 So, to start off, let's get some data...
