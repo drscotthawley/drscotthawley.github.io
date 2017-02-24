@@ -480,7 +480,7 @@ So expanding out $$f(x)$$, we see that the MSE is a function of $$m$$ and $$b$$,
 
 $$ MSE(m,b) = {1\over n}\sum_{i=1}^n (mx_i+b-y_i)^2.$$
 
-So, following our earlier word on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
+So, following our earlier work on multidimensional optimization, we start with guesses for $$m$$ and $$b$$ and then update according to gradient descent:
 
 $$m_{new} = m_{old} + \alpha \Delta m,\ \ \ \ \ \ \Delta m = {\partial (MSE)\over\partial m} = {2\over n}\sum_{i=1}^n (mx_i+b-y_i)(x_i) $$
 
