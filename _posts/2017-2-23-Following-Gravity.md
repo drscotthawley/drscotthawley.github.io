@@ -452,10 +452,10 @@ Note that due to the asymmetry in the function (between $$x$$ and $$y$$), the pa
 
 Many sophisticated schemes have arisen to handle this challenge, and we won't cover them here.  For now, suffice it to say that, yes, this sort of thing happens.  You may have 'found' highly accurate values for certain parameters, but others are bogging down the process of convergence.
 
-*Next time, we'll cover a common application of optimization: Least Squares Regression...*
+*Next, we'll cover a common application of optimization: Least Squares Regression...*
+
 
 ## Least Squares Regression
-
 
 This is such a common thing to do in science and statistics, that everyone should learn how it works.  We'll do it for linear relationships, but it generalizes to nonlinear situations as well.
 
