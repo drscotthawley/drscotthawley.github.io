@@ -54,8 +54,8 @@ If $$f(x)$$ is differentiable and the derivative $$df/dx$$ can be evaluated easi
 
 We do so as follows:
 
-1. Start with some initial guess for $$x$$
-2. "Go in the direction of  $$-df/dx$$":
+-1. Start with some initial guess for $$x$$
+-2. "Go in the direction of  $$-df/dx$$":
 
 $$x_{new} = x_{old} - \alpha {df\over dx},$$
 
@@ -63,7 +63,7 @@ where $$\alpha$$ is some parameter often called the "learning rate".  All this e
 
 $$\Delta x \equiv - \alpha (df/dx).$$    
 
-3. Repeat step 2 until some approximation criterion is met.
+-3. Repeat step 2 until some approximation criterion is met.
 
 A nice feature of this method is that as $$df/dx \rightarrow 0$$, so too $$\Delta x\rightarrow0$$.  So an "adaptive stepsize" is built-in.
 
