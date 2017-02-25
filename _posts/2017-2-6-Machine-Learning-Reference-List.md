@@ -66,11 +66,11 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 ### LSTM Alternatives/advances:
 
-* GRU (Gated Recurrent Unit) by Cho et al, ``Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation, <http://arxiv.org/pdf/1406.1078v3.pdf  (2014) >
+* GRU (Gated Recurrent Unit) by Cho et al, ``Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation, <http://arxiv.org/pdf/1406.1078v3.pdf>  (2014)
     * Chung et al. Good exp of GRU & LSTM, say GRU comparable to LSTM,  <http://arxiv.org/abs/1412.3555>
     * But GRUV/MVitelli found that LSTM outperformed GRU for audio accuracy
-    * GRU's are a bit simpler than LSTM, Britz blog/tutorial: <http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/>
-* ClockWork-RNN by Koutnik et al,  <http://arxiv.org/pdf/1402.3511v1.pdf (2014)>
+    * GRU's are a bit simpler than LSTM, Britz blog/tutorial: <http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano>
+* ClockWork-RNN by Koutnik et al,  <http://arxiv.org/pdf/1402.3511v1.pdf>
 * Highway networks...
 * Echo State Networks (ESN).  (2008) Comparison of MLP, RNN & ESN for sequence modeling: <https://www.researchgate.net/publication/224374378_A_comparison_of_MLP_RNN_and_ESN_in_determining_harmonic_contributions_from_nonlinear_loads>
 * Undecimated Fully Convolutional Neural Networks (UFCNN): <http://arxiv.org/pdf/1508.00317.pdf>
@@ -208,6 +208,9 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 - Melody annotation dataset: <http://medleydb.weebly.com/description.html>
 
+
+### Activations & Optimizers
+* ELU: Exponential Linear Unit, seems to work better than ReLU in many cases <https://arxiv.org/pdf/1511.07289v1.pdf>
 
 
 ### Hardware:
