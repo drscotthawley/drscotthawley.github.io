@@ -45,7 +45,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
     * Great List of references; <https://handong1587.github.io/deep_learning/2015/10/09/rnn-and-lstm.html>
 * in TensorFlow: <https://www.tensorflow.org/versions/r0.8/tutorials/recurrent/index.html>
 * Theano tutorial:  <http://deeplearning.net/tutorial/rnnslu.html>
-
+* Batch Normalization for: <https://arxiv.org/abs/1510.01378>: "applying batch normalization to the hidden-to-hidden transitions of our RNNs doesn't help the training procedure. We also show that when applied to the input-to-hidden transitions, batch normalization can lead to a faster convergence of the training criterion but doesn't seem to improve the generalization performance"
 
 *Traditional RNNs suffer from vanishing/exploding gradient. Hence LSTM & others...*
 
