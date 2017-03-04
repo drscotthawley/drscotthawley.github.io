@@ -66,7 +66,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 
 ### LSTM Alternatives/advances:
 
-* GRU (Gated Recurrent Unit) by Cho et al, ``Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation, <http://arxiv.org/pdf/1406.1078v3.pdf>  (2014)
+* GRU (Gated Recurrent Unit) by Cho et al, "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation", <http://arxiv.org/pdf/1406.1078v3.pdf>  (2014)
     * Chung et al. Good exp of GRU & LSTM, say GRU comparable to LSTM,  <http://arxiv.org/abs/1412.3555>
     * But GRUV/MVitelli found that LSTM outperformed GRU for audio accuracy
     * GRU's are a bit simpler than LSTM, Britz blog/tutorial: <http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano>
@@ -103,9 +103,24 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 	- [Trask's tutorial blog on Neural Stack Machines](http://iamtrask.github.io/2016/02/25/deepminds-neural-stack-machine/)
 
 ### Convolutional Neural Networks:
-* "A guide to convolution arithmetic for deep learning" <https://arxiv.org/pdf/1603.07285.pdf>
-* History of major convnet architectures (LeNet, AlexNet, Inception ResNet, VGG,...) <https://culurciello.github.io/tech/2016/06/04/nets.html>
+* EXCELLENT: "History of major convnet architectures" (LeNet, AlexNet, Inception ResNet, VGG,...) <https://culurciello.github.io/tech/2016/06/04/nets.html>
+* EXCELLENT: "A guide to convolution arithmetic for deep learning" by Dumoulin and Visin <https://arxiv.org/pdf/1603.07285.pdf>
+* Glossary/Summary of conv net terms/concepts:
+	- Vector: *not* a true vector in the sense of vector calculus. Just a one-dimensional array. "N-dimensional vector" = 1-D array with N elements.
+	- Tensor: *not* a true tensor in the sense of differential geometry. Just a multi-dimensional arry or "matrix".
+	- Affine Transformation: General math term; here we just mean multiplying by a tensor and (maybe) adding a constant bias (vector).  Generalization of "linear transformation."
+	- Convolution: Pretty much what you'd normally think of "convolution" in the DSP sense.  *The following analogy helps me too: Evaluating a finite-difference stencil on a discretised scalar field via a banded (e.g. tridiagonal) matrix would be considered a convolution in the CNN sense, because said matrix is sparse and the same weights are used throughout.*
+	- Channel Axis: (quoting D&V): "is used to access different views of the data (e.g., the red, green and blue channels of a color image, or the left and right channels of a stereo audio track)."
+	- Feature Map: Generally, the output of running one particular convolution kernel over a data item (e.g over an image). However there are also *input feature maps*, examples of which are the "channels" referred to earlier (e.g. RGB, Left/Right). 
+	- Flattening: turn a tensor into a vector
+	- Pooling: can think of it like a special type of convolution kernel (except it may not just add up the kernel's inputs). Usually "Max Pooling", as in: take the maximum value from the the kernel's inputs.  (On the other hand, "Average pooling" really is just a regular top-hat convolution.) In contrast to regular convolution, pooling does not involve zero padding, and pooling often takes place over non-overlapping regions of the input.
+	- (Zero-)Padding: Pretty much like in the DSP sense: add zeros to the front or end of a data stream or image, so that you can run convolution kernel all the way up to & over the boundaries of where they data's defined.
+	- Transposed Convolution: Analagous to transposing a matrix to get an output with oppositely-ordered shape, e.g. to go from an output feature map of one shape, back to the original shape of the input.   *There seems to be some confusion, whereby some people treat the transpose as if it's an inverse, like $$A^T A = I$$. ??*
+	- 1x1: Actually 1x1xC, where C is, e.g. the number color channels in a RGB image (3).
+
+	- *an observation: the bigger shape of the kernel, the smaller the shape of its output feature map*
 * Related: Deconvolutional Networks <http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf>
+
 
 ### Reinforcement Learning:
 
