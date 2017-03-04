@@ -102,6 +102,10 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 	- Original paper: "Learning to Transduce with Unbounded Memory" by Grefenstette et al.: <https://arxiv.org/abs/1506.02516>
 	- [Trask's tutorial blog on Neural Stack Machines](http://iamtrask.github.io/2016/02/25/deepminds-neural-stack-machine/)
 
+### Convolutional Neural Networks:
+* "A guide to convolution arithmetic for deep learning" <https://arxiv.org/pdf/1603.07285.pdf>
+* History of major convnet architectures (LeNet, AlexNet, Inception ResNet, VGG,...) <https://culurciello.github.io/tech/2016/06/04/nets.html>
+* Related: Deconvolutional Networks <http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf>
 
 ### Reinforcement Learning:
 
