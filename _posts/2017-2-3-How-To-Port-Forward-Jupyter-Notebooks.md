@@ -35,6 +35,29 @@ This generates a bunch of text, including a URL with a token. It'll say...
     `http://localhost:8889/?token=96c92fc27f102995044da89ae111914c28e51757d57bebfc`  
 **...and it works!**  The notebook comes right up, but the only lag involves sending *text* over ssh, as opposed to sending X11 graphics.
 
-### Wohoo!
+
+(incidentally, I find 'localhost' sometimes doesn't resolve, which is why I use 127.0.0.1 explicitly)
 
 
+
+
+**Wohoo!**
+
+<hr>
+## Extra: Remotely Editing Files via rmate & Sublime Text
+
+On laptop, in Sublime Text 3: Tools > Command Pallete > Install package > rsub
+
+On internal (server): `sudo apt-get install ruby; sudo gem install rmate`
+
+Make two reverse-SHH tunnel hops from laptop to doorkeeper to internal:
+
+1.  `ssh -R 52698:127.0.0.1:52698 doorkeeper`
+
+2.  (on doorkeeper) `ssh -R 52698:127.0.0.1:52698 internal`
+
+3.  (then on internal) `rmate [whatever file you want to edit]`
+
+**...and suddenly, your file appears in your Sublime Text window on your laptop!**
+
+To automate this, either alias ssh to be "ssh -R 52698:127.0.0.1:52698" or modify your ~/.ssh/config file(s)
