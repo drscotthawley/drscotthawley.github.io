@@ -139,7 +139,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 ### Related Approaches to Neural Networks:  (historical)
 
-* Hidden Markov Models (HMM).  Dahl used for text classification: George E. Dahl, Ryan P. Adams, and Hugo Larochelle. ``Training restricted boltzmann machines on word observations.'' arXiv:1202.5695v1 (2012)
+* Hidden Markov Models (HMM).  Dahl used for text classification: George E. Dahl, Ryan P. Adams, and Hugo Larochelle. "Training restricted boltzmann machines on word observations." arXiv:1202.5695v1 (2012)
 * Support Vector Machine (SVM).  SVMs are globally convex, which is nice (whereas NNs are only locally convex).  Very effective for classification tasks.  But NNs have beat them out for complex datasets & tasks.   Audio app:  e.g., Audio Classificiation by Gou & Li (2003) <http://www.ee.columbia.edu/~sfchang/course/spr-F05/papers/guo-li-svm-audio00.pdf>
 * Restricted Boltzmann Machine (RBM).  Hinton et al. mid-2000s
 
@@ -208,7 +208,7 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 
 
-### Datasets of Musical Audio for Machine Learning:
+### Datasets of (mostly musical) Audio for Machine Learning:
 
 - IRMAS: for musical Instrument recognition: <http://www.mtg.upf.edu/download/datasets/irmas>
 
@@ -227,6 +227,8 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 
 - Melody annotation dataset: <http://medleydb.weebly.com/description.html>
 
+- Binaural audio: :
+    * Antoine Deleforge: <http://perception.inrialpes.fr/~Deleforge/AVASM_Dataset/>
 
 ### Activations & Optimizers
 * ELU: Exponential Linear Unit, seems to work better than ReLU in many cases <https://arxiv.org/pdf/1511.07289v1.pdf>
