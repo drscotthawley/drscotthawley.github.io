@@ -233,6 +233,9 @@ Scattering Hierarchy (multi-scale representation) by Mallat (2012-2014), Pablo S
 ### Activations & Optimizers
 * ELU: Exponential Linear Unit, seems to work better than ReLU in many cases <https://arxiv.org/pdf/1511.07289v1.pdf>
 
+## In Physics:
+* "Fast cosmological parameter estimation using neural networks", T. Auld, M. Bridges, M.P. Hobson and S.F. Gull,  MNRAS. 000, 1–6 (2004), <https://arxiv.org/pdf/astro-ph/0608174.pdf>
+* "Parameterized Neural Networks for High-Energy Physics", Baldi, P., Cranmer, K., Faucett, T., Sadowski, P., Whiteson, D. The European Physical Journal C. 76, 235, 1-7, May 2016, 2016, <https://arxiv.org/pdf/1601.07913.pdf>
 
 ### Hardware:
 
