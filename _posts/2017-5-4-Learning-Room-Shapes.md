@@ -3,7 +3,7 @@
 
 Main code is [here](https://github.com/drscotthawley/room-shape).
 
-Just sharing a new "toy" result, that relates to function spaces, acoustics, and machine learning:
+This is just a quick note sharing a new "toy" result, that relates to function spaces, acoustics, and machine learning:
 
 ## Motivation
 During [Karlheinz Brandenburg's visit](http://www.belmont.edu/burs/), he remarked that learning room shapes from the sound of the room is still an open question. So yesterday, "for fun" I decided to try the easiest possible thing I could think of, the most "ideal" if you will:  wrote a NN system that learns to use a set of room mode frequencies to predict (boxy) room dimensions, or vice versa, i.e. it learns the "Rayleigh Equation" for 3D standing waves... 
