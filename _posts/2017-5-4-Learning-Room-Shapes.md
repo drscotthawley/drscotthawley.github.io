@@ -1,7 +1,7 @@
 
 'Deep' neural network learns (boxy) room shape given mode frequencies, or vice versa
 
-Main code is [here](https://github.com/drscotthawley/room-shape)
+Main code is [here](https://github.com/drscotthawley/room-shape).
 
 Just sharing a new "toy" result, that relates to function spaces, acoustics, and machine learning:
 
