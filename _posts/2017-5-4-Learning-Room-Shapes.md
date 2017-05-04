@@ -10,7 +10,7 @@ During [Karlheinz Brandenburg's visit](http://www.belmont.edu/burs/), he remarke
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f_{nx,ny,nz}&space;=&space;{v_s&space;\over&space;2}&space;\sqrt{&space;\left(&space;{n_x&space;\over&space;L}&space;\right)^2&space;&plus;&space;\left(&space;{n_y&space;\over&space;W}&space;\right)^2&space;&plus;&space;\left(&space;{n_z&space;\over&space;H}&space;\right)^2&space;},&space;\{&space;n_x,&space;n_y,&space;n_z&space;=&space;0,1,2,3,...\}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_{nx,ny,nz}&space;=&space;{v_s&space;\over&space;2}&space;\sqrt{&space;\left(&space;{n_x&space;\over&space;L}&space;\right)^2&space;&plus;&space;\left(&space;{n_y&space;\over&space;W}&space;\right)^2&space;&plus;&space;\left(&space;{n_z&space;\over&space;H}&space;\right)^2&space;},&space;\{&space;n_x,&space;n_y,&space;n_z&space;=&space;0,1,2,3,...\}" title="f_{nx,ny,nz} = {v_s \over 2} \sqrt{ \left( {n_x \over L} \right)^2 + \left( {n_y \over W} \right)^2 + \left( {n_z \over H} \right)^2 }, \{ n_x, n_y, n_z = 0,1,2,3,...\}" /></a>
 
-...both 'forwards' or 'backwards'. 
+...both 'forwards' or 'backwards':  [L,W,H] <--> [list of mode frequencies]  (given speed of sound v_s).
 
 
 ## Results
