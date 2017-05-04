@@ -15,7 +15,7 @@ During [Karlheinz Brandenburg's visit](http://www.belmont.edu/burs/), he remarke
 ## Results
 Seems to learn within +/- 5%.   Sample room shown in the picture (red=target, green=predicted), used a training set of 200,000 random rooms.  It even learns to sort the freqs in ascending order.
 
-![Sample plot of mode freqs](https://github.com/drscotthawley/room-shape/blob/master/sample_mode_plot.png)
+![Sample plot of mode freqs](https://raw.githubusercontent.com/drscotthawley/room-shape/master/sample_mode_plot.png)
 
 Interestingly, trying to 'help' the network by using squared frequencies, inverse-(squared)-dimensions, etc. actually gave worse performance than letting the network learn the nonlinearities itself. (???)
 
