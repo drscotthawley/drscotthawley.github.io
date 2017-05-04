@@ -26,4 +26,5 @@ Of what possible practical utility is this? Not really sure. Although, it does a
 
 ## Future Work
 Taking this further, would require analyzing the weights of the network in detail, to see how it represents the function approximation.  Which would be worth doing!
-Of course, moving on to non-boxy rooms would be relevant and challenging.  Some means of encoding the room geometry would be needed, as well some way of simulating (or measuring?) resonant frequencies or impulse responses.
+
+Moving on to non-boxy rooms would be relevant and challenging.  Some means of encoding the room geometry would be needed, as well some way of simulating (or measuring?) resonant frequencies or impulse responses.
