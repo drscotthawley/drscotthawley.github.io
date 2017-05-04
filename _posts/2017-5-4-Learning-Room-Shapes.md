@@ -1,5 +1,5 @@
 
-'Deep' neural network learns (boxy) room shape given mode frequencies, or vice versa
+'Deep' neural network learns (boxy) room shape given mode frequencies, or vice versa.
 
 Main code is [here](https://github.com/drscotthawley/room-shape).
 
