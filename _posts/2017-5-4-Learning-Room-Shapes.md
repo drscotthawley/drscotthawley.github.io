@@ -14,11 +14,12 @@ During [Karlheinz Brandenburg's visit](http://www.belmont.edu/burs/), he remarke
 
 
 ## Results
-Seems to learn within +/- 5%.   Sample room shown in the picture (red=target, green=predicted), used a training set of 200,000 random rooms.  It even learns to sort the freqs in ascending order.
+Seems to learn within +/- 5%.  I don't have a graphical representation of going from mode frequencies to room dimensions (any ideas?).  For mapping dimensions to frequencies, here's a sample room shown in the picture (red=target, green=predicted), used a training set of 200,000 random rooms.  It even learns to sort the freqs in ascending order.
 
 ![Sample plot of mode freqs](https://raw.githubusercontent.com/drscotthawley/room-shape/master/sample_mode_plot.png)
 
 Interestingly, trying to 'help' the network by using squared frequencies, inverse-(squared)-dimensions, etc. actually gave worse performance than letting the network learn the nonlinearities itself. (???)
+
 
 Of what possible practical utility is this? Not really sure. Although, it does a fairly decent job learning the room shape even using a smaller random subsample of the available mode frequencies. :-)  If anything, it highlights a weakness of data-driven modeling: there's no way you'll measure 200,000 rooms in real life!
 
