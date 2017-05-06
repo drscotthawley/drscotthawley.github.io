@@ -6,7 +6,9 @@ title: Crash Course On GANs
 ## Intro/Motivation
 I've been wanting to grasp the seeming-magic of Generative Adversarial Networks (GANs) since I started seeing [handbags turned into shoes and brunettes turned to blondes](https://github.com/SKTBrain/DiscoGAN)... 
 ![hbg-shoe](https://raw.githubusercontent.com/SKTBrain/DiscoGAN/master/assets/discogan.png)
-...and seeing [Magic Pony's image super-resolution results](https://techcrunch.com/2016/04/14/magic-ponys-neural-network-dreams-up-new-imagery-to-expand-an-existing-picture/) and hearing that [Yann Lecun](https://twitter.com/ylecun) had called GANs [the most important innovation in machine learning in recent years](https://www.quora.com/session/Yann-LeCun/1).  Finally, Google's [Cat-Pig Sketch-Drawing Math](https://research.googleblog.com/2017/04/teaching-machines-to-draw.html)...
+...and seeing [Magic Pony's image super-resolution results](https://techcrunch.com/2016/04/14/magic-ponys-neural-network-dreams-up-new-imagery-to-expand-an-existing-picture/) and hearing that [Yann Lecun](https://twitter.com/ylecun) had called GANs [the most important innovation in machine learning in recent years](https://www.quora.com/session/Yann-LeCun/1).  
+
+Finally, seeing Google's [Cat-Pig Sketch-Drawing Math](https://research.googleblog.com/2017/04/teaching-machines-to-draw.html)...
 ![catpig](https://4.bp.blogspot.com/-yK7t-68XTzA/WO6XNTIb66I/AAAAAAAABuM/PqB64rz_YgMYM3EkP2BEJojnCLHsAMXqgCLcB/s640/image05.png) 
 
 ...broke me, and so...I need to 'get' this.
