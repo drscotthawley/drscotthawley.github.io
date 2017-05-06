@@ -87,6 +87,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 - ["Machine Learning is Fun Part 7: Abusing Generative Adversarial Networks to Make 8-bit Pixel Art"](https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7) by Adam Geitgey, *skip down to "How DCGANs Work"* (2017)
 - Post on BEGAN: <https://blog.heuritech.com/2017/04/11/began-state-of-the-art-generation-of-faces-with-generative-adversarial-networks/>
 - [An introduction to Generative Adversarial Networks (with code in TensorFlow)](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow)
+- ["Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)"](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f)
 
 
 ## Code
@@ -103,6 +104,9 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 - BEGAN-Tensorflow: <https://github.com/carpedm20/BEGAN-tensorflow>
 - SEGAN: <https://github.com/santi-pdp/segan>
 - DCGAN-Tensorflow: <https://github.com/carpedm20/DCGAN-tensorflow>
+
+### PyTorch:
+- Tutorial & simple implementation: <https://github.com/devnag/pytorch-generative-adversarial-networks>
 
 ## Datasets
 - CelebA: <http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html>
