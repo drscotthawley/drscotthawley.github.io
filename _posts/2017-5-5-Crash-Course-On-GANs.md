@@ -3,7 +3,7 @@
 
 *This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.*
 
-##Intro/Motivation
+## Intro/Motivation
 I've been wanting to grasp the seeming-magic of Generative Adversarial Networks (GANs) since I started seeing [handbags turned into shoes and brunettes turned to blondes](https://github.com/SKTBrain/DiscoGAN)... 
 ![hbg-shoe](https://raw.githubusercontent.com/SKTBrain/DiscoGAN/master/assets/discogan.png)
 ...and seeing [Magic Pony's image super-resolution results](https://techcrunch.com/2016/04/14/magic-ponys-neural-network-dreams-up-new-imagery-to-expand-an-existing-picture/) and hearing that [Yann Lecun](https://twitter.com/ylecun) had called GANs [the most important innovation in machine learning in recent years](https://www.quora.com/session/Yann-LeCun/1).  Finally, Google's [Cat-Pig Sketch-Drawing Math](https://research.googleblog.com/2017/04/teaching-machines-to-draw.html)...
@@ -12,7 +12,7 @@ I've been wanting to grasp the seeming-magic of Generative Adversarial Networks 
 I've noticed that, although people use GANs with great success for images, not many have tried using them for audio yet (**Note:** see SEGAN paper, below).  Maybe with already-successful generative audio systems like [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), [SampleRNN](https://github.com/soroushmehr/sampleRNN_ICLR2017) (listen to those piano sounds!!) and [TacoTron](https://google.github.io/tacotron/) there's less of a push for trying GANs.  Or maybe GANs just suck for audio.  Guess I'll find out...
 
 ## Steps I Took
-###Day 1:
+### Day 1:
 1. Gathered list of some prominent papers (below).
 2. Watched video of [Ian Goodfellow's Berkely lecture](https://www.youtube.com/watch?v=JRKl9QPiRok) (notes below).
 3. Started reading the [EBGAN paper](https://arxiv.org/abs/1609.03126) (notes below)...
@@ -28,7 +28,7 @@ I've noticed that, although people use GANs with great success for images, not m
 	
 8. Leaving codes to train. Next time, I'd like to try to better understand the use of an autoencoder as the discriminator.
 
-###Day 2: 
+### Day 2: 
 1. ???
 
 
