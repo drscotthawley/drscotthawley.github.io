@@ -39,11 +39,12 @@ I've noticed that, although people use GANs with great success for images, not m
 	
 	b. Cloned [@carpedm's Tensorflow repo](https://github.com/carpedm20/BEGAN-tensorflow), looked through it, got CelebA dataset, started running code.
 	
-8. Leaving codes to train. Next time, I'd like to try to better understand the use of an autoencoder as the discriminator.
+8. Leaving codes to train overnight. Next time, I'd like to try to better understand the use of an autoencoder as the discriminator.
 
 ### Day 2: 
-1. ???
-
+1. My office is <span style="color:red">hot</span>.  Two Titan X GPUs pulling ~230W for 10 hours straight has put the cards up towards annoyingly high temperatures, as in ~ 85 Celsius!  My previous nightly runs wouldn't even go above 60 C.   But the results -- espically from the straight-Tensorflow code -- are as incredible as advertised!  (Not that I understand them yet. LOL.)
+2. Fished around a little more on the web for audio GAN applications.  Found an [RNN-GAN application to MIDI](https://arxiv.org/abs/1611.09904), and found actual audio examples of [what not to do: don't try to just produce spectrograms with DCGAN and convert them to audio](http://deepsound.io/dcgan_spectrograms.html).  The latter authors seem to have decided to switch to a SampleRNN approach.  Perhaps it would be wise to heed their example? ;-) 
+3. 
 
 ## Papers
 Haven't read hardly any of these yet, just gathering them here for reference:
