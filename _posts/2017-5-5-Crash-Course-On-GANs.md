@@ -4,7 +4,7 @@ image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png
 bg-image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png
 ---
 
-![header-img](https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png?h=360)
+![header-img](https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png)
 (image source: [Dev Nag, medium.com](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f))
 
 *This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.  Adding to this as I go...*
