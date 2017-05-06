@@ -44,8 +44,8 @@ I've noticed that, although people use GANs with great success for images, not m
 ### Day 2: 
 1. My office is <span style="color:red">hot</span>.  Two Titan X GPUs pulling ~230W for 10 hours straight has put the cards up towards annoyingly high temperatures, as in ~ 85 Celsius!  My previous nightly runs wouldn't even go above 60 C.   But the results -- espically from the straight-Tensorflow code trained on the CelebA dataset -- are as incredible as advertised!  (Not that I understand them yet. LOL.)  The Keras version, despite claiming to be a BEGAN implementation, seems to suffer from "mode collapse," i.e. that too many very similar images get generated.
 2. Fished around a little more on the web for audio GAN applications.  Found an [RNN-GAN application to MIDI](https://arxiv.org/abs/1611.09904), and found actual audio examples of [what not to do: don't try to just produce spectrograms with DCGAN and convert them to audio](http://deepsound.io/dcgan_spectrograms.html).  The latter authors seem to have decided to switch to a SampleRNN approach.  Perhaps it would be wise to heed their example? ;-) 
-3. Since EBGAN implemented autoencoders as discriminators before BEGAN did, I went back to read that part of the EBGAN paper. Indeed, section "2.3 - Using AutoEncoders" (page 4).  Ok, I get the whole autoencoder thing now.
-4. 
+3. Since EBGAN implemented autoencoders as discriminators before BEGAN did, I went back to read that part of the EBGAN paper. Indeed, section "2.3 - Using AutoEncoders" (page 4). ... Ok, I basically get the autoencoder-discriminator thing now. :-)
+
 
 ## Papers
 Haven't read hardly any of these yet, just gathering them here for reference:
@@ -110,11 +110,14 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 - ["Stability of Generative Adversarial Networks"](http://www.araya.org/archives/1183) by Nicholas Guttenberg (2016)
 - ["End to End Neural Art with Generative Models"](http://dmlc.ml/mxnet/2016/06/20/end-to-end-neural-style.html) by Bing Xu (2016)
 
+- ### [Kording Lab GAN Tutorial](http://kordinglab.com/lab_teaching_2016/session_4/#1) by Roozbeh Farhoodi :-).  Nicely done, [has code too](https://github.com/KordingLab/lab_teaching_2016).
+
 
 ## Code
 ### Keras:
 - 'Basic' GAN with MNIST example: <http://www.kdnuggets.com/2016/07/mnist-generative-adversarial-model-keras.html>
 - GAN, BiGAN \& Adversarial AutoEncoder: <https://github.com/bstriner/keras-adversarial>
+- **Kording Lab's GAN tutorial, Jupyter Notebook <https://github.com/KordingLab/lab_teaching_2016/blob/master/session_4/Generative%20Adversarial%20Networks.ipynb>.  (Code is short and understandable.)**
 - Keras BEGAN: 
 	- <https://github.com/mokemokechicken/keras_BEGAN>: Only works on 64x64 images; BEGAN paper shows some 128x128
 	- <https://github.com/pbontrager/BEGAN-keras>: No documentation, and I don't see how it could run.  I notice local variables being referenced in [models.py](https://github.com/pbontrager/BEGAN-keras/blob/master/models.py) as if they're global.
@@ -123,6 +126,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
  
 ### Tensorflow:
 - BEGAN-Tensorflow: <https://github.com/carpedm20/BEGAN-tensorflow>
+- EBGAN.Tensorflow: <https://github.com/shekkizh/EBGAN.tensorflow>
 - SEGAN: <https://github.com/santi-pdp/segan>
 - DCGAN-Tensorflow: <https://github.com/carpedm20/DCGAN-tensorflow>
 
