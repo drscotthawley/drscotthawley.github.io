@@ -59,7 +59,8 @@ with Generative Adversarial Networks"](https://arxiv.org/pdf/1703.05192.pdf) by 
 	- **Remarks/Notes:**
 	- "This variant [EBGAN] converges more stably [than previous GANs] and is both easy to train and robust to hyper-parameter variations" (quoting from BEGAN paper, below).
 	- If it's energy-based, does that mean we get a Lagrangian, and Euler-Lagrange Equations, and Lagrange Multipliers?  And thus can physics students (& professors!) grasp these networks in a straightforward way?  Should perhaps take a look at Lecun's [Tutorial on Energy-Based Learning](http://yann.lecun.com/exdb/publis/pdf/lecun-06.pdf).
-	- "The energy is the resconstruction error [of the autoencoder]" (Section 1.3, bullet points) ![ebgan-pic](http://kordinglab.com/lab_teaching_2016/session_4/images/ebgan.jpg) <p style="text-align: right"><i>Image credit: <a href="http://kordinglab.com/lab_teaching_2016/session_4/">Roozbeh Farhoodi</a> + EBGAN authors</i></p>
+	- "The energy is the resconstruction error [of the autoencoder]" (Section 1.3, bullet points) 
+	- ![ebgan-pic](http://kordinglab.com/lab_teaching_2016/session_4/images/ebgan.jpg) <p style="text-align: right"><i>Image credit: <a href="http://kordinglab.com/lab_teaching_2016/session_4/">Roozbeh Farhoodi</a> + EBGAN authors</i></p>
 	- "...256×256 pixel resolution, without a multi-scale approach." (ibid)
 	- Section 2.3 covers on the use of the autoencoder as a discriminator.  Wow, truly, the discriminator's "energy"/ "loss" criterion is literally just the reconstruction error of the autoencoder. How does that get you a discriminator?? 
 	- It gets you a discriminator because the outputs of the generator are likely to have high energies (if you do it right) whereas the real data will produce low energies: "We argue that the energy function (the discriminator) in the EBGAN framework is also seen as
