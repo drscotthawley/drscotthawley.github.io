@@ -42,9 +42,10 @@ I've noticed that, although people use GANs with great success for images, not m
 8. Leaving codes to train overnight. Next time, I'd like to try to better understand the use of an autoencoder as the discriminator.
 
 ### Day 2: 
-1. My office is <span style="color:red">hot</span>.  Two Titan X GPUs pulling ~230W for 10 hours straight has put the cards up towards annoyingly high temperatures, as in ~ 85 Celsius!  My previous nightly runs wouldn't even go above 60 C.   But the results -- espically from the straight-Tensorflow code -- are as incredible as advertised!  (Not that I understand them yet. LOL.)
+1. My office is <span style="color:red">hot</span>.  Two Titan X GPUs pulling ~230W for 10 hours straight has put the cards up towards annoyingly high temperatures, as in ~ 85 Celsius!  My previous nightly runs wouldn't even go above 60 C.   But the results -- espically from the straight-Tensorflow code trained on the CelebA dataset -- are as incredible as advertised!  (Not that I understand them yet. LOL.)  The Keras version, despite claiming to be a BEGAN implementation, seems to suffer from "mode collapse," i.e. that too many very similar images get generated.
 2. Fished around a little more on the web for audio GAN applications.  Found an [RNN-GAN application to MIDI](https://arxiv.org/abs/1611.09904), and found actual audio examples of [what not to do: don't try to just produce spectrograms with DCGAN and convert them to audio](http://deepsound.io/dcgan_spectrograms.html).  The latter authors seem to have decided to switch to a SampleRNN approach.  Perhaps it would be wise to heed their example? ;-) 
-3. 
+3. Since EBGAN implemented autoencoders as discriminators before BEGAN did, I went back to read that part of the EBGAN paper. Indeed, section "2.3 - Using AutoEncoders" (page 4).  Ok, I get the whole autoencoder thing now.
+4. 
 
 ## Papers
 Haven't read hardly any of these yet, just gathering them here for reference:
@@ -59,13 +60,21 @@ with Generative Adversarial Networks"](https://arxiv.org/pdf/1703.05192.pdf) by 
 	- **Remarks/Notes:**
 	- "This variant [EBGAN] converges more stably [than previous GANs] and is both easy to train and robust to hyper-parameter variations" (quoting from BEGAN paper, below).
 	- If it's energy-based, does that mean we get a Lagrangian, and Euler-Lagrange Equations, and Lagrange Multipliers?  And thus can physics students (& professors!) grasp these networks in a straightforward way?  Should perhaps take a look at Lecun's [Tutorial on Energy-Based Learning](http://yann.lecun.com/exdb/publis/pdf/lecun-06.pdf).
+	- "The energy is the resconstruction error [of the autoencoder]" (Section 1.3, bullet points)
+	- "...256×256 pixel resolution, without a multi-scale approach." (ibid)
+	- Section 2.3 covers on the use of the autoencoder as a discriminator.  Wow, truly, the discriminator's "energy"/ "loss" criterion is literally just the reconstruction error of the autoencoder. How does that get you a discriminator?? 
+	- It gets you a discriminator because the outputs of the generator are likely to have high energies (if you do it right) whereas the real data will produce low energies: "We argue that the energy function (the discriminator) in the EBGAN framework is also seen as
+being regularized by having a generator producing the contrastive samples, to which the discrim-
+inator ought to give high reconstruction energies" (bottom of page 4). 
+
+	
 - ["Wasserstein GAN (WGAN)](https://arxiv.org/pdf/1701.07875.pdf) by Arjovsky, Chintala, \& Bottou (2017)
 
 - ### ["BEGAN: Boundary Equilibrium Generative Adversarial Networks"](https://arxiv.org/abs/1703.10717) by Berthelot, Schumm & Metz (April 2017). 
 	- **Remarks/Notes:**
 	- *"Our model is easier to train and simpler than other GANs architectures: no batch normalization, no dropout, no transpose convolutions and no exponential growth for convolution filters."* (end of section 3.5, page 5)
 	- This is probably not the kind of paper that anyone off the street can just pick up \& read.  *There will be math.*
-	- Uses an autoencoder for the discriminator...great. :-/	
+	- Uses an autoencoder for the discriminator.
 	- I notice that Table 1, page 8 shows "DFM" (from ["Improving Generative Adversarial Networks
 with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Warde-Farley & Bengio, 2017) as scoring higher than BEGAN.
    - page 2: "Given two normal distributions...with covariances $$C_1, C_2$$,...": see ["Multivariate Normal Distribution"](https://en.wikipedia.org/wiki/Multivariate_normal_distribution).
