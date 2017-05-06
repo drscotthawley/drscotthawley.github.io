@@ -1,3 +1,6 @@
+---
+title: Crash Course On GANs
+---
 *(adding to this as I go) This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.*
 
 ## Intro/Motivation
