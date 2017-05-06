@@ -45,12 +45,14 @@ Haven't read hardly any of these yet, just gathering them here for reference:
 - ["Improved Techniques for Training GANs"](https://arxiv.org/abs/1606.03498) by Salimans et al (2016).
 - DiscoGAN: ["Learning to Discover Cross-Domain Relations
 with Generative Adversarial Networks"](https://arxiv.org/pdf/1703.05192.pdf) by Kim et al. (2017)
-- EBGAN: ["Energy-based Generative Adversarial Network](https://arxiv.org/abs/1609.03126) by Zhao, Matheiu \& Lecun (2016/2017).  **Remarks/Notes:**
+- EBGAN: ["Energy-based Generative Adversarial Network](https://arxiv.org/abs/1609.03126) by Zhao, Matheiu \& Lecun (2016/2017).  
+	- **Remarks/Notes:**
 	- "This variant [EBGAN] converges more stably [than previous GANs] and is both easy to train and robust to hyper-parameter variations" (quoting from BEGAN paper, below).
 	- If it's energy-based, does that mean we get a Lagrangian, and Euler-Lagrange Equations, and Lagrange Multipliers?  And thus can physics students (& professors!) grasp these networks in a straightforward way?  Should perhaps take a look at Lecun's [Tutorial on Energy-Based Learning](http://yann.lecun.com/exdb/publis/pdf/lecun-06.pdf).
 - ["Wasserstein GAN (WGAN)](https://arxiv.org/pdf/1701.07875.pdf) by Arjovsky, Chintala, \& Bottou (2017)
 
-- ### ["BEGAN: Boundary Equilibrium Generative Adversarial Networks](https://arxiv.org/abs/1703.10717)** by Berthelot, Schumm & Metz (April 2017). *Remarks/Notes:*
+- ### ["BEGAN: Boundary Equilibrium Generative Adversarial Networks"](https://arxiv.org/abs/1703.10717) by Berthelot, Schumm & Metz (April 2017). 
+	- **Remarks/Notes:**
 	- *"Our model is easier to train and simpler than other GANs architectures: no batch normalization, no dropout, no transpose convolutions and no exponential growth for convolution filters."* (end of section 3.5, page 5)
 	- This is probably not the kind of paper that anyone off the street can just pick up \& read.  *There will be math.*
 	- Uses an autoencoder for the discriminator...great. :-/	
@@ -59,14 +61,16 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
    - page 2: "Given two normal distributions...with covariances $$C_1, C_2$$,...": see ["Multivariate Normal Distribution"](https://en.wikipedia.org/wiki/Multivariate_normal_distribution).
    - Section 3.3, Equilibrium: The "$$\mathbb{E}[\  ]$$" notation -- as in $$\mathbb{E}\left[\mathcal{L}(x)\right]$$ -- means "expected value."  See <https://en.wikipedia.org/wiki/Expected_value>
    - Introduces the *diversity ratio*: $$\gamma=\frac{\mathbb{E}\left[\mathcal{L}(G(z))\right]}{\mathbb{E}\left[\mathcal{L}(x)\right]}$$.  "Lower values of $$\gamma$$ lead to lower image diversity because the discriminator focuses more heavily on auto-encoding real images."
-   - "3.5 Model arcitechture": Did not actually get the bit about the autoencoder as the discriminator: "How does an autoencoder output a 1 or a zero?"  Moving on...
+   - "3.5 Model arcitechture": Did not actually get the bit about the autoencoder as the discriminator: "How does an autoencoder output a 1 or a zero?"  
+   - Ok, done. Will come back later if needed; maybe looking at code will make things clearer...
 
 - ["SEGAN: Speech Enhancement Generative Adversarial Network"](https://arxiv.org/pdf/1703.09452.pdf) by Pascual, Bonafonte \& Serra (April 2017). **Actual audio GAN!** They only used it to remove noise.
 
 
 ## Videos
 
-- [Ian Goodfellow (original GAN author), Guest lecture on GANs for UC Berkeley CS295](https://www.youtube.com/watch?v=JRKl9QPiRok) (Oct 2016). 1 hour 27 minutes. *NOTE: actually starts at 4:33.* Watch at 1.25 speed.  **Remarks/Notes:**
+- [Ian Goodfellow (original GAN author), Guest lecture on GANs for UC Berkeley CS295](https://www.youtube.com/watch?v=JRKl9QPiRok) (Oct 2016). 1 hour 27 minutes. *NOTE: actually starts at 4:33.* Watch at 1.25 speed.  
+	- **Remarks/Notes:**
 	-  *This is on fairly "high" level*, which may be too much for some viewers; if hearing the words "probability distribution" over & over again makes you tune out, and e.g. if you don't know what a Jacobian is, then you may not want to watch this.
 	-  His "Taxonomy of Generative Models" is **GREAT!**
 	-  The discriminator is just an ordinary classifier.
