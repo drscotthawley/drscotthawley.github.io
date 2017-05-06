@@ -11,7 +11,7 @@ I've noticed that, although people use GANs with great success for images, not m
 ## Steps I Took
 ### Day 1:
 1. Gathered list of some prominent papers (below).
-2. Watched video of [Ian Goodfellow's Berkely lecture](https://www.youtube.com/watch?v=JRKl9QPiRok) (notes below).
+2. Watched video of [Ian Goodfellow's Berkeley lecture](https://www.youtube.com/watch?v=JRKl9QPiRok) (notes below).
 3. Started reading the [EBGAN paper](https://arxiv.org/abs/1609.03126) (notes below)...
 4. ...but soon switched to [BEGAN paper](https://arxiv.org/abs/1703.10717) -- because wow! Look at these generated images: ![Sample Images](https://heuritech.files.wordpress.com/2017/04/1_face_teaser.png?w=1595&h=955)
 5. Googled for Keras-based BEGAN implementations and other code repositories (below)...Noticed [SEGAN](https://arxiv.org/abs/1703.09452)...
@@ -50,7 +50,7 @@ with Generative Adversarial Networks"](https://arxiv.org/pdf/1703.05192.pdf) by 
 	- I notice that Table 1, page 8 shows "DFM" (from ["Improving Generative Adversarial Networks
 with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Warde-Farley & Bengio, 2017) as scoring higher than BEGAN.
    - page 2: "Given two normal distributions...with covariances $$C_1, C_2$$,...": see ["Multivariate Normal Distribution"](https://en.wikipedia.org/wiki/Multivariate_normal_distribution).
-   - Section 3.3, Equilibrium: The "$$\mathbb{E}[\  ]$$" notation -- as in $$\mathbb{E}\left[\mathcal{L}(x)\right]$$ -- means "expected value." See <https://en.wikipedia.org/wiki/Expected_value>
+   - Section 3.3, Equilibrium: The "$$\mathbb{E}[\  ]$$" notation -- as in $$\mathbb{E}\left[\mathcal{L}(x)\right]$$ -- means "expected value." (Hey! GitHub isn't rendering my MarkDown Equations!)  See <https://en.wikipedia.org/wiki/Expected_value>
    - Introduces the *diversity ratio*: $$\gamma=\frac{\mathbb{E}\left[\mathcal{L}(G(z))\right]}{\mathbb{E}\left[\mathcal{L}(x)\right]}$$.  "Lower values of $$\gamma$$ lead to lower image diversity because the discriminator focuses more heavily on auto-encoding real images."
    - "3.5 Model arcitechture": Did not actually get the bit about the autoencoder as the discriminator: "How does an autoencoder output a 1 or a zero?"  Moving on...
 
@@ -59,7 +59,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 
 ## Videos
 
-- [Ian Goodfellow (originator of GANs), Guest lecture on GANs for UC Berkely CS295](https://www.youtube.com/watch?v=JRKl9QPiRok) (Oct 2016). 1 hour 27 minutes. *NOTE: actually starts at 4:33.* Watch at 1.25 speed.  **Remarks/Notes:**
+- [Ian Goodfellow (original GAN author), Guest lecture on GANs for UC Berkeley CS295](https://www.youtube.com/watch?v=JRKl9QPiRok) (Oct 2016). 1 hour 27 minutes. *NOTE: actually starts at 4:33.* Watch at 1.25 speed.  **Remarks/Notes:**
 	-  *This is on fairly "high" level*, which may be too much for some viewers; if hearing the words "probability distribution" over & over again makes you tune out, and e.g. if you don't know what a Jacobian is, then you may not want to watch this.
 	-  His "Taxonomy of Generative Models" is **GREAT!**
 	-  The discriminator is just an ordinary classifier.
