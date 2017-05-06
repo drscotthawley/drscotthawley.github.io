@@ -1,11 +1,11 @@
 ---
 title: Crash Course On GANs
-image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png
-bg-image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png
+image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png?h
+bg-image: https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png?h
 description: This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.  Adding to this as I go...
 ---
 
-![header-img](https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png)
+![header-img](https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png?h)
 (image source: [Dev Nag, medium.com](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f))
 
 *This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.  Adding to this as I go...*
@@ -96,6 +96,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 - [An introduction to Generative Adversarial Networks (with code in TensorFlow)](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow)
 - ["Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)"](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f) by Dev Nag (2017)
 - ["Stability of Generative Adversarial Networks"](http://www.araya.org/archives/1183) by Nicholas Guttenberg (2016)
+- ["End to End Neural Art with Generative Models"](http://dmlc.ml/mxnet/2016/06/20/end-to-end-neural-style.html) by Bing Xu (2016)
 
 
 ## Code
