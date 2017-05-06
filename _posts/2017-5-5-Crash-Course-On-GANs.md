@@ -66,7 +66,7 @@ with Generative Adversarial Networks"](https://arxiv.org/pdf/1703.05192.pdf) by 
 	<p style="text-align: right"><i>Image credit: <a href="http://kordinglab.com/lab_teaching_2016/session_4/">Roozbeh Farhoodi</a> + EBGAN authors</i></p>
 	- "...256×256 pixel resolution, without a multi-scale approach." (ibid)
 	- Section 2.3 covers on the use of the autoencoder as a discriminator.  Wow, truly, the discriminator's "energy"/ "loss" criterion is literally just the reconstruction error of the autoencoder. How does that get you a discriminator?? 
-	- It gets you a discriminator because the outputs of the generator are likely to have high energies (if you do it right) whereas the real data will produce low energies: "We argue that the energy function (the discriminator) in the EBGAN framework is also seen as
+	- It gets you a discriminator because the outputs of the generator are likely to have high energies whereas the real data (supposedly) will produce low energies: "We argue that the energy function (the discriminator) in the EBGAN framework is also seen as
 being regularized by having a generator producing the contrastive samples, to which the discrim-
 inator ought to give high reconstruction energies" (bottom of page 4). 
 
