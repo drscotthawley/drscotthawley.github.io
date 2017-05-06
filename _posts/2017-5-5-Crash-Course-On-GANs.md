@@ -71,7 +71,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 
 - [Ian Goodfellow (original GAN author), Guest lecture on GANs for UC Berkeley CS295](https://www.youtube.com/watch?v=JRKl9QPiRok) (Oct 2016). 1 hour 27 minutes. *NOTE: actually starts at 4:33.* Watch at 1.25 speed.  
 	- **Remarks/Notes:**
-	-  *This is on fairly "high" level*, which may be too much for some viewers; if hearing the words "probability distribution" over & over again makes you tune out, and e.g. if you don't know what a Jacobian is, then you may not want to watch this.
+	-  *This is on a fairly "high" level*, which may be too much for some viewers; if hearing the words "probability distribution" over & over again makes you tune out, and e.g. if you don't know what a Jacobian is, then you may not want to watch this.
 	-  His "Taxonomy of Generative Models" is **GREAT!**
 	-  The discriminator is just an ordinary classifier.
 	-  So, the generator's cost function can be just the negative of the discriminator's cost function, (i.e. it tries to "mess up" the discriminator), however that can saturate (i.e. produce small gradients) so instead they try to "maximize the probability that the discriminator will make a mistake" (44:12). 
