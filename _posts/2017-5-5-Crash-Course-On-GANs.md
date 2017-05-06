@@ -1,7 +1,11 @@
 ---
 title: Crash Course On GANs
+image: https://heuritech.files.wordpress.com/2017/04/4_gamma_convergence.png?w=1092&h=360
+bg-image: https://heuritech.files.wordpress.com/2017/04/4_gamma_convergence.png?w=1092&h=360
 ---
 *This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.  Adding to this as I go...*
+
+![header-img](https://heuritech.files.wordpress.com/2017/04/4_gamma_convergence.png?w=1092&h=360)
 
 ## Intro/Motivation
 I've been wanting to grasp the seeming-magic of Generative Adversarial Networks (GANs) since I started seeing [handbags turned into shoes and brunettes turned to blondes](https://github.com/SKTBrain/DiscoGAN)... 
