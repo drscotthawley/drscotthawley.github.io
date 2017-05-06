@@ -67,7 +67,7 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
    - page 2: "Given two normal distributions...with covariances $$C_1, C_2$$,...": see ["Multivariate Normal Distribution"](https://en.wikipedia.org/wiki/Multivariate_normal_distribution).
    - Section 3.3, Equilibrium: The "$$\mathbb{E}[\  ]$$" notation -- as in $$\mathbb{E}\left[\mathcal{L}(x)\right]$$ -- means "expected value."  See <https://en.wikipedia.org/wiki/Expected_value>
    - Introduces the *diversity ratio*: $$\gamma=\frac{\mathbb{E}\left[\mathcal{L}(G(z))\right]}{\mathbb{E}\left[\mathcal{L}(x)\right]}$$.  "Lower values of $$\gamma$$ lead to lower image diversity because the discriminator focuses more heavily on auto-encoding real images."
-   - "3.5 Model arcitechture": Did not actually get the bit about the autoencoder as the discriminator: "How does an autoencoder output a 1 or a zero?"  
+   - "3.5 Model architecture": Did not actually get the bit about the autoencoder as the discriminator: "How does an autoencoder output a 1 or a zero?"  
    - Ok, done. Will come back later if needed; maybe looking at code will make things clearer...
 
 - ["SEGAN: Speech Enhancement Generative Adversarial Network"](https://arxiv.org/pdf/1703.09452.pdf) by Pascual, Bonafonte \& Serra (April 2017). **Actual audio GAN!** They only used it to remove noise.
