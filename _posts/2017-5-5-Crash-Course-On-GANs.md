@@ -89,11 +89,12 @@ with Denoising Feature Matching"](https://openreview.net/pdf?id=S1X7nhsxl) by Wa
 
 
 
-## Web Tutorials
+## Web Posts/Tutorials
 - ["Machine Learning is Fun Part 7: Abusing Generative Adversarial Networks to Make 8-bit Pixel Art"](https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7) by Adam Geitgey, *skip down to "How DCGANs Work"* (2017)
 - Post on BEGAN: <https://blog.heuritech.com/2017/04/11/began-state-of-the-art-generation-of-faces-with-generative-adversarial-networks/>
 - [An introduction to Generative Adversarial Networks (with code in TensorFlow)](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow)
-- ["Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)"](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f)
+- ["Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)"](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f) by Dev Nag (2017)
+- ["Stability of Generative Adversarial Networks"](http://www.araya.org/archives/1183) by Nicholas Guttenberg (2016)
 
 
 ## Code
