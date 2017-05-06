@@ -8,7 +8,7 @@ excerpt: This post is not necessarily a crash course on GANs. It is at least a r
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ![header-img](https://cdn-images-1.medium.com/max/2000/1*-gFsbymY9oJUQJ-A3GTfeg.png?h)
-<p style="text-align: right"><i>Image credit: [Dev Nag](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f)</i></p>
+<p style="text-align: right"><i>Image credit: <a href="https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f">Dev Nag</a></i></p>
 
 *This post is not necessarily a crash course on GANs. It is at least a record of me giving myself a crash course on GANs.  Adding to this as I go.*
 
