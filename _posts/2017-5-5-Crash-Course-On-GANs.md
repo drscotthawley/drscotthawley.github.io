@@ -46,7 +46,9 @@ I've noticed that, although people use GANs with great success for images, not m
 2. Fished around a little more on the web for audio GAN applications.  Found an [RNN-GAN application to MIDI](https://arxiv.org/abs/1611.09904), and found actual audio examples of [what not to do: don't try to just produce spectrograms with DCGAN and convert them to audio](http://deepsound.io/dcgan_spectrograms.html).  The latter authors seem to have decided to switch to a SampleRNN approach.  Perhaps it would be wise to heed their example? ;-) 
 3. Since EBGAN implemented autoencoders as discriminators before BEGAN did, I went back to read that part of the EBGAN paper. Indeed, section "2.3 - Using AutoEncoders" (page 4). (see notes below) 
 4. Ok, I basically get the autoencoder-discriminator thing now. :-) 
-5. ??? Profit.
+
+### Day 3:
+"Life" intervened. :-/  Hope to pick this up later.
 
 ## Papers
 Haven't read hardly any of these yet, just gathering them here for reference:
