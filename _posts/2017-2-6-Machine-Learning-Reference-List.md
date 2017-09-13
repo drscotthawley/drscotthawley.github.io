@@ -1,4 +1,4 @@
-This has been my personal reading list, compiled ca. February 2016 & again further ca. October 2016.  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
+This has been my personal reading list, first compiled ca. February 2016 & updated very infrequently (e.g. October 2016, September 2017).  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
 
 *I'm mostly interested in audio processing, so...* 
 
@@ -103,6 +103,7 @@ This has been my personal reading list, compiled ca. February 2016 & again furth
 	- [Trask's tutorial blog on Neural Stack Machines](http://iamtrask.github.io/2016/02/25/deepminds-neural-stack-machine/)
 
 ### Convolutional Neural Networks:
+* Video: "What is wrong with convolutional neural nets?" Geoffrey Hinton,  Fields Institute, August 2017"<https://www.youtube.com/watch?v=Mqt8fs6ZbHk&feature=youtu.be>
 * Excellent: "History of major convnet architectures" (LeNet, AlexNet, Inception ResNet, VGG,...) <https://culurciello.github.io/tech/2016/06/04/nets.html>
 * Excellent: "A guide to convolution arithmetic for deep learning" by Dumoulin and Visin <https://arxiv.org/pdf/1603.07285.pdf>
 * Glossary/Summary of conv net terms/concepts:
