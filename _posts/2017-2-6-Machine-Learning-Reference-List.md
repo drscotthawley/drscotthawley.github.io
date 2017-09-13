@@ -1,4 +1,4 @@
-This has been my personal reading list, first compiled ca. February 2016 & updated very infrequently (e.g. October 2016, September 2017).  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
+This has been my personal reading list, first compiled ca. February 2016 & updated very infrequently (e.g. Oct 2016, Feb 2017, Sept 2017).  The field moves so quickly, much of this may have been superseded by now.  If you find it useful as well, that's great.
 
 *I'm mostly interested in audio processing, so...* 
 
