@@ -4,7 +4,8 @@ title: Notes on Convexity
 subtitle: of Loss Functions Used in Classification (Logistic Regression)
 description: Following up on a question that arose in Week 3 of Andrew Ng's Machine Learning course. 
 excerpt: Andrew Ng, in Week 3 of his Coursera course on Machine Learning, shows an image...
-image: images/convexity/convexity_header.jpg
+image: ../images/convexity/convexity_header_new.jpg
+bg-image: ../images/convexity/convexity_header_new.jpg
 comments: true
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
