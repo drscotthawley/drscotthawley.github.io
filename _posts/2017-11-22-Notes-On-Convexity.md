@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Notes on Convexity
-subtitle: of Loss Functions Used in Classification (Logistic Regression)
+title: Notes on Convexity of Loss Functions for Classification
+subtitle: (Logistic Regression)
 description: Following up on a question that arose in Week 3 of Andrew Ng's Machine Learning course. 
 excerpt: Andrew Ng, in Week 3 of his Coursera course on Machine Learning, shows an image...
 image: ../images/convexity/convexity_header_new.jpg
@@ -182,6 +182,8 @@ plot_loss_surf(A,B,x_arr,loss='CE')
 So, although the individual terms  $(y_i - h_i)^2$ and/or $[y_i\log(h_i)+(1-y_i)\log(1-h_i)]$ are individually convex, the *sum* for *either* type of loss terms is actually non-convex for this problem.  Although neither give rise to unwanted local minima for this problem.
 
 The SE loss, while at least not having any non-global minima, still has multiple significant flat regions that would prove tedious for gradient descent optimiazation, whereas in contrast, the CE loss is smoother and is strictly monotonic on either side of the global minimum.   The the CE loss (and/or KL divergence) would be preferable for this problem -- you could *do* it with SE loss assuming you had momentum or some fancy optimization algorithm, but it would take longer and why bother?
+
+A better way to describe this may be in terms of the 'flat regions'.  As we see in [this nice demo on Desmos](https://www.desmos.com/calculator/kxz6lzszf9), what the -log function does is take the "flattening" and blow it up into a significant slope: the smaller the value, the larger the -log.  This has a way of making things 'curved' when the true values seem to be flattening out.  In this sense, the CE loss would seem to preferable for many cases, _so long as the predictions $h_i$ stay bounded between 0 and 1_. This is why it is not recommended for regression problems which may not be bounded in such a way.  If, however, you can keep your regression values between 0 and 1, this may be worthwhile.  The trade-off is that by bounding the output layer of a regression solver in such a away, you may introduce a new form of "vanishing gradients" -- i.e. you move these from the loss function into, say, the activation of your last network layer. 
 
 ## Aside: Solve the logistic regression problem using scikit-learn
 
