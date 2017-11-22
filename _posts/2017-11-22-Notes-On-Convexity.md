@@ -22,7 +22,7 @@ $$ MSE = {1\over m}\sum_{i=1}^m \left( y_i - h_i \right)^2 $$
 
 $$ CE =  - {1\over m}\sum_{i=1}^m \left[ y_i \log(h_i) + (1-y_i) \log(1-h_i) \right] $$
 
-where $y_i$ are the true values (0 or 1) and $h_i = h(x_i)$ are the predictions.
+where $$y_i$$ are the true values (0 or 1) and $$h_i = h(x_i)$$ are the predictions.
 
 **TL/DR: No I can't reproduce his sketches.  The graph I get for sum of the squared error (SE) doesn't have the wiggles that his drawing on the left does. *(Perhaps he was just doodling an example of an arbitrary non-convex function, rather than the squared loss in particular?)*   Takeways at the bottom of this, re. the difference between a convex *loss function (by itself)* vs. a convex loss for a *problem* -- i.e. the individual terms are convex for either function, but the *sum* of these terms is actually not strictly convex for either function (for this problem).**
 
@@ -202,9 +202,9 @@ print("Predicted threshold: x = ",-b_fit/a_fit)
 
 
 ## Afterward: "But you still haven't found the global minimum!"
-In the surface plots above, we see the minimum of the surface going lower and lower -- even lower than the supposedly 'optimum' parameters we just found via scikit-learn.  The reason is that there is no optimal paramter combination:  The steepness parameter $a$ of the sigmoid function $h(x)$ is only bounded from below by the data in this problem. Thus there is no upper bound.  The data will constrain the center of the sigmoid $x_0 = -b/a$ to some extent (i.e. it needs to lie between two values of $x_i$), but other than that...
+In the surface plots above, we see the minimum of the surface going lower and lower -- even lower than the supposedly 'optimum' parameters we just found via scikit-learn.  The reason is that there is no optimal paramter combination:  The steepness parameter $a$ of the sigmoid function $$h(x)$$ is only bounded from below by the data in this problem. Thus there is no upper bound.  The data will constrain the center of the sigmoid $$x_0 = -b/a$$ to some extent (i.e. it needs to lie between two values of $$x_i$$), but other than that...
 
-So how then does the loss function seem to get lower and lower?  The steeper the sigmoid function, the more closely its values will approach 0 and 1 on either side.  Thus for this problem, the optimal solution is $a \rightarrow \infty$, with $b = -({\rm threshold})/a$.
+So how then does the loss function seem to get lower and lower?  The steeper the sigmoid function, the more closely its values will approach 0 and 1 on either side.  Thus for this problem, the optimal solution is $$a \rightarrow \infty$$, with $$b = -({\rm threshold})/a$$.
 
 ## Comments?
 I'd love feedback, especially from those more experienced in these matters.  Any thoughts?
