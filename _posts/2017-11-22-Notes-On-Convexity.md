@@ -202,7 +202,7 @@ print("Predicted threshold: x = ",-b_fit/a_fit)
 
 
 ## Afterward: "But you still haven't found the global minimum!"
-In the surface plots above, we see the minimum of the surface going lower and lower -- even lower than the supposedly 'optimum' parameters we just found via scikit-learn.  The reason is that there is no optimal paramter combination:  The steepness parameter $a$ of the sigmoid function $$h(x)$$ is only bounded from below by the data in this problem. Thus there is no upper bound.  The data will constrain the center of the sigmoid $$x_0 = -b/a$$ to some extent (i.e. it needs to lie between two values of $$x_i$$), but other than that...
+In the surface plots above, we see the minimum of the surface going lower and lower -- even lower than the supposedly 'optimum' parameters we just found via scikit-learn.  The reason is that there is no optimal paramter combination:  The steepness parameter $$a$$ of the sigmoid function $$h(x)$$ is only bounded from below by the data in this problem. Thus there is no upper bound.  The data will constrain the center of the sigmoid $$x_0 = -b/a$$ to some extent (i.e. it needs to lie between two values of $$x_i$$), but other than that...
 
 So how then does the loss function seem to get lower and lower?  The steeper the sigmoid function, the more closely its values will approach 0 and 1 on either side.  Thus for this problem, the optimal solution is $$a \rightarrow \infty$$, with $$b = -({\rm threshold})/a$$.
 
