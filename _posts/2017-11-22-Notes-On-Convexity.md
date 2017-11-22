@@ -1,3 +1,14 @@
+---
+layout: post
+title: Notes on Convexity
+subtitle: of Loss Functions Used in Classification
+description: Following up on a question that arose in Week 3 of Andrew Ng's Machine Learning course. 
+excerpt: Andrew Ng, in Week 3 of his Coursera course on Machine Learning, shows an image...
+image: ../images/convexity/convexity_header.jpg
+bg-image: ../images/convexity/convexity_header.jpg
+comments: true
+---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 # Notes on the [Convexity](https://en.wikipedia.org/wiki/Convex_function) of Squared Error vs. Cross Entropy Loss for Logistic Regression
 
