@@ -24,7 +24,7 @@ $$ CE =  - {1\over m}\sum_{i=1}^m \left[ y_i \log(h_i) + (1-y_i) \log(1-h_i) \ri
 
 where $$y_i$$ are the true values (0 or 1) and $$h_i = h(x_i)$$ are the predictions.  
 
-*(Note that CE is part of the [Kullback-Liebler (KL) divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence); for supervised learning scenarios, they differ only by a constant.  Thus optimizing one is functionally equivalent to optimizing the other, and the following remarks appy to both CE and KL loss.  For more on that, try reading [this](https://stats.stackexchange.com/q/265989).)*
+*(Note that CE is part of the [Kullback-Liebler (KL) divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence); for supervised learning scenarios, they differ only by a constant.  Thus optimizing one is functionally equivalent to optimizing the other, and the following remarks appy to both CE and KL loss. In fact, many people will say 'KL' even though they're really only computing the CE part.  For more on this topic, try reading [this](https://stats.stackexchange.com/q/265989).)*
 
 **TL/DR: No I can't reproduce his sketches.  The graph I get for sum of the squared error (SE) doesn't have the wiggles that his drawing on the left does. *(Perhaps he was just doodling an example of an arbitrary non-convex function, rather than the squared loss in particular?)*   Takeways at the bottom of this, re. the difference between a convex *loss function (by itself)* vs. a convex loss for a *problem* -- i.e. the individual terms are convex for either function, but the *sum* of these terms is actually not strictly convex for either function (for this problem).**
 
