@@ -149,6 +149,6 @@ def load_audio(audio_path, mono=None, sr=None, convertOSXaliases=True):  # wrapp
 
 Happy coding!
 
-*NOTE: Currently this code only follows *one* alias.  If there's an alias pointing to an alias to a file, it won't resolve to that file.
+*NOTE: Currently this code only follows _one_ alias.  If there's an alias pointing to an alias to a file, it won't resolve to that file.
 Full generality would involve adding an iteration or recursive way of traversing multiple aliases which...I may do later. ;-)* 
 
