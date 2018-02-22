@@ -76,7 +76,7 @@ def isAlias(path, already_checked_os=False):
     return None
 
 
-
+# returns the full path of the file "pointed to" by the alias
 def resolve_osx_alias(path, already_checked_os=False, convert=False):        # single file/path name
     if (not already_checked_os) and ('Darwin' != platform.system()):  # already_checked just saves a few microseconds ;-)
         return path
@@ -105,6 +105,7 @@ def resolve_osx_alias(path, already_checked_os=False, convert=False):        # s
     return source
 
 
+# used for multiple files at a time, just a looped call to resolve_osx_alias
 def resolve_osx_aliases(filelist, convert=False):  # multiple files
     #print("filelist = ",filelist)
     if ('Darwin' != platform.system()):
