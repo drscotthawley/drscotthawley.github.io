@@ -37,8 +37,7 @@ links, so that "next time" you won't have to deal with this.  Enjoy.
 #
 # Requirements: osascript (AppleScript), platform, subprocess
 #
-# TODO: - make it work in parallel
-#       - security upgrade: shell call will allow untrusted execution if 'path' contains ';'', etc.
+# TODO: Fix security risk: shell call is sloppy & will allow untrusted execution if 'path' contains ';' etc.
 #
 # NOTE: By default, this only returns the names of the original source files,
 #       but if you set convert=True, it will also convert aliases to symbolic links.
