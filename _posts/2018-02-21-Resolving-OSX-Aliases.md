@@ -7,6 +7,7 @@ image: http://cdn.osxdaily.com/wp-content/uploads/2012/06/remove-alias-arrows-ma
 bg-image: http://cdn.osxdaily.com/wp-content/uploads/2012/06/remove-alias-arrows-mac.jpg
 comments: true
 ---
+Mac OSX aliases are not symbolic links. Trying to read one may crash your code.
 
 In an app I'm developing, I want users to be able to easily create a "library" of symbolic links to 
 other places on their machine, and this is most easily achieved for many of them by Cmd-Option-Dragging and dropping the files.
