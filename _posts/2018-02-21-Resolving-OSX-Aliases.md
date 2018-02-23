@@ -35,7 +35,7 @@ links, so that "next time" you won't have to deal with this.  Enjoy.
 #
 # Python port modified from https://hints.macworld.com/article.php?story=20021024064107356
 #
-# Requirements: osascript (AppleScript), platform, subprocess
+# Requirements: osascript (AppleScript), platform, subprocess, shlex
 #
 # TODO: "Shell"-style execution could allow untrusted code execution (security risk) & could be upgraded
 #       However, intended use is that the only variable in command string is a 'real' filename on the system,
@@ -63,7 +63,8 @@ def isAlias(path, already_checked_os=False):
     line_7='end if'
     line_8='end tell'
     cmd = "osascript -e '"+line_1+"' -e '"+line_2+"' -e '"+line_3+"' -e '"+line_4+"' -e '"+line_5+"' -e '"+line_6+"' -e '"+line_7+"' -e '"+line_8+"'"
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    args = shlex.split(cmd)      # shlex splits cmd up appropriately so we can call subprocess.Popen with shell=False (better security)
+    p = subprocess.Popen(args, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     retval = p.wait()
     if (0 == retval):
         line = p.stdout.readlines()[0]
@@ -92,7 +93,8 @@ def resolve_osx_alias(path, already_checked_os=False, convert=False):        # s
     line_7 ='end if'
     line_8 ='end tell'
     cmd = "osascript -e '"+line_1+"' -e '"+line_2+"' -e '"+line_3+"' -e '"+line_4+"' -e '"+line_5+"' -e '"+line_6+"' -e '"+line_7+"' -e '"+line_8+"'"
-    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    args = shlex.split(cmd)              # shlex splits cmd up appropriately so we can call subprocess.Popen with shell=False (better security)
+    p = subprocess.Popen(args, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     retval = p.wait()
     if (0 == retval):
         line = p.stdout.readlines()[0]        
