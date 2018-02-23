@@ -37,9 +37,7 @@ links, so that "next time" you won't have to deal with this.  Enjoy.
 #
 # Requirements: osascript (AppleScript), platform, subprocess, shlex
 #
-# TODO: "Shell"-style execution could allow untrusted code execution (security risk) & could be upgraded
-#       However, intended use is that the only variable in command string is a 'real' filename on the system,
-#       so for this use case the risk is minor. 
+# TODO: - could make it work in parallel when mutliple filenames are given
 #
 # NOTE: By default, this only returns the names of the original source files,
 #       but if you set convert=True, it will also convert aliases to symbolic links.
