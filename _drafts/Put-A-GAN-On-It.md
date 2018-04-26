@@ -27,8 +27,9 @@ of that, I missed the essential essence of [Dev Nang](https://medium.com/@devnag
 
  > "GANs are simpler to set up than you think"
  
-blah
-
+The figure above shows an image-transformation pipeline. 
+In one ‘traditional’ paradigm, the question mark is a loss function such as the Mean Squared Error.
+What if instead we replace this loss function with an image classifier, that tries to guess which path the generated image came from, and train the weights of the NN transformation to try to ‘fool’ the classifier?  This amounts to a type of Generative Adversarial Network (GAN).
 
 ```python
 
