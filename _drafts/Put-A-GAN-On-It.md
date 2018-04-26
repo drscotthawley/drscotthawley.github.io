@@ -2,7 +2,7 @@
 layout: post
 title: Put a GAN on It!
 subtitle: Too-high error got you down? Put a GAN on It!
-description: I thought GANs were confusing. The key is simply learning to lie. ...A more correct title would be "Put a Classifier on It (and Turn it Into a GAN)!", but that doesn't sound as good.
+description: I thought GANs were confusing. The key is simply learning to lie.
 excerpt: Earlier I wrote a post called "Crash Course on GANs", but somehow I missed the "essence:" "GANs are simpler to set up than you think."
 
 image: ../images/PutaGANonIt_justimage.png
