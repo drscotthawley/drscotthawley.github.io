@@ -25,7 +25,7 @@ Earlier I wrote a post called [Crash Course on GANs](https://drscotthawley.githu
 of that, I missed the essential essence of [Dev Nang](https://medium.com/@devnag)'s excellent post,
 ["Generative Adversarial Networks (GANs) in 50 lines of code (PyTorch)"](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f):
 
- > "GANs are simpler to set up than you think"
+ > *"tl;dr: GANs are simpler to set up than you think"*
  
 The figure above shows an image-transformation pipeline. 
 In one ‘traditional’ paradigm, the question mark is a loss function such as the Mean Squared Error.
