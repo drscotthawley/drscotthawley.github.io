@@ -31,6 +31,13 @@ The figure above shows an image-transformation pipeline.
 In one ‘traditional’ paradigm, the question mark is a loss function such as the Mean Squared Error.
 What if instead we replace this loss function with an image classifier, that tries to guess which path the generated image came from, and train the weights of the NN transformation to try to ‘fool’ the classifier?  This amounts to a type of Generative Adversarial Network (GAN).
 
+So, like in the [Portlandia sketch](https://www.youtube.com/watch?v=GNpIOlDhigw), we're going put \[classifiers] on things that didn't have them.
+![portlandia gif](http://i0.kym-cdn.com/photos/images/original/001/116/028/630.gif)
+
+*...And yea, the title for this post should be "Put a Classifier on It (and Turn it Into a GAN)!", but that doesn't flow
+as well.*
+
+
 ```python
 
 ```
