@@ -29,13 +29,13 @@ Now, when we talk about uncertainties, we're talking about some kind of probabil
 Conceptually, *that's it.*  But as with many things in the life of the scientist (e.g., General Relatvity), quantifying that simple, elegant concept involves  a \*\*\*\* ton of careful math. To wit...
 
 ### Recasting the Problem
-First, some clarification and notation.  We'll regard the given $$$N$$$ domain values $$$x_i (i=1..N)$$$ as inputs and their corresponding range values $$$y_i$$$ as outputs.
+First, some clarification and notation.  We'll regard the given $N$ domain values $x_i (i=1..N)$ as inputs and their corresponding range values $y_i$ as outputs.
 
-Now, instead of regarding the x's as spaced out along the number line and having the model map individual values  $$$x\rightarrow y$$$ (i.e., $$$\mathbb{R}^1\rightarrow\mathbb{R}^1$$$), we're going to put all the $$$x_i$$$ values *together*, as specifying a single point (or 'vector' if you're a computer scientist rather than a physicist or mathematician) $$$\mathbf X$$$ in $$$N$$$-dimenstional space, with corresponding output point $$$\mathbf Y$$$,  and our model as mapping $$$\mathbf X\rightarrow \mathbf Y$$$
-(i.e. $$$\mathbb{R}^N\rightarrow\mathbb{R}^N$$$).  Or, to be more careful, using the given data $$$\mathbf X$$$ and $$$\mathbf Y$$$, and given some *new* input vector $$$\mathbf x^*$$$, the model will predict the probability of an output of $$$\mathbf y^*$$$, i.e. it will predict
+Now, instead of regarding the x's as spaced out along the number line and having the model map individual values  $x\rightarrow y$ (i.e., $\mathbb{R}^1\rightarrow\mathbb{R}^1$), we're going to put all the $x_i$ values *together*, as specifying a single point (or 'vector' if you're a computer scientist rather than a physicist or mathematician) $\mathbf X$ in $N$-dimenstional space, with corresponding output point $\mathbf Y$,  and our model as mapping $\mathbf X\rightarrow \mathbf Y$
+(i.e. $\mathbb{R}^N\rightarrow\mathbb{R}^N$).  Or, to be more careful, using the given data $\mathbf X$ and $\mathbf Y$, and given some *new* input vector $\mathbf x^*$, the model will predict the probability of an output of $\mathbf y^*$, i.e. it will predict
 
 $$p(\mathbf{y^*| x^*, X, Y})$$
 
-Gal again: "The expectation of $$$\mathbf y^*$$$ is called the *predictive mean* of the model, and its variance is called the *predictive uncertainty*."
+Gal again: "The expectation of $\mathbf y^*$ is called the *predictive mean* of the model, and its variance is called the *predictive uncertainty*."
 
 **TODO:** more later
