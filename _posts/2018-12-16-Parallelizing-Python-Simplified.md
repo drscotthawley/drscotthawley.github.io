@@ -16,14 +16,17 @@ the documentation on this to be obtuse?  Yea.
 Usually I'm interested in either *outputting* lots of data in parallel, or *inputting* lots of data in parallel, and it's
 usually something that I first implemented as a loop but got tired of how slow it runs.
 
-There's a simple prescription for parallelizing most of these kinds of tasks.  It goes as follows:
+There's usually a simple prescription for parallelizing most of these kinds of tasks.  It goes as follows:
+<ol start="0">
+  <li>Have some kind of task performed in a for loop.</li>
+  <li>Write a function that does what you want for one "instance."  For example, take what's inside one of your for loops,
+put all that in a separate function.</li>
+  <li>As a check, keep your loop but use only the function call. Make sure it produces the same results as the original version of your code.</li>
+    <li>Use `functools.partial` to create a wrapper for your function.</li>
+  <li>Replace the loop with a call to `Pool.map()`. </li>
+</ol>
 
-0. Have some kind of task performed in a for loop. 
-1. Write a function that does what you want for one "instance."  For example, take what's inside one of your for loops,
-put all that in a separate function.
-2. Keep your loop but use only the function call. Make sure it produces the same results as the original version of your code.
-3. Use `functools.partial` to create a wrapper for your function.
-4. Replace the loop with a call to `Pool.map()`. 
+
 
 In the following, we'll cover 3 examples for parallel tasks:
 1. Generate a bunch of files
