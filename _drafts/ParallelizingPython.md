@@ -108,7 +108,7 @@ you'll see the speedup.
 This example is actually of limited utility and you may want to just skip down to "Example 3: Filling a numpy array," but 
 it's still an illustrative example that motivates Example 3, and offers a bit of variety in how one might do things.  In this case we're *not* going to use Pool.map; instead we're going to use a context manager for the particular datatype of `list`.  
 
-Let's try to load in all the image files we just generated, into a list.  We'll split up the tasks manually into equal numbers for each process.
+Let's try to load in all the image files we just generated, into a list.  Here's the serial version: 
 ~~~ python
 import glob
 import cv2
@@ -129,8 +129,10 @@ for i in range(n_files):
 
 print(len(img_data_list),"images in list.")
 ~~~
-If we wanted to, we could easily convert this list of images to a numpy array. But let's hold off on that.  Parallelizing this looks like the following process:
+(If we wanted to, we could easily convert this list of images to a numpy array. But let's hold off on that.)
 
+This time, we'll split up the tasks manually into equal numbers for each process.
+Parallelizing this can take the following form:
 ~~~ python
 from multiprocessing import Process, Manager, cpu_count
 import glob
