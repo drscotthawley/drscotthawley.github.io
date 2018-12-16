@@ -211,7 +211,7 @@ for i in range(n_files):
 print("Finished.")
 ~~~
 
-For the parallel part, we're going to have to a global variable.  Sorry, there's no away around it, because of Python's [Global Itnerpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
+For the parallel version, we're going to have to use a global variable.  Sorry, there's no away around it, because of Python's [Global Itnerpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
 
 Without further ado, here's the parallel, numpy version of the 'loading a list of images' shown earlier in Example 2.
 
