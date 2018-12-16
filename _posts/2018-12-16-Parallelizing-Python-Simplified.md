@@ -52,7 +52,7 @@ for i in range(n_images):
     cv2.imwrite(filename,arr)
 ~~~
 
-Now we write dedicated function, put it in a `partial` wrapper, and call it as follows:
+Now we write a dedicated function, put it in a `partial` wrapper, and call it as follows:
 ~~~ python
 import numpy as np
 import cv2
