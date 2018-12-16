@@ -163,7 +163,7 @@ num_procs = cpu_count()
 print("Parallelizing across",num_procs,"processes.")
 
 per_proc = n_files // num_procs  # Number of files per processor to load
-assert n_files == per_proc * num_procs  # Obvously one can do something more sophisticated than this!
+assert n_files == per_proc * num_procs  # Make sure taks divide evenly. Obvously one can do something more sophisticated than this!
 
 with Manager() as manager:
     img_data_list = manager.list()
@@ -212,3 +212,72 @@ for i in range(n_files):
 print("Finished.")
 ~~~
 
+For the parallel part, we're going to have to a global variable.  Sorry, there's no away around it, because of Python's [Global Itnerpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
+
+Without further ado, here's the parallel, numpy version of the 'loading a list of images' shown earlier in Example 2.
+
+~~~ python
+import numpy as np
+import glob
+import cv2
+from multiprocessing import Process, Manager, Pool, sharedctypes, cpu_count
+from functools import partial
+import gc
+
+mp_shared_array = None                               # global variable for array
+def load_one_proc(img_file_list, per_proc, iproc):
+    global mp_shared_array
+
+    tmp = np.ctypeslib.as_array(mp_shared_array)
+
+    istart, iend = iproc * per_proc, (iproc+1) * per_proc
+    for i in range(istart,iend):    # each process will read a range of files
+        filename = img_file_list[i]
+        print("Reading file",filename)
+        tmp[i] = cv2.imread(filename)
+    return
+
+name_prefix = 'image_'
+img_file_list = sorted(glob.glob(name_prefix+'*.png'))
+n_files = len(img_file_list)
+
+first_image = cv2.imread(img_file_list[0])
+print(n_files,"files available.  Shape of first image is",first_image.shape)
+print("Assuming all images are that size.")
+img_data_arr = np.zeros([n_files]+list(first_image.shape))  # allocate storage
+tmp = np.ctypeslib.as_ctypes(img_data_arr)                  # tmp variable avoids numpy garbage-collection bug
+
+print("Allocating shared storage for multiprocessing (this can take a while)")
+mp_shared_array = sharedctypes.RawArray(tmp._type_, tmp)
+
+
+# We'll split up the list manually.
+num_procs = cpu_count()
+print("Parallelizing across",num_procs,"processes.")
+
+per_proc = n_files // num_procs  # Number of files per processor to load
+assert n_files == per_proc * num_procs  # Obvously one can do something more sophisticated than this!
+
+p = Pool(num_procs)
+wrapper = partial(load_one_proc, img_file_list, per_proc)
+indices = range(num_procs)
+result = p.map(wrapper, indices)                # here's where we farm out the op
+img_data_arr = np.ctypeslib.as_array(mp_shared_array, shape=img_data_arr.shape)  # this actually happens pretty fast
+p.close()
+p.join()
+
+# Next couple list are here just in case you want to move on to other things
+#   and force garbage collection
+mp_shared_array = None
+gc.collect()
+
+
+print("Finished.")
+~~~
+
+So that's the basic implementation.  Note that in the above codes we're forcing the number of processes to divide evenly into
+the size of the dataset.  This not a huge problem to fix. There are other ways of indexing the array, or perhaps you might only care
+to use the nearest multiple of the number of processors for the size of your dataset.  For now, these examples show the basics
+of how you might parallelize a few common tasks in Python.
+
+Let me know in the comments if you have suggestions for improvements, or other ideas!
