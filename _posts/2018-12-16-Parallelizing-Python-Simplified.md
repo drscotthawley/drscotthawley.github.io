@@ -275,7 +275,7 @@ print("Finished.")
 ~~~
 
 So that's the basic implementation.  Note that in the above codes we're forcing the number of processes to divide evenly into
-the size of the dataset.  This not a huge problem to fix. There are other ways of indexing the array, or perhaps you might only care
+the size of the dataset, which is kind of 'stupid' and 'lazy'.  This not a huge problem to correct...maybe I'll come back and re-write that part later. There are other ways of indexing the array, or perhaps you might only care
 to use the nearest multiple of the number of processors for the size of your dataset.  For now, these examples show the basics
 of how you might parallelize a few common tasks in Python.
 
