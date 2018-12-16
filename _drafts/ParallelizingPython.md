@@ -175,3 +175,37 @@ with Manager() as manager:
 
 print(len(outside_list),"images in list.")
 ~~~
+
+Okay, great.  The thing is, that set of processes operates asynchronously, so there's no telling what *order* the final list is going to be in.  Maybe you do don't care.  But I care.  One way of dealing with this is to add an index item within the list for each item,
+and then sort on that index.
+
+But most of the time what I really want in the end is a numpy array.  So let's just look at how to fill one of those, directly.
+
+## Example 3: Filling a NumPy array
+Data scientist Jonas Teuwen made [a great post](https://jonasteuwen.github.io/numpy/python/multiprocessing/2017/01/07/multiprocessing-numpy-array.html) which got me started on how to do this, but then it seems I [uncovered a bug in numpy's garbage collection](https://stackoverflow.com/questions/53757856/segmentation-fault-when-creating-multiprocessing-array) for which there's [now a patch](https://github.com/numpy/numpy/pull/12566).  Even without the patch, there are a couple workarounds one can use, and I'll choose
+the simpler of the two workarounds.
+
+Let's load all those images into a numpy array instead of a list. First the serial version:
+~~~ python
+import numpy as np
+import glob
+import cv2
+
+name_prefix = 'image_'
+img_file_list = sorted(glob.glob(name_prefix+'*.png'))
+n_files = len(img_file_list)
+
+first_image = cv2.imread(img_file_list[0])
+print(n_files,"files available.  Shape of first image is",first_image.shape)
+
+print("Assuming all images are that size.")
+img_data_arr = np.zeros([n_files]+list(first_image.shape))  # allocate storage
+
+for i in range(n_files):
+    filename = img_file_list[i]
+    print("Reading file",filename)
+    img_data_arr[i] = cv2.imread(filename)
+
+print("Finished.")
+~~~
+
