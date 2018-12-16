@@ -6,10 +6,10 @@ description: Basic use of multiprocessing
 excerpt: So you have some serial task that takes forever, and you're thinking it should be parallelizable, but you find
 the documentation on this to be obtuse? 
 image: ../images/parallelpython.png
-bg-image: ../parallelpython.jpg
+bg-image: ../images/parallelpython.png
 comments: true
 ---
-
+![title](../images/parallelpython.png)
 # Parallelizing Python, Simplified
 
 So you have some serial task that takes forever, and you're thinking it should be parallelizable, but you find
