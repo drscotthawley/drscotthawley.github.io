@@ -227,13 +227,14 @@ mp_shared_array = None                               # global variable for array
 def load_one_proc(img_file_list, per_proc, iproc):
     global mp_shared_array
 
+    # tmp will end up pointing to the memory address of the shared array we want to populate
     tmp = np.ctypeslib.as_array(mp_shared_array)
 
     istart, iend = iproc * per_proc, (iproc+1) * per_proc
     for i in range(istart,iend):    # each process will read a range of files
         filename = img_file_list[i]
         print("Reading file",filename)
-        tmp[i] = cv2.imread(filename)
+        tmp[i] = cv2.imread(filename)   # assign the values into the memory of the shared array
     return
 
 name_prefix = 'image_'
