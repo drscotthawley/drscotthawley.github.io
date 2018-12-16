@@ -22,8 +22,8 @@ There's usually a simple prescription for parallelizing most of these kinds of t
   <li>Write a function that does what you want for one "instance."  For example, take what's inside one of your for loops,
 put all that in a separate function.</li>
   <li>As a check, keep your loop but use only the function call. Make sure it produces the same results as the original version of your code.</li>
-    <li>Use `functools.partial` to create a wrapper for your function.</li>
-  <li>Replace the loop with a call to `Pool.map()`. </li>
+    <li>Use functools.partial to create a wrapper for your function.</li>
+  <li>Replace the loop with a call to Pool.map(). </li>
 </ol>
 
 
