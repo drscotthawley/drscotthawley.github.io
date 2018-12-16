@@ -4,13 +4,11 @@ title: Parallelizing Python, Simplified
 subtitle: Tips for a few common tasks
 description: Basic use of multiprocessing 
 excerpt: So you have some serial task that takes forever, and you're thinking it should be parallelizable, but you find
-the documentation on this to be obtuse?  Yea. 
+the documentation on this to be obtuse? 
 image: ../images/parallelpython.png
 bg-image: ../parallelpython.jpg
 comments: true
 ---
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
 # Parallelizing Python, Simplified
 
