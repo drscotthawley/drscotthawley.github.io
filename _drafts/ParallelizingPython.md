@@ -29,7 +29,10 @@ put all that in a separate function.
 3. Use `functools.partial` to create a wrapper for your function.
 4. Replace the loop with a call to `Pool.map()`. 
 
-Let's do a few examples:
+In the following, we'll cover 3 examples for parallel tasks:
+1. Generate a bunch of files
+2. Read a bunch of files into a list
+3. Filling a numpy array
 
 ## Example 1: Generate a bunch of files
 Let's say you have some important synthetic data that you want to generate lots of instances of. 
