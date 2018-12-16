@@ -266,7 +266,7 @@ img_data_arr = np.ctypeslib.as_array(mp_shared_array, shape=img_data_arr.shape) 
 p.close()
 p.join()
 
-# Next couple list are here just in case you want to move on to other things
+# Next couple lines are here just in case you want to move on to other things
 #   and force garbage collection
 mp_shared_array = None
 gc.collect()
