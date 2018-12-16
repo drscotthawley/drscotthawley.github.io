@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Parallelizing Python (Simplified)
-subtitle: Tips for a few common tasks
+title: Parallelizing Python, Simplified
+subtitle: Tips for a few common multiprocessing tasks.
 description: Basic use of multiprocessing.
 image:  ../images/parallelpython.png
 bg-image:  ../images/parallelpython.png
