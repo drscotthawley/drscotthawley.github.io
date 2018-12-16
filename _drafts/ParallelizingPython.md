@@ -271,7 +271,6 @@ p.join()
 mp_shared_array = None
 gc.collect()
 
-
 print("Finished.")
 ~~~
 
