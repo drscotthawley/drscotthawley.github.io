@@ -1,4 +1,13 @@
-
+---
+layout: post
+title: Resolving Mac OS X Aliases in Python
+subtitle: (or "How I Spent Monday Night")
+description: Mac OSX aliases are not symbolic links. Trying to read one will probably crash your code.
+image: http://cdn.osxdaily.com/wp-content/uploads/2012/06/remove-alias-arrows-mac.jpg
+bg-image: http://cdn.osxdaily.com/wp-content/uploads/2012/06/remove-alias-arrows-mac.jpg
+comments: true
+---
+Mac OSX aliases are not symbolic links. Trying to read one may crash your code.
 
 ![title](../images/parallelpython.png)
 
