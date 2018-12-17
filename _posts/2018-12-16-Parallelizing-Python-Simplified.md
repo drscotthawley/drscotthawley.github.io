@@ -162,7 +162,7 @@ num_procs = cpu_count()
 print("Parallelizing across",num_procs,"processes.")
 
 per_proc = n_files // num_procs  # Number of files per processor to load
-assert n_files == per_proc * num_procs  # Make sure taks divide evenly. Obvously one can do something more sophisticated than this!
+assert n_files == per_proc * num_procs  # Make sure tasks divide evenly. Obvously one can do something more sophisticated than this!
 
 with Manager() as manager:
     img_data_list = manager.list()
