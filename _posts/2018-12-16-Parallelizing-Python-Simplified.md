@@ -13,10 +13,10 @@ comments: true
 So you have some serial task that takes forever, and you're thinking it should be parallelizable, but you find
 the documentation on this to be obtuse?  Yea. 
 
-Usually I'm interested in either *outputting* lots of data in parallel, or *inputting* lots of data in parallel, and it's
-often something that I first implemented as a loop but got tired of how slow it runs.
+Usually I'm interested in either *creating* lots of data in parallel, or *inputting* lots of data in parallel, and it's
+often something that I first implemented as a loop but got tired of how slow it runs.  These involve [embarassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) tasks in that they don't depend on one another. 
 
-There's a simple prescription for parallelizing most of these kinds of tasks.  It goes as follows:
+There's a simple prescription for parallelizing most of these kinds of tasks in Python.  It goes as follows:
 <ol start="0">
   <li>Have some kind of task performed in a for loop.</li>
   <li>Write a function that does what you want for one "instance."  For example, take what's inside one of your for loops,
