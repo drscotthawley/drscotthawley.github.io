@@ -58,9 +58,9 @@ import numpy as np
 import cv2
 from functools import partial
 
-def write_one_file(size_x, size_y, name_prefix, index):
+def write_one_file(size_x, size_y, name_prefix, i):
     arr = 255*np.random.rand(size_x,size_y)
-    filename = name_prefix + str(index) + '.png'
+    filename = name_prefix + str(i) + '.png'
     print("writing file ",filename)
     cv2.imwrite(filename,arr)
 
@@ -81,9 +81,9 @@ import cv2
 from functools import partial
 import multiprocessing as mp
 
-def write_one_file(size_x, size_y, name_prefix, index):
+def write_one_file(size_x, size_y, name_prefix, i):
     arr = 255*np.random.rand(size_x,size_y)
-    filename = name_prefix + str(index) + '.png'
+    filename = name_prefix + str(i) + '.png'
     print("writing file ",filename)
     cv2.imwrite(filename,arr)
 
