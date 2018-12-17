@@ -14,9 +14,9 @@ So you have some serial task that takes forever, and you're thinking it should b
 the documentation on this to be obtuse?  Yea. 
 
 Usually I'm interested in either *outputting* lots of data in parallel, or *inputting* lots of data in parallel, and it's
-usually something that I first implemented as a loop but got tired of how slow it runs.
+often something that I first implemented as a loop but got tired of how slow it runs.
 
-There's usually a simple prescription for parallelizing most of these kinds of tasks.  It goes as follows:
+There's a simple prescription for parallelizing most of these kinds of tasks.  It goes as follows:
 <ol start="0">
   <li>Have some kind of task performed in a for loop.</li>
   <li>Write a function that does what you want for one "instance."  For example, take what's inside one of your for loops,
@@ -268,3 +268,12 @@ print("Finished.")
 ~~~
 
 So that's the basic implementation.  Let me know in the comments if you have suggestions for improvements, or other ideas!
+
+## P.S.- Final Remarks
+Added in a couple thoughts, post-facto:
+
+**1. Performance.** Notice that what gets passed to `p.map()` is an *iterator*, which typically you'll use as either be the indices of the members of an array (as we did just now), or it can be the range of processors (kinda like we did in Example 2).  In the former case, the system is likely to spawn lots and lots of processes (not all at the same time, but as one 'job' finishes the system will spawn a new one, and will keep the "pool" going), which will have a bit of overhead -- i.e. latency -- each time these start and stop. It's not much though, and so you probably won't notice if your goal is merely, "I'm doing this so that I only have to wait 5 minutes instead of an hour to get something done."  If instead you make the indices in the map over the range of processors on your machine and manually break up
+the array indices into chunks (sort of like we did in Example 2), then you won't be spawning as many processes and so your latency will be considerably lower.  But the gain may be small enough (depending on your system) that you may not notice the difference in performance.  Still, if you want to go all-out for performance, then make the pool.map go over the number of procs you want.  Otherwise, feel free to trust the system to do its thing for you and just use the array indices.
+
+**2. When Processes Die.**  Debugging `multiprocessing` runs is *a pain*.  If one process dies (crashes, seg faults, generates any kind of "Error"), it will hang the entire pool and you won't know why because the error messages won't come to `stdout` or `stderr`.  Look elsewhere for tutorials on tools on debugging multiprocessing runs.  Good news is that regular `print` statements still come to `stdout` for all processes, so one way of debugging is the age-old method of just loading your code with `print` statements. 
+
