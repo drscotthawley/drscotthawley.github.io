@@ -178,7 +178,7 @@ with Manager() as manager:
 print(len(outside_list),"images in list.")
 ~~~
 
-Okay, great.  The thing is, that set of processes operates asynchronously, so there's no telling what *order* the final list is going to be in.  Maybe you do don't care.  But I care.  One way of dealing with this is to add an index item within the list for each item,
+Okay, great.  The thing is, that set of processes operates asynchronously, so there's no telling what *order* the final list is going to be in.  Maybe you don't care, but sometimes I care.  One way of dealing with this is to add an index item within the list for each item,
 and then sort on that index.
 
 But most of the time what I really want in the end is a numpy array.  So let's just look at how to fill one of those, directly.
