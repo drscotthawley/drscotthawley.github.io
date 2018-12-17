@@ -219,7 +219,7 @@ Without further ado, here's the parallel, numpy version of the 'loading a list o
 import numpy as np
 import glob
 import cv2
-from multiprocessing import Process, Manager, Pool, sharedctypes, cpu_count
+from multiprocessing import Pool, sharedctypes, cpu_count
 from functools import partial
 import gc
 
