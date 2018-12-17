@@ -211,7 +211,7 @@ for i in range(n_files):
 print("Finished.")
 ~~~
 
-For the parallel version, we're going to have to use a global variable.  Sorry, there's no away around it, because of Python's [Global Itnerpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
+For the parallel version, we're going to have to use a global variable.  Sorry, there's no away around it, because of Python's [Global Interpreter Lock (GIL)](https://wiki.python.org/moin/GlobalInterpreterLock).
 
 Without further ado, here's the parallel, numpy version of the 'loading a list of images' shown earlier in Example 2. (One other change: rather than specifying ranges of images for each processor -- which I did just for the sake of variety -- this time we'll let Pool.map decide how to -- evenly -- distribute the tasks.)
 
