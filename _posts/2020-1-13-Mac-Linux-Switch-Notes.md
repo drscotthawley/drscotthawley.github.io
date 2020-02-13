@@ -5,10 +5,7 @@ subtitle: Mac and I aren't breaking up, we're just seeing other people.
 description: One of those lists people make when they get a Linux laptop
 comments: true
 ---
-
-# Mac => Linux Switch Notes
-
-*by Scott H. Hawley, Dec 29, 2019 to Jan 13, 2020.   License Agreement: Feel free to copy, redistribute, steal, resell, etc., any of this; I'm happy to pass along what I find.*
+*by Scott H. Hawley, Dec 29, 2019 to Jan 13, 2020.*
 
 ## Intro 
 
