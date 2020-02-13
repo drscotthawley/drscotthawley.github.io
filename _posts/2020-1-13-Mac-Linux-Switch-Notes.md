@@ -5,8 +5,6 @@ subtitle: Mac and I aren't breaking up, we're just seeing other people.
 description: One of those lists people make when they get a Linux laptop
 comments: true
 ---
-*by Scott H. Hawley, Dec 29, 2019 to Jan 13, 2020.*
-
 ## Intro 
 
 I'd been jonesing for a laptop with a real GPU for a couple years.  Granted, most of my computation occurs on remote servers, but sometimes when I'm traveling, those connections can be spotty.  And heck, I might want to play the occasional video game (without NVIDIA GeForce NOW). 
