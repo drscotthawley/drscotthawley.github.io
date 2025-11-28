@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Blog Moved</title>
+  <link>https://drscotthawley.github.io/blog/</link>
+  <description>This feed has moved to https://drscotthawley.github.io/blog/index.xml - please update your reader.</description>
+  <item>
+    <title>Feed has moved</title>
+    <link>https://drscotthawley.github.io/blog/index.xml</link>
+    <description>Please update your RSS reader to use: https://drscotthawley.github.io/blog/index.xml</description>
+  </item>
+</channel>
+</rss>
